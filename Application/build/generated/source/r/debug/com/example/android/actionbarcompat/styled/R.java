@@ -2008,7 +2008,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f090054;
         public static final int action_mode_bar_stub=0x7f090053;
         public static final int action_mode_close_button=0x7f090046;
-        public static final int action_settings=0x7f09006e;
+        public static final int action_settings=0x7f090071;
         public static final int activity_chooser_view_content=0x7f090047;
         public static final int adjust_height=0x7f090028;
         public static final int adjust_width=0x7f090029;
@@ -2042,6 +2042,7 @@ containing a value of this type.
         public static final int fill=0x7f09001f;
         public static final int fill_horizontal=0x7f090020;
         public static final int fill_vertical=0x7f090021;
+        public static final int googlemaps_start=0x7f09006b;
         public static final int grayscale=0x7f090042;
         public static final int holo_dark=0x7f090035;
         public static final int holo_light=0x7f090036;
@@ -2062,9 +2063,9 @@ containing a value of this type.
         public static final int login_user_edit=0x7f090067;
         public static final int map=0x7f09006a;
         public static final int match_parent=0x7f09003c;
-        public static final int menu_location=0x7f09006c;
-        public static final int menu_refresh=0x7f09006b;
-        public static final int menu_settings=0x7f09006d;
+        public static final int menu_location=0x7f09006f;
+        public static final int menu_refresh=0x7f09006e;
+        public static final int menu_settings=0x7f090070;
         public static final int middle=0x7f090027;
         public static final int monochrome=0x7f090043;
         public static final int never=0x7f090030;
@@ -2074,7 +2075,9 @@ containing a value of this type.
         public static final int progress_circular=0x7f090005;
         public static final int progress_horizontal=0x7f090006;
         public static final int radio=0x7f090051;
+        public static final int result_btn=0x7f09006d;
         public static final int right=0x7f090023;
+        public static final int rstTexxt=0x7f09006c;
         public static final int sandbox=0x7f090038;
         public static final int satellite=0x7f09002b;
         public static final int search_badge=0x7f09005b;
@@ -2138,8 +2141,9 @@ containing a value of this type.
         public static final int abc_simple_dropdown_hint=0x7f030015;
         public static final int activity_log_in=0x7f030016;
         public static final int activity_mainpage=0x7f030017;
-        public static final int sample_main=0x7f030018;
-        public static final int support_simple_spinner_dropdown_item=0x7f030019;
+        public static final int activity_resultdisplay=0x7f030018;
+        public static final int sample_main=0x7f030019;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001a;
     }
     public static final class menu {
         public static final int main=0x7f0d0000;
@@ -2209,11 +2213,14 @@ containing a value of this type.
         public static final int menu_location=0x7f0b0039;
         public static final int menu_refresh=0x7f0b003a;
         public static final int menu_settings=0x7f0b003b;
-        public static final int store_picture_message=0x7f0b003c;
-        public static final int store_picture_title=0x7f0b003d;
-        public static final int title_activity_log_in=0x7f0b003e;
-        public static final int title_activity_mainpage=0x7f0b003f;
-        public static final int wallet_buy_button_place_holder=0x7f0b0040;
+        public static final int run=0x7f0b003c;
+        public static final int stop=0x7f0b003d;
+        public static final int store_picture_message=0x7f0b003e;
+        public static final int store_picture_title=0x7f0b003f;
+        public static final int title_activity_log_in=0x7f0b0040;
+        public static final int title_activity_mainpage=0x7f0b0041;
+        public static final int title_activity_runningpage=0x7f0b0042;
+        public static final int wallet_buy_button_place_holder=0x7f0b0043;
     }
     public static final class style {
         public static final int Animation_AppCompat_DropDownUp=0x7f0c0000;

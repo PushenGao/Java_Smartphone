@@ -28,7 +28,9 @@
          Google Maps Android API v2, but are recommended.
     -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
     <!--
         Theme is set on the application so that our custom theme is used by
         default by all Activities
@@ -69,6 +71,10 @@
         <activity
             android:name="ui.Mainpage"
             android:label="@string/title_activity_mainpage" >
+        </activity>
+        <activity
+            android:name="ui.Resultdisplay"
+            android:label="@string/title_activity_runningpage" >
         </activity>
     </application>
 

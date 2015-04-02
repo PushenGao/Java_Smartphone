@@ -316,6 +316,8 @@ available. Please contact the developer for assistance.</string>
     <string name="menu_location">Location</string>
     <string name="menu_refresh">Refresh</string>
     <string name="menu_settings">Settings</string>
+    <string name="run">Run</string>
+    <string name="stop">Stop</string>
     <!-- From: file:/Users/JiateLi/Desktop/WeRun/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
@@ -324,6 +326,7 @@ available. Please contact the developer for assistance.</string>
     <eat-comment/>
     <string name="title_activity_log_in">LogIn</string>
     <string name="title_activity_mainpage">Map</string>
+    <string name="title_activity_runningpage">Result</string>
     <!-- From: file:/Users/JiateLi/Desktop/WeRun/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_strings.xml -->
     <eat-comment/>
     <string name="wallet_buy_button_place_holder" translation_description="Text on a button that allows a user to make a payment with Google Wallet [CHAR LIMIT=30]">Buy with Google</string>

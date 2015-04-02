@@ -76,6 +76,10 @@
             android:name="ui.Mainpage"
             android:label="@string/title_activity_mainpage" >
         </activity>
+        <activity
+            android:name="ui.Resultdisplay"
+            android:label="@string/title_activity_runningpage" >
+        </activity>
     </application>
 
 </manifest>

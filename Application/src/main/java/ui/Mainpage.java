@@ -1,6 +1,7 @@
 package ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.location.Address;
 import android.location.Criteria;
 import android.location.Geocoder;
@@ -10,6 +11,8 @@ import android.location.LocationManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.android.actionbarcompat.styled.R;
@@ -29,7 +32,9 @@ public class Mainpage extends FragmentActivity {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
     public Marker whereAmI;
-
+    public static final int RUNSTATE = 1;
+    public static final int STOPSTATE = 0;
+    private int state = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -182,7 +187,20 @@ public class Mainpage extends FragmentActivity {
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+        //mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+    }
+
+    public void buttonClicked(View view){
+        Button bt = (Button) findViewById(R.id.googlemaps_start);
+        state++;
+        if(state == RUNSTATE) {
+            bt.setText("Stop");
+        }else{
+            state = STOPSTATE;
+            Intent intent = new Intent(this, Resultdisplay.class);
+            startActivity(intent);
+        }
+
     }
 }
