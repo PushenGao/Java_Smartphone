@@ -1,7 +1,7 @@
-C:\Users\Michael-Gao\AndroidStudioProjects\ActionBarCompat-Styled\Application\build\intermediates\classes\debug
-C:\Users\Michael-Gao\AndroidStudioProjects\ActionBarCompat-Styled\Application\build\intermediates\pre-dexed\debug\support-annotations-21.0.2-20a3cb677478cba076f0ca1d19566e6173e88a58.jar
-C:\Users\Michael-Gao\AndroidStudioProjects\ActionBarCompat-Styled\Application\build\intermediates\pre-dexed\debug\classes-809f11eebded5868be3476ee664a240062f9dcc3.jar
-C:\Users\Michael-Gao\AndroidStudioProjects\ActionBarCompat-Styled\Application\build\intermediates\pre-dexed\debug\classes-39723e192286ce6cf6e92619573329026d7ed718.jar
-C:\Users\Michael-Gao\AndroidStudioProjects\ActionBarCompat-Styled\Application\build\intermediates\pre-dexed\debug\internal_impl-21.0.2-a858e3230f576c094f21c1896a90737f3a20ac41.jar
-C:\Users\Michael-Gao\AndroidStudioProjects\ActionBarCompat-Styled\Application\build\intermediates\pre-dexed\debug\classes-d4e7f625a085ded34a04d5259cca20b8601714aa.jar
-C:\Users\Michael-Gao\AndroidStudioProjects\ActionBarCompat-Styled\Application\build\intermediates\pre-dexed\debug\classes-c9ccdb83e8aeb90d4481c001e4edffdcd0111fb7.jar
+/Users/JiateLi/Desktop/WeRun/Application/build/intermediates/classes/debug
+/Users/JiateLi/Desktop/WeRun/Application/build/intermediates/pre-dexed/debug/support-annotations-21.0.2-2e5474100446e69e5e09a2a771a2772c4bcaae77.jar
+/Users/JiateLi/Desktop/WeRun/Application/build/intermediates/pre-dexed/debug/classes-f273d13f8f59771f26ce2552239144ed6005fc94.jar
+/Users/JiateLi/Desktop/WeRun/Application/build/intermediates/pre-dexed/debug/classes-4fe0f715b45b7d8d2d0987e3b1ca43e97e8b367c.jar
+/Users/JiateLi/Desktop/WeRun/Application/build/intermediates/pre-dexed/debug/internal_impl-21.0.2-97a1dd8b071d2e829ee4bb4bf83e95e0cbae9594.jar
+/Users/JiateLi/Desktop/WeRun/Application/build/intermediates/pre-dexed/debug/classes-cf711e74837cde064a9b884c2b3f87884c3331c1.jar
+/Users/JiateLi/Desktop/WeRun/Application/build/intermediates/pre-dexed/debug/classes-993b7ac26041227461dd18470fc5d17c35b67f36.jar

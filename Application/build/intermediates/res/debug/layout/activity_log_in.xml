@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#eee"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".LogIn">
+    <ImageView
+        android:id="@+id/imageLeft"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="5dip"
+        android:adjustViewBounds="true"
+        android:src="@drawable/login_image" />
+
+    <!--android:scaleType="fitXY"-->
+
+    <RelativeLayout
+        android:id="@+id/login_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        >
+        <!--<Button
+            android:id="@+id/login_reback_btn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="返回"
+            android:textSize="14sp"
+            android:textColor="#00f"
+            android:onClick="login_back"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#00f"
+            android:text="LogIn"/>
+            android:text="登录"-->
+
+
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/login_user_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_top_layout"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:singleLine="true"
+        android:hint="FaceBook Id"/>
+    <!--android:hint="QQ号/微信号/手机号（请输入afeng）"-->
+
+
+    <EditText
+        android:id="@+id/login_passwd_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_user_edit"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:password="true"
+        android:singleLine="true"
+        android:hint="Password"/>
+    <!--android:hint="密码(请输入afeng)"-->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/login_passwd_edit"
+        >
+        <!--<Button
+            android:id="@+id/forget_passwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="5dp"
+            android:text="忘记密码?"
+            android:textSize="16sp"
+            android:textColor="#00f"
+            android:background="#0000"
+            android:onClick="login_pw"
+            /> -->
+        <Button
+            android:id="@+id/login_login_btn"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:text="LogIn"
+
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:onClick="login_mainweixin"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
+<!-- From: file:/Users/JiateLi/Desktop/WeRun/Application/src/main/res/layout/activity_log_in.xml -->
