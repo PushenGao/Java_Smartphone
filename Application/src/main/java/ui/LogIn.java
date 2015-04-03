@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.android.actionbarcompat.styled.MainActivity;
 import com.example.android.actionbarcompat.styled.R;
 
 
@@ -41,7 +42,7 @@ public class LogIn extends ActionBarActivity {
     }
 
     public void login_mainweixin(View view){
-        Intent intent = new Intent(this, Mainpage.class);
+        Intent intent = new Intent(this,com.example.android.actionbarcompat.styled.MainActivity.class);
         startActivity(intent);
     }
 }

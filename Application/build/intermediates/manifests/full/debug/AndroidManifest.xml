@@ -20,7 +20,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="9"
+        android:minSdkVersion="15"
         android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -79,6 +79,14 @@
         <activity
             android:name="ui.Resultdisplay"
             android:label="@string/title_activity_runningpage" >
+        </activity>
+        <activity
+            android:name="ui.Chathistory"
+            android:label="@string/title_activity_runningpage" >
+        </activity>
+        <activity
+            android:name="com.example.android.actionbarcompat.styled.MainActivity"
+            android:label="@string/title_activity_tabSelect" >
         </activity>
     </application>
 

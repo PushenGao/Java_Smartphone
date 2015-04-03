@@ -16,11 +16,20 @@
 
 package com.example.android.actionbarcompat.styled;
 
+import android.app.TabActivity;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBar;
+
 import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
+
+import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TabHost;
+import android.widget.TextView;
+
+import ui.*;
 
 /**
  * This sample shows you how to use ActionBarCompat with a customized theme. It utilizes a split
@@ -35,47 +44,70 @@ import android.view.Menu;
  * Many of the drawables used in this sample were generated with the
  * 'Android Action Bar Style Generator': http://jgilfelt.github.io/android-actionbarstylegenerator
  */
-public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
-
+public class MainActivity extends TabActivity implements TabHost.TabContentFactory {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sample_main);
-
-        // Set the Action Bar to use tabs for navigation
-        ActionBar ab = getSupportActionBar();
-        ab.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-
-        // Add three tabs to the Action Bar for display
-        ab.addTab(ab.newTab().setText("Tab 1").setTabListener(this));
-        ab.addTab(ab.newTab().setText("Tab 2").setTabListener(this));
-        ab.addTab(ab.newTab().setText("Tab 3").setTabListener(this));
+        TabHost tabHost = getTabHost();
+        tabHost.addTab(tabHost.newTabSpec("chat").setIndicator("Chat").setContent(new Intent(this, Chathistory.class)));
+        tabHost.addTab(tabHost.newTabSpec("contact").setIndicator("Contact").setContent(this));
+        tabHost.addTab(tabHost.newTabSpec("run").setIndicator("Running").setContent(new Intent(this, Mainpage.class)));
+        tabHost.addTab(tabHost.newTabSpec("recommend").setIndicator("Recommend").setContent(this));
+        tabHost.addTab(tabHost.newTabSpec("history").setIndicator("History").setContent(this));
+        setupUI();
     }
-
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate menu from menu resource (res/menu/main)
-        getMenuInflater().inflate(R.menu.main, menu);
-
-        return super.onCreateOptionsMenu(menu);
+    public View createTabContent(String tag) {
+        TextView tv = new TextView(this);
+        tv.setTextColor(Color.BLACK);
+        tv.setTextSize(20);
+        if (tag.equals("chat")) {
+            tv.setText(R.string.chat);
+        } else if (tag.equals("contact")) {
+            tv.setText(R.string.contact);
+        } else if (tag.equals("recommend")) {
+            tv.setText(R.string.recommend);
+        } else if (tag.equals("history")) {
+            tv.setText(R.string.history);
+        }
+        return tv;
     }
+    private void setupUI() {
+        RadioButton rbFirst = (RadioButton) findViewById(R.id.first);
+        RadioButton rbSecond = (RadioButton) findViewById(R.id.second);
+        RadioButton rbThird = (RadioButton) findViewById(R.id.third);
+        RadioButton rbFourth = (RadioButton) findViewById(R.id.fourth);
+        RadioButton rbFifth = (RadioButton) findViewById(R.id.fifth);
 
-    // Implemented from ActionBar.TabListener
-    @Override
-    public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-        // This is called when a tab is selected.
-    }
+        rbFirst.setButtonDrawable(R.drawable.chat_icon);
+        rbSecond.setButtonDrawable(R.drawable.contact_icon);
+        rbThird.setButtonDrawable(R.drawable.running_icon);
+        rbFourth.setButtonDrawable(R.drawable.recommend_icon);
+        rbFifth.setButtonDrawable(R.drawable.history_icon);
 
-    // Implemented from ActionBar.TabListener
-    @Override
-    public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-        // This is called when a previously selected tab is unselected.
-    }
-
-    // Implemented from ActionBar.TabListener
-    @Override
-    public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-        // This is called when a previously selected tab is selected again.
+        RadioGroup rg = (RadioGroup) findViewById(R.id.states);
+        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            public void onCheckedChanged(RadioGroup group, final int checkedId) {
+                switch (checkedId) {
+                    case R.id.first:
+                        getTabHost().setCurrentTab(0);
+                        break;
+                    case R.id.second:
+                        getTabHost().setCurrentTab(1);
+                        break;
+                    case R.id.third:
+                        getTabHost().setCurrentTab(2);
+                        break;
+                    case R.id.fourth:
+                        getTabHost().setCurrentTab(3);
+                        break;
+                    case R.id.fifth:
+                        getTabHost().setCurrentTab(4);
+                        break;
+                }
+            }
+        });
     }
 }
 

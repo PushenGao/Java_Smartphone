@@ -6,6 +6,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.android.actionbarcompat.styled.MainActivity;
 import com.example.android.actionbarcompat.styled.R;
 
 public class Resultdisplay extends ActionBarActivity {
@@ -39,7 +41,7 @@ public class Resultdisplay extends ActionBarActivity {
     }
 
     public void returntomain(View view){
-        Intent intent = new Intent(this, Mainpage.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }

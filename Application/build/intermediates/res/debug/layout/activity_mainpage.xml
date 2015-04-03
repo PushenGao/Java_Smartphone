@@ -21,4 +21,4 @@
         android:layout_centerHorizontal="true"
         android:onClick="buttonClicked"
         android:text="@string/run"/>
-</RelativeLayout><!-- From: file:/Users/JiateLi/Desktop/WeRun/Application/src/main/res/layout/activity_mainpage.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/layout/activity_mainpage.xml -->
