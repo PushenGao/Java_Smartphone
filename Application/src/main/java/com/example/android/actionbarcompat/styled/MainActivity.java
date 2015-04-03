@@ -53,7 +53,7 @@ public class MainActivity extends TabActivity implements TabHost.TabContentFacto
         tabHost.addTab(tabHost.newTabSpec("chat").setIndicator("Chat").setContent(new Intent(this, Chathistory.class)));
         tabHost.addTab(tabHost.newTabSpec("contact").setIndicator("Contact").setContent(this));
         tabHost.addTab(tabHost.newTabSpec("run").setIndicator("Running").setContent(new Intent(this, Mainpage.class)));
-        tabHost.addTab(tabHost.newTabSpec("recommend").setIndicator("Recommend").setContent(this));
+        tabHost.addTab(tabHost.newTabSpec("recommend").setIndicator("Recommend").setContent(new Intent(this,Recommend.class)));
         tabHost.addTab(tabHost.newTabSpec("history").setIndicator("History").setContent(this));
         setupUI();
     }
@@ -80,11 +80,11 @@ public class MainActivity extends TabActivity implements TabHost.TabContentFacto
         RadioButton rbFourth = (RadioButton) findViewById(R.id.fourth);
         RadioButton rbFifth = (RadioButton) findViewById(R.id.fifth);
 
-        rbFirst.setButtonDrawable(R.drawable.chat_icon);
-        rbSecond.setButtonDrawable(R.drawable.contact_icon);
-        rbThird.setButtonDrawable(R.drawable.running_icon);
-        rbFourth.setButtonDrawable(R.drawable.recommend_icon);
-        rbFifth.setButtonDrawable(R.drawable.history_icon);
+        rbFirst.setButtonDrawable(R.drawable.chat);
+        rbSecond.setButtonDrawable(R.drawable.contact);
+        rbThird.setButtonDrawable(R.drawable.run);
+        rbFourth.setButtonDrawable(R.drawable.recommend);
+        rbFifth.setButtonDrawable(R.drawable.user);
 
         RadioGroup rg = (RadioGroup) findViewById(R.id.states);
         rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

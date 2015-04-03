@@ -36,6 +36,8 @@
     <string name="title_activity_mainpage">Map</string>
     <string name="title_activity_runningpage">Result</string>
     <string name="title_activity_tabSelect">TabSelect</string>
+    <string name="title_activity_recommend">Recommend</string>
+    <string name="title_activity_profile">Profile</string>
 
 
 </resources>

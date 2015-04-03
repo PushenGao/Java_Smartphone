@@ -81,10 +81,18 @@
             android:label="@string/title_activity_runningpage" >
         </activity>
         <activity
-            android:name="com.example.android.actionbarcompat.styled.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/title_activity_tabSelect" >
         </activity>
-
+        <activity
+            android:name="ui.Recommend"
+            android:label="@string/title_activity_recommend" >
+        </activity>
+        <activity
+            android:name="ui.Profile"
+            android:parentActivityName="ui.Recommend"
+            android:label="@string/title_activity_profile" >
+        </activity>
     </application>
 
 </manifest>

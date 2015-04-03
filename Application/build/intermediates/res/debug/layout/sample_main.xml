@@ -6,11 +6,26 @@
         <FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="0dip" android:layout_weight="1"  android:background="#fff"/>
 
         <RadioGroup android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:checkedButton="@+id/first" android:id="@+id/states">
-            <RadioButton android:id="@+id/first"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-            <RadioButton android:id="@+id/second"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-            <RadioButton android:id="@+id/third"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-            <RadioButton android:id="@+id/fourth"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-            <RadioButton android:id="@+id/fifth"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <RadioButton android:id="@+id/first"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Chat"
+                android:textSize="15dp" />
+            <RadioButton android:id="@+id/second"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Contact"
+                android:checked="false"
+                android:textSize="15dp" />
+            <RadioButton android:id="@+id/third"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Run"
+                android:checked="false"
+                android:textSize="15dp" />
+            <RadioButton android:id="@+id/fourth"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Recommend"
+                android:checked="false"
+                android:textSize="15dp" />
+            <RadioButton android:id="@+id/fifth"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="History"
+                android:checked="false"
+                android:textSize="15dp" />
         </RadioGroup>
 
         <TabWidget android:id="@android:id/tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0" android:visibility="gone" />

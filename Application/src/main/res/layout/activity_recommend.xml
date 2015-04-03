@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fcfcfc"
+    tools:context="ui.Recommend"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:id="@+id/title"
+        android:background="@drawable/bar"
+        android:gravity="center_vertical"  >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WeRun"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:textColor="#ffffff" />
+        <!--<ImageButton
+            android:id="@+id/right_btn"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/titlebutton"
+            android:onClick="btnmainright"
+            />-->
+        <!--android:background="@drawable/title_btn_right"-->
+    </RelativeLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/searchbar" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="搜索"
+            android:singleLine="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColor="#000"
+            android:background="@drawable/search_bar_edit_bg"
+            android:drawableLeft="@drawable/searchbaricon" >
+        </EditText>
+
+    </LinearLayout> -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+
+        android:clickable="true"
+        android:onClick="startchat"
+        >
+        <!--android:background="@drawable/mm_listitem"-->
+        <ImageView
+            android:id="@+id/head"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="5dp"
+            android:src="@drawable/pushen"
+            android:layout_alignParentBottom="true" />
+        <!--android:src="@drawable/xiaohei"-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:text="Pushen"
+            android:textColor="#000"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/head"
+            android:layout_toEndOf="@+id/head"
+            android:textStyle="bold|italic"
+            android:textSize="20dp"
+            android:id="@+id/textView" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            android:id="@+id/button"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_alignTop="@+id/textView"
+            android:onClick="viewProfile"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

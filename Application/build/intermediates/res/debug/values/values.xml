@@ -295,6 +295,8 @@
     <string name="stop">Stop</string>
     <string name="title_activity_log_in">LogIn</string>
     <string name="title_activity_mainpage">Map</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_recommend">Recommend</string>
     <string name="title_activity_runningpage">Result</string>
     <string name="title_activity_tabSelect">TabSelect</string>
     <!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
