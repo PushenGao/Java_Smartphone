@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import com.example.android.actionbarcompat.styled.R;
@@ -24,6 +25,15 @@ public class Contact extends ActionBarActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Contact.this, ProfileAndRemove.class);
                 startActivity(intent);
+            }
+        });
+
+        Button searchButton = (Button) findViewById(R.id.search_button);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent searchIntent = new Intent(Contact.this, Profile.class);
+                startActivity(searchIntent);
             }
         });
     }

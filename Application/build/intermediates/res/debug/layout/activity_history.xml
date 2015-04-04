@@ -19,7 +19,7 @@
     <TableLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:paddingTop="600dp">
+        android:paddingTop="500dp">
 
         <TableRow
             android:layout_width="fill_parent"
@@ -97,4 +97,5 @@
         </TableRow>
     </TableLayout>
 </RelativeLayout>
+
 <!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/layout/activity_history.xml -->

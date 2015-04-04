@@ -91,7 +91,7 @@
         <activity
             android:name="ui.Profile"
             android:label="@string/title_activity_profile"
-            android:parentActivityName="ui.Recommend" >
+            >
         </activity>
         <activity
             android:name="ui.ChatWindow"

@@ -41,7 +41,7 @@ public class LogIn extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void login_mainweixin(View view){
+    public void login_werun(View view){
         Intent intent = new Intent(this,com.example.android.actionbarcompat.styled.MainActivity.class);
         startActivity(intent);
     }

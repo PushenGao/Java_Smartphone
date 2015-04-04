@@ -43,7 +43,7 @@
             android:id="@+id/editText1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="搜索"
+            android:hint="鎼滅储"
             android:singleLine="true"
             android:focusable="true"
             android:focusableInTouchMode="true"
@@ -67,50 +67,103 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:id="@+id/search_bar"
-                android:minWidth="520dp" />
+                android:minWidth="400dp" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/searchbaricon"
                 android:textColor="#FFFFFF"
-                android:id="@+id/ButtonTest"
+                android:id="@+id/search_button"
                 android:paddingTop="32sp"
-                android:drawablePadding="-15sp"/>
+                android:drawablePadding="-15sp"
+                android:layout_column="19" />
 
         </TableRow>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:gravity="center_vertical"
-            android:id="@+id/contact_relative"
-            android:clickable="true"
-            android:onClick="startchat2"
-            >
-            <!--android:background="@drawable/mm_listitem"-->
-            <ImageView
-                android:id="@+id/contact_head"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:paddingLeft="5dp"
-                android:src="@drawable/zheng"
-                />
-            <!--android:src="@drawable/xiaohei"-->
-            <TextView
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:id="@+id/relativeLayout"
+                android:clickable="true"
+                android:onClick="startchat2" >
+
+                <ImageView
+                    android:id="@+id/request_imageView"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/pushen" />
+
+                <TextView
+                    android:id="@+id/request_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/request_imageView"
+                    android:padding="7dp"
+                    android:text="Pushen wants to connect with you"
+                    android:textColor="#000" />
+
+            </RelativeLayout>
+
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/contact_head"
-                android:padding="7dp"
-                android:text="Zheng"
-                android:textColor="#000" />
+                android:layout_toRightOf="@+id/request_text"
+                android:text="Agree"
+                android:id="@+id/agree_button"
+                android:layout_column="19" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:id="@+id/contact_relative"
+                android:clickable="true"
+                android:onClick="startchat2"
+                >
+                <!--android:background="@drawable/mm_listitem"-->
+                <ImageView
+                    android:id="@+id/contact_head"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/zheng"
+                    />
+                <!--android:src="@drawable/xiaohei"-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/contact_head"
+                    android:padding="7dp"
+                    android:text="Zheng"
+                    android:textColor="#000" />
 
 
 
-        </RelativeLayout>
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"></TableRow>
 
     </TableLayout>
 
 </LinearLayout>
+
