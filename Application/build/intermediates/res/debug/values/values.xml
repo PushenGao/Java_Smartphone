@@ -293,9 +293,13 @@
     <string name="recommend">Recommend Activity</string>
     <string name="run">Run</string>
     <string name="stop">Stop</string>
+    <string name="title_activity_chat_window">Chat Window</string>
+    <string name="title_activity_contact">Contact</string>
+    <string name="title_activity_history">History</string>
     <string name="title_activity_log_in">LogIn</string>
     <string name="title_activity_mainpage">Map</string>
     <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_profile_and_remove">Profile and Remove</string>
     <string name="title_activity_recommend">Recommend</string>
     <string name="title_activity_runningpage">Result</string>
     <string name="title_activity_tabSelect">TabSelect</string>

@@ -43,7 +43,7 @@
             android:id="@+id/editText1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="搜索"
+            android:hint="鎼滅储"
             android:singleLine="true"
             android:focusable="true"
             android:focusableInTouchMode="true"
@@ -58,11 +58,11 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:gravity="center_vertical"
-
+        android:id="@+id/chat_relative"
         android:clickable="true"
         android:onClick="startchat"
         >
-<!--android:background="@drawable/mm_listitem"-->
+        <!--android:background="@drawable/mm_listitem"-->
         <ImageView
             android:id="@+id/head"
             android:layout_width="55dp"
@@ -71,8 +71,8 @@
             android:layout_centerVertical="true"
             android:paddingLeft="5dp"
             android:src="@drawable/pushen"
-             />
-<!--android:src="@drawable/xiaohei"-->
+            />
+        <!--android:src="@drawable/xiaohei"-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -101,4 +101,5 @@
     </RelativeLayout>
 
 </LinearLayout>
+
 <!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/layout/activity_chathistory.xml -->

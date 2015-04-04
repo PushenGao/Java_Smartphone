@@ -97,6 +97,22 @@
             android:label="@string/title_activity_profile"
             android:parentActivityName="ui.Recommend" >
         </activity>
+        <activity
+            android:name="ui.ChatWindow"
+            android:label="@string/title_activity_chat_window" >
+        </activity>
+        <activity
+            android:name="ui.Contact"
+            android:label="@string/title_activity_contact" >
+        </activity>
+        <activity
+            android:name="ui.History"
+            android:label="@string/title_activity_history" >
+        </activity>
+        <activity
+            android:name="ui.ProfileAndRemove"
+            android:label="@string/title_activity_profile_and_remove" >
+        </activity>
     </application>
 
 </manifest>

@@ -13,33 +13,11 @@
         android:adjustViewBounds="true"
         android:src="@drawable/login_image" />
 
-    <!--android:scaleType="fitXY"-->
-
     <RelativeLayout
         android:id="@+id/login_top_layout"
         android:layout_width="fill_parent"
         android:layout_height="45dp"
         >
-        <!--<Button
-            android:id="@+id/login_reback_btn"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:text="返回"
-            android:textSize="14sp"
-            android:textColor="#00f"
-            android:onClick="login_back"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#00f"
-            android:text="LogIn"/>
-            android:text="登录"-->
-
 
     </RelativeLayout>
     <EditText
@@ -54,7 +32,6 @@
         android:layout_marginRight="20dp"
         android:singleLine="true"
         android:hint="FaceBook Id"/>
-    <!--android:hint="QQ号/微信号/手机号（请输入afeng）"-->
 
 
     <EditText
@@ -71,7 +48,6 @@
         android:password="true"
         android:singleLine="true"
         android:hint="Password"/>
-    <!--android:hint="密码(请输入afeng)"-->
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -79,18 +55,7 @@
         android:layout_marginTop="20dp"
         android:layout_below="@+id/login_passwd_edit"
         >
-        <!--<Button
-            android:id="@+id/forget_passwd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="23dp"
-            android:layout_marginTop="5dp"
-            android:text="忘记密码?"
-            android:textSize="16sp"
-            android:textColor="#00f"
-            android:background="#0000"
-            android:onClick="login_pw"
-            /> -->
+
         <Button
             android:id="@+id/login_login_btn"
             android:layout_width="90dp"

@@ -51,10 +51,10 @@ public class MainActivity extends TabActivity implements TabHost.TabContentFacto
         setContentView(R.layout.sample_main);
         TabHost tabHost = getTabHost();
         tabHost.addTab(tabHost.newTabSpec("chat").setIndicator("Chat").setContent(new Intent(this, Chathistory.class)));
-        tabHost.addTab(tabHost.newTabSpec("contact").setIndicator("Contact").setContent(this));
+        tabHost.addTab(tabHost.newTabSpec("contact").setIndicator("Contact").setContent(new Intent(this, Contact.class)));
         tabHost.addTab(tabHost.newTabSpec("run").setIndicator("Running").setContent(new Intent(this, Mainpage.class)));
         tabHost.addTab(tabHost.newTabSpec("recommend").setIndicator("Recommend").setContent(new Intent(this,Recommend.class)));
-        tabHost.addTab(tabHost.newTabSpec("history").setIndicator("History").setContent(this));
+        tabHost.addTab(tabHost.newTabSpec("history").setIndicator("History").setContent(new Intent(this, History.class)));
         setupUI();
     }
     @Override
@@ -62,15 +62,15 @@ public class MainActivity extends TabActivity implements TabHost.TabContentFacto
         TextView tv = new TextView(this);
         tv.setTextColor(Color.BLACK);
         tv.setTextSize(20);
-        if (tag.equals("chat")) {
-            tv.setText(R.string.chat);
-        } else if (tag.equals("contact")) {
-            tv.setText(R.string.contact);
-        } else if (tag.equals("recommend")) {
-            tv.setText(R.string.recommend);
-        } else if (tag.equals("history")) {
-            tv.setText(R.string.history);
-        }
+//        if (tag.equals("chat")) {
+//            tv.setText(R.string.chat);
+//        } else if (tag.equals("contact")) {
+//            tv.setText(R.string.contact);
+//        } else if (tag.equals("recommend")) {
+//            tv.setText(R.string.recommend);
+//        } else if (tag.equals("history")) {
+//            tv.setText(R.string.history);
+//        }
         return tv;
     }
     private void setupUI() {

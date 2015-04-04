@@ -1,9 +1,12 @@
 package ui;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.RelativeLayout;
 
 import com.example.android.actionbarcompat.styled.R;
 
@@ -14,6 +17,15 @@ public class Chathistory extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chathistory);
+
+        RelativeLayout layout = (RelativeLayout) findViewById(R.id.chat_relative);
+        layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Chathistory.this, ChatWindow.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

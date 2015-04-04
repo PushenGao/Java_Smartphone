@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fcfcfc"
+    tools:context="ui.Contact"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:id="@+id/contact_title"
+        android:background="@drawable/bar"
+        android:gravity="center_vertical"  >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WeRun"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:textColor="#ffffff" />
+        <!--<ImageButton
+            android:id="@+id/right_btn"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/titlebutton"
+            android:onClick="btnmainright"
+            />-->
+        <!--android:background="@drawable/title_btn_right"-->
+    </RelativeLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/searchbar" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="搜索"
+            android:singleLine="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColor="#000"
+            android:background="@drawable/search_bar_edit_bg"
+            android:drawableLeft="@drawable/searchbaricon" >
+        </EditText>
+
+    </LinearLayout> -->
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/search_bar"
+                android:minWidth="520dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/searchbaricon"
+                android:textColor="#FFFFFF"
+                android:id="@+id/ButtonTest"
+                android:paddingTop="32sp"
+                android:drawablePadding="-15sp"/>
+
+        </TableRow>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:id="@+id/contact_relative"
+            android:clickable="true"
+            android:onClick="startchat2"
+            >
+            <!--android:background="@drawable/mm_listitem"-->
+            <ImageView
+                android:id="@+id/contact_head"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="5dp"
+                android:src="@drawable/zheng"
+                />
+            <!--android:src="@drawable/xiaohei"-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/contact_head"
+                android:padding="7dp"
+                android:text="Zheng"
+                android:textColor="#000" />
+
+
+
+        </RelativeLayout>
+
+    </TableLayout>
+
+</LinearLayout>
+<!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/layout/activity_contact.xml -->
