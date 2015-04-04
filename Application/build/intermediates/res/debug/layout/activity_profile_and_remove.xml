@@ -44,7 +44,7 @@
             android:id="@+id/editText1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="搜索"
+            android:hint="鎼滅储"
             android:singleLine="true"
             android:focusable="true"
             android:focusableInTouchMode="true"
@@ -60,7 +60,6 @@
         android:layout_height="200dp"
         android:gravity="center_vertical"
 
-        android:clickable="true"
         android:onClick="startchat3"
         android:layout_gravity="top">
         <!--android:background="@drawable/mm_listitem"-->

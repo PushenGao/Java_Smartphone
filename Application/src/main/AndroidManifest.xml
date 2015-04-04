@@ -85,29 +85,38 @@
             android:label="@string/title_activity_tabSelect" >
         </activity>
         <activity
+            android:launchMode="singleTop"
             android:name="ui.Recommend"
             android:label="@string/title_activity_recommend" >
         </activity>
         <activity
+            android:parentActivityName="ui.Recommend"
             android:name="ui.Profile"
             android:label="@string/title_activity_profile"
             >
         </activity>
         <activity
             android:name="ui.ChatWindow"
-            android:label="@string/title_activity_chat_window" >
+            android:label="@string/title_activity_chat_window"
+            android:parentActivityName="ui.Contact" >
+            >
         </activity>
         <activity
             android:name="ui.Contact"
-            android:label="@string/title_activity_contact" >
+            android:label="@string/title_activity_contact"
+            android:launchMode="singleTop">
+
         </activity>
         <activity
             android:name="ui.History"
             android:label="@string/title_activity_history" >
         </activity>
+
         <activity
             android:name="ui.ProfileAndRemove"
-            android:label="@string/title_activity_profile_and_remove" >
+            android:label="@string/title_activity_profile_and_remove"
+            android:parentActivityName="ui.Contact" >
+
         </activity>
 
     </application>

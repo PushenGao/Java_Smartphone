@@ -1938,7 +1938,7 @@ containing a value of this type.
         public static final int textView2=0x7f09006e;
         public static final int textView3=0x7f09006f;
         public static final int textView4=0x7f090070;
-        public static final int text_input=0x7f090055;
+        public static final int textView5=0x7f090055;
         public static final int third=0x7f090080;
         public static final int title=0x7f09003d;
         public static final int top=0x7f090024;
