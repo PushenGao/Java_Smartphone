@@ -7,24 +7,31 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.example.android.actionbarcompat.styled.R;
 
 
 public class ChatWindow extends ActionBarActivity {
+    private Button callCameraButton;
+    private EditText inputText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_window);
 
-        Button callCameraButton = (Button) findViewById(R.id.button_callcamera);
+        callCameraButton = (Button) findViewById(R.id.button_callcamera);
         callCameraButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
                 startActivity(intent);
             }
         });
+
+        inputText = (EditText) findViewById(R.id.input_text);
+
+
     }
 
 

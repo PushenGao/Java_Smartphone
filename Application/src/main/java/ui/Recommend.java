@@ -13,12 +13,12 @@ import com.example.android.actionbarcompat.styled.R;
 
 
 public class Recommend extends ActionBarActivity {
-
+    private Button bt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recommend);
-        Button bt = (Button)findViewById(R.id.recommend_button);
+        bt = (Button)findViewById(R.id.recommend_button);
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

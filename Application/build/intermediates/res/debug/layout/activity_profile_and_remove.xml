@@ -21,8 +21,39 @@
             android:layout_centerInParent="true"
             android:textSize="20sp"
             android:textColor="#ffffff" />
-
+        <!--<ImageButton
+            android:id="@+id/right_btn"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/titlebutton"
+            android:onClick="btnmainright"
+            />-->
+        <!--android:background="@drawable/title_btn_right"-->
     </RelativeLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/searchbar" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="鎼滅储"
+            android:singleLine="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColor="#000"
+            android:background="@drawable/search_bar_edit_bg"
+            android:drawableLeft="@drawable/searchbaricon" >
+        </EditText>
+
+    </LinearLayout> -->
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -31,6 +62,7 @@
 
         android:onClick="startchat3"
         android:layout_gravity="top">
+        <!--android:background="@drawable/mm_listitem"-->
         <ImageView
             android:id="@+id/head"
             android:layout_width="match_parent"
@@ -39,6 +71,8 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true" />
+
+        <!--android:src="@drawable/xiaohei"-->
 
 
     </RelativeLayout>
@@ -90,5 +124,6 @@
         android:paddingTop="30dp" />
 
 </LinearLayout>
+
 
 <!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/layout/activity_profile_and_remove.xml -->

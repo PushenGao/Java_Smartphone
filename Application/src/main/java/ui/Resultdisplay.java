@@ -5,23 +5,26 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.android.actionbarcompat.styled.MainActivity;
 import com.example.android.actionbarcompat.styled.R;
 
 public class Resultdisplay extends ActionBarActivity {
-
+    private Button rstBtn;
+    private TextView rstText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultdisplay);
-        TextView text = (TextView) findViewById(R.id.rstTexxt);
+        rstBtn = (Button)findViewById(R.id.result_btn);
+        rstText = (TextView) findViewById(R.id.rstTexxt);
         StringBuilder sb = new StringBuilder();
         sb.append("Running time: 39 min\n");
         sb.append("Running distance: 2.5 mile\n");
         sb.append("Energy consumption: 400 cal");
-        text.setText(sb.toString());
+        rstText.setText(sb.toString());
     }
 
 

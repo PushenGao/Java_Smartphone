@@ -18,11 +18,15 @@
             android:clickable="false"
             android:paddingTop="700dp">
 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView5"
+                android:id="@+id/input_text"
                 android:minWidth="460dp" />
 
             <Button
@@ -35,4 +39,5 @@
     </TableLayout>
 
 </RelativeLayout>
+
 <!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/layout/activity_chat_window.xml -->

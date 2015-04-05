@@ -7,19 +7,24 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 
 import com.example.android.actionbarcompat.styled.R;
 
 
 public class Contact extends ActionBarActivity {
+    RelativeLayout layout;
+    Button searchButton;
+    Button agreeButton;
+    EditText search_bar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
 
-        RelativeLayout layout = (RelativeLayout) findViewById(R.id.contact_relative);
+        layout = (RelativeLayout) findViewById(R.id.contact_relative);
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,7 +33,7 @@ public class Contact extends ActionBarActivity {
             }
         });
 
-        Button searchButton = (Button) findViewById(R.id.search_button);
+        searchButton = (Button) findViewById(R.id.search_button);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,13 +41,17 @@ public class Contact extends ActionBarActivity {
                 startActivity(searchIntent);
             }
         });
+
+        agreeButton = (Button) findViewById(R.id.agree_button);
+
+        search_bar = (EditText) findViewById(R.id.search_bar);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-       // getMenuInflater().inflate(R.menu.menu_contact, menu);
+        //getMenuInflater().inflate(R.menu.menu_contact, menu);
         return true;
     }
 

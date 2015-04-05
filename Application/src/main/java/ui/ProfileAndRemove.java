@@ -13,19 +13,24 @@ import com.example.android.actionbarcompat.styled.R;
 
 public class ProfileAndRemove extends ActionBarActivity {
 
+    Button addButton;
+    Button removeButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_and_remove);
 
-        Button button = (Button) findViewById(R.id.profileandremove_add);
-        button.setOnClickListener(new View.OnClickListener() {
+        addButton = (Button) findViewById(R.id.profileandremove_add);
+        addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProfileAndRemove.this, ChatWindow.class);
                 startActivity(intent);
             }
         });
+
+        removeButton = (Button) findViewById(R.id.profileandremove_delete);
     }
 
 

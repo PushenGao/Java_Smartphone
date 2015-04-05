@@ -57,7 +57,7 @@
         >
 
         <Button
-            android:id="@+id/login_login_btn"
+            android:id="@+id/login_btn"
             android:layout_width="90dp"
             android:layout_height="40dp"
             android:layout_marginRight="20dp"

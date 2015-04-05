@@ -12,13 +12,14 @@ import com.example.android.actionbarcompat.styled.R;
 
 
 public class Chathistory extends ActionBarActivity {
+    RelativeLayout layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chathistory);
 
-        RelativeLayout layout = (RelativeLayout) findViewById(R.id.chat_relative);
+        layout = (RelativeLayout) findViewById(R.id.chat_relative);
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,7 +34,7 @@ public class Chathistory extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
 //        getMenuInflater().inflate(R.menu.menu_chathistory, menu);
-         return true;
+        return true;
     }
 
     @Override

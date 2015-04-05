@@ -1838,7 +1838,6 @@ containing a value of this type.
         public static final int always=0x7f09002c;
         public static final int beginning=0x7f090025;
         public static final int bottom=0x7f090017;
-        public static final int button=0x7f090079;
         public static final int button2=0x7f090071;
         public static final int button_callcamera=0x7f090056;
         public static final int center=0x7f090018;
@@ -1878,11 +1877,12 @@ containing a value of this type.
         public static final int ifRoom=0x7f09002e;
         public static final int image=0x7f090039;
         public static final int image_Res=0x7f09007a;
+        public static final int input_text=0x7f090055;
         public static final int left=0x7f090021;
         public static final int listMode=0x7f090009;
         public static final int list_item=0x7f09003b;
         public static final int loginImage=0x7f090067;
-        public static final int login_login_btn=0x7f09006b;
+        public static final int login_btn=0x7f09006b;
         public static final int login_passwd_edit=0x7f09006a;
         public static final int login_top_layout=0x7f090068;
         public static final int login_user_edit=0x7f090069;
@@ -1903,6 +1903,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f090005;
         public static final int progress_horizontal=0x7f090006;
         public static final int radio=0x7f090041;
+        public static final int recommend_button=0x7f090079;
         public static final int relativeLayout=0x7f09005a;
         public static final int request_imageView=0x7f09005b;
         public static final int request_text=0x7f09005c;
@@ -1938,7 +1939,6 @@ containing a value of this type.
         public static final int textView2=0x7f09006e;
         public static final int textView3=0x7f09006f;
         public static final int textView4=0x7f090070;
-        public static final int textView5=0x7f090055;
         public static final int third=0x7f090080;
         public static final int title=0x7f09003d;
         public static final int top=0x7f090024;

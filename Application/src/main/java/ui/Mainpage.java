@@ -37,21 +37,21 @@ import java.util.Locale;
 public class Mainpage extends FragmentActivity {
 
     private GoogleMap mMap;
-    public Marker marker;
+    private Marker marker;
     private PolylineOptions poly;
-    Bitmap bitmap;
+    private Bitmap bitmap;
+    private int state = 0;
+    private Button startBtn;
     public static final int RUNSTATE = 1;
     public static final int STOPSTATE = 0;
-
-    public  final static String SER_KEY = "ui";
-    private int state = 0;
+    public final static String SER_KEY = "ui";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainpage);
         setUpMapIfNeeded();
-
+        startBtn = (Button)findViewById(R.id.googlemaps_start);
         LocationManager locationManager;
         String svcName= Context.LOCATION_SERVICE;
         locationManager = (LocationManager)getSystemService(svcName);
@@ -70,14 +70,12 @@ public class Mainpage extends FragmentActivity {
             LatLng latlng = fromLocationToLatLng(location);
             marker = mMap.addMarker(new MarkerOptions().position(latlng).icon(BitmapDescriptorFactory.defaultMarker(
                     BitmapDescriptorFactory.HUE_GREEN)));
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng,
-                    17));
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng,17));
         }
 
         poly = new PolylineOptions();
         updateWithNewLocation(location);
-        locationManager.requestLocationUpdates(provider, 1000, 10,
-                locationListener);
+        locationManager.requestLocationUpdates(provider, 1000, 10,locationListener);
     }
     @Override
     protected void onResume() {
@@ -92,20 +90,12 @@ public class Mainpage extends FragmentActivity {
     private void updateWithNewLocation(Location location) {
 
         if (location != null) {
-            // Update the map location.
-
             LatLng latlng=fromLocationToLatLng(location);
-
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng,
-                    17));
-
-
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng,17));
             if(marker !=null)
                 marker.remove();
-
             marker =mMap.addMarker(new MarkerOptions().position(latlng).icon(BitmapDescriptorFactory.defaultMarker(
                     BitmapDescriptorFactory.HUE_GREEN)).title("Running map"));
-
             double lat = location.getLatitude();
             double lng = location.getLongitude();
             poly.add(new LatLng(lat,lng));
@@ -121,17 +111,14 @@ public class Mainpage extends FragmentActivity {
         public void onLocationChanged(Location location) {
             updateWithNewLocation(location);
         }
-
         public void onProviderDisabled(String provider) {}
         public void onProviderEnabled(String provider) {}
-        public void onStatusChanged(String provider, int status,
-                                    Bundle extras) {}
+        public void onStatusChanged(String provider, int status, Bundle extras) {}
     };
 
     private void setUpMapIfNeeded() {
         if (mMap == null) {
-            mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
-                    .getMap();
+            mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
             if (mMap != null) {
                 setUpMap();
             }
@@ -144,16 +131,15 @@ public class Mainpage extends FragmentActivity {
     }
 
     public void buttonClicked(View view){
-        Button bt = (Button) findViewById(R.id.googlemaps_start);
+        startBtn = (Button) findViewById(R.id.googlemaps_start);
         state++;
         if(state == RUNSTATE) {
-            bt.setText("Stop");
+            startBtn.setText("Stop");
         }else{
             state = STOPSTATE;
             try {
-
-                Bundle mBundle = new Bundle();
-                Drawable drawable = CaptureMapScreen();
+                //Bundle mBundle = new Bundle();
+                //Drawable drawable = CaptureMapScreen();
                 // mBundle.putSerializable(SER_KEY, drawable);
                 Intent intent = new Intent(this, Resultdisplay.class);
                 startActivity(intent);
@@ -174,9 +160,7 @@ public class Mainpage extends FragmentActivity {
                 bitmap = snapshot;
             }
         };
-
         mMap.snapshot(callback);
-
         return new BitmapDrawable(getResources(),bitmap);
     }
 }

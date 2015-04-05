@@ -6,17 +6,24 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.example.android.actionbarcompat.styled.MainActivity;
 import com.example.android.actionbarcompat.styled.R;
 
 
 public class LogIn extends ActionBarActivity {
-
+    private EditText userText;
+    private EditText passwordText;
+    private Button loginBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
+        userText = (EditText) findViewById(R.id.login_user_edit);
+        passwordText = (EditText) findViewById(R.id.login_passwd_edit);
+        loginBtn = (Button) findViewById(R.id.login_btn);
     }
 
     @Override
