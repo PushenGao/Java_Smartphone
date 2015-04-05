@@ -59,12 +59,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ADD"
-            android:id="@+id/button"
+            android:id="@+id/recommend_button"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_alignBottom="@+id/textView"
             android:layout_alignTop="@+id/textView"
-            android:onClick="viewProfile"/>
+            />
 
 
     </RelativeLayout>
