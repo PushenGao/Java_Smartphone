@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chat_window_relativelayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -9,20 +10,23 @@
     tools:context=".CallCamera">
 
     <TableLayout
+        android:id="@+id/chat_window_tablelayout"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        >
 
         <TableRow
+            android:id="@+id/chat_window_tablerow"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:clickable="false"
             android:paddingTop="700dp">
 
             <EditText
+                android:id="@+id/input_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/input_text"
                 android:minWidth="460dp" />
 
             <Button
@@ -35,4 +39,4 @@
 
 </RelativeLayout>
 
-<!-- From: file:/Users/JiateLi/Desktop/April_9_Java/Application/src/main/res/layout/activity_chat_window.xml -->
+<!-- From: file:/Users/Jackyliz/Documents/Course/JAVA%20/Java_Smartphone/Application/src/main/res/layout/activity_chat_window.xml -->

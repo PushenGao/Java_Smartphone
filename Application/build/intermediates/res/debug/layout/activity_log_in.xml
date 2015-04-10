@@ -1,5 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:id="@+id/login_linearlayout"
     android:layout_height="match_parent"
     android:background="#eee"
     android:orientation="vertical"
@@ -50,6 +51,7 @@
         android:hint="@string/password"/>
 
     <RelativeLayout
+        android:id="@+id/login_relativelayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -83,4 +85,4 @@
     </RelativeLayout>
 
 </LinearLayout>
-<!-- From: file:/Users/JiateLi/Desktop/April_9_Java/Application/src/main/res/layout/activity_log_in.xml -->
+<!-- From: file:/Users/Jackyliz/Documents/Course/JAVA%20/Java_Smartphone/Application/src/main/res/layout/activity_log_in.xml -->

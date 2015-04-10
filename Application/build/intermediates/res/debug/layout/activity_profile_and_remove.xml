@@ -1,5 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:id="@+id/profileandremove_linearlayout"
     android:layout_height="fill_parent"
     android:background="#fcfcfc"
     tools:context="ui.ProfileAndRemove"
@@ -7,14 +8,15 @@
     android:weightSum="1">
 
     <RelativeLayout
+        android:id="@+id/profileandremove_relativelayout"
         android:layout_width="fill_parent"
         android:layout_height="45dp"
-        android:id="@+id/profileandremove_head"
         android:background="@drawable/bar"
         android:gravity="center_vertical"  >
 
 
         <TextView
+            android:id="@+id/profileandremove_textview1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/we_run"
@@ -25,6 +27,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/profileandremove_relativelayout2"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:gravity="center_vertical"
@@ -33,7 +36,7 @@
         android:layout_gravity="top">
 
         <ImageView
-            android:id="@+id/head"
+            android:id="@+id/profileandremove_imageview1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/zheng"
@@ -46,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/zheng"
-        android:id="@+id/profileandremove_text1"
+        android:id="@+id/profileandremove_textview2"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/background_floating_material_dark"
         android:textSize="40dp" />
@@ -55,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/location_ca"
-        android:id="@+id/profileandremove_text2"
+        android:id="@+id/profileandremove_textview3"
         android:layout_gravity="center_horizontal|left"
         android:textSize="30dp"
         android:paddingLeft="10dp" />
@@ -64,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/personal_info"
-        android:id="@+id/profileandremove_text3"
+        android:id="@+id/profileandremove_textview4"
         android:layout_gravity="center_horizontal|left"
         android:textSize="30dp"
         android:paddingLeft="10dp" />
@@ -91,4 +94,4 @@
 </LinearLayout>
 
 
-<!-- From: file:/Users/JiateLi/Desktop/April_9_Java/Application/src/main/res/layout/activity_profile_and_remove.xml -->
+<!-- From: file:/Users/Jackyliz/Documents/Course/JAVA%20/Java_Smartphone/Application/src/main/res/layout/activity_profile_and_remove.xml -->

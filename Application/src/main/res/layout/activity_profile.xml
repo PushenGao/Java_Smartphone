@@ -1,5 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:id="@+id/profile_linearlayout"
     android:layout_height="fill_parent"
     android:background="#fcfcfc"
     tools:context="ui.Profile"
@@ -7,14 +8,15 @@
     android:weightSum="1">
 
     <RelativeLayout
+        android:id="@+id/profile_relativelayout"
         android:layout_width="fill_parent"
         android:layout_height="45dp"
-        android:id="@+id/title"
         android:background="@drawable/bar"
         android:gravity="center_vertical"  >
 
 
         <TextView
+            android:id="@+id/profile_textview1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/we_run"
@@ -25,6 +27,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/profile_relativelayout2"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:gravity="center_vertical"
@@ -33,7 +36,7 @@
         android:onClick="startchat"
         android:layout_gravity="top">
         <ImageView
-            android:id="@+id/head"
+            android:id="@+id/profile_imageview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/pushen"
@@ -45,37 +48,37 @@
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/profile_textview2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/pushen"
-        android:id="@+id/textView2"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/background_floating_material_dark"
         android:textSize="40dp" />
 
     <TextView
+        android:id="@+id/profile_textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/location_ca"
-        android:id="@+id/textView3"
         android:layout_gravity="center_horizontal|left"
         android:textSize="30dp"
         android:paddingLeft="10dp" />
 
     <TextView
+        android:id="@+id/profile_textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/personal_info"
-        android:id="@+id/textView4"
         android:layout_gravity="center_horizontal|left"
         android:textSize="30dp"
         android:paddingLeft="10dp" />
 
     <Button
+        android:id="@+id/profile_button1"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:text="@string/add_friend"
-        android:id="@+id/button2"
         android:layout_gravity="center_horizontal"
         android:textSize="25dp"
         android:background="#ff3339ff" />

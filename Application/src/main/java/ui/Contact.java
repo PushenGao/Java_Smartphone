@@ -24,7 +24,7 @@ public class Contact extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
 
-        layout = (RelativeLayout) findViewById(R.id.contact_relative);
+        layout = (RelativeLayout) findViewById(R.id.contact_relativelayout3);
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

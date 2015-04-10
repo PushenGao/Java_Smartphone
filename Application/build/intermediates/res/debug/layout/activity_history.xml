@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:id="@+id/history_relativelayout1"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -17,85 +18,92 @@
         android:layout_alignParentTop="true" />
 
     <TableLayout
+        android:id="@+id/history_tablelayout1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:paddingTop="500dp">
 
         <TableRow
+            android:id="@+id/history_tablerow1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
 
             <TextView
+                android:id="@+id/total_run"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/total_run"
-                android:id="@+id/total_run" />
+                android:text="@string/total_run" />
         </TableRow>
 
         <TableRow
+            android:id="@+id/history_tablerow2"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
 
             <TextView
+                android:id="@+id/show_total_run"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/total_miles"
-                android:id="@+id/show_total_run"
                 android:paddingLeft="400dp" />
         </TableRow>
 
         <TableRow
+            android:id="@+id/history_tablerow3"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
 
             <TextView
+                android:id="@+id/total_energy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/energy_consumption"
-                android:id="@+id/total_energy" />
+                android:text="@string/energy_consumption" />
         </TableRow>
 
         <TableRow
+            android:id="@+id/history_tablerow4"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
 
             <TextView
+                android:id="@+id/show_total_energy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/total_kals"
-                android:id="@+id/show_total_energy"
                 android:paddingLeft="400dp" />
         </TableRow>
 
         <TableRow
+            android:id="@+id/history_tablerow5"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
 
             <TextView
+                android:id="@+id/total_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/total_time"
-                android:id="@+id/total_time" />
+                android:text="@string/total_time" />
         </TableRow>
 
         <TableRow
+            android:id="@+id/history_tablerow6"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
 
             <TextView
+                android:id="@+id/show_total_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/total_hour"
-                android:id="@+id/show_total_time"
                 android:paddingLeft="400dp" />
         </TableRow>
     </TableLayout>
 </RelativeLayout>
 
-<!-- From: file:/Users/JiateLi/Desktop/April_9_Java/Application/src/main/res/layout/activity_history.xml -->
+<!-- From: file:/Users/Jackyliz/Documents/Course/JAVA%20/Java_Smartphone/Application/src/main/res/layout/activity_history.xml -->

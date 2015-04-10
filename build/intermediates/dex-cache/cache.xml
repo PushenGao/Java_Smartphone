@@ -2,60 +2,60 @@
 <items version="2" >
 
     <item
-        jar="/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/22.0.0/classes.jar"
+        jar="/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/22.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="11842de6a309c447b3a3d60d73ad637a87c58994">
-        <dex dex="/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/pre-dexed/debug/classes-71983c8a119d782447dc0fdf9a8d093cb41292bd.jar" />
+        <dex dex="/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-0c4df484584a58a90fbe46f618e11a1a04b5ad1f.jar" />
     </item>
     <item
-        jar="/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="95482e7c792a7c0d5a9d5461e97726bd54fe9549">
-        <dex dex="/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/pre-dexed/debug/classes-c1f1b53379634488c15525bace3c417ca298968b.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/pre-dexed/debug/classes-93bba30ee2e537154f80a1c6e79abd816681c43e.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/22.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="c9e0c6fc22b22b96d0db564cf073ab6f288bb758">
-        <dex dex="/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/pre-dexed/debug/classes-e80ea9b8665a25b024723bb63d1e6eac732b7f7f.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
-        <dex dex="/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/pre-dexed/debug/classes-8f304d6c7ec541b3a785b69855793617cd595d01.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/6.5.87/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a75b29dc51b364df032af8bcfcad7e54ccfda28d">
-        <dex dex="/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/pre-dexed/debug/classes-d68e5fa0a17e63fbc4d18a95ee362b2e28a95f33.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-d008f6bc85537c42e562b7ccb97a13812db09c79.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jar="/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-6cc06675fd89a29feb4c330ec1958de332d5293f.jar" />
+        <dex dex="/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-2cf156b3e4ee10c66aa3a8f59804e608786a5e80.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a75b29dc51b364df032af8bcfcad7e54ccfda28d">
+        <dex dex="/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-2cd64f794518cfa1d0245084f743c4f46eb07986.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-bff3dcf5347d7c023269e20bf4e719a2fc4af4f7.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="95482e7c792a7c0d5a9d5461e97726bd54fe9549">
+        <dex dex="/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-d81867f0dcbb1f77e24e6b50c80e6beda5acea91.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c9e0c6fc22b22b96d0db564cf073ab6f288bb758">
+        <dex dex="/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-6988d985ac45edee6b2557b0d90a3a6e9f323477.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-b12b7827b00f687c3abea19d3ee9976a2fe0d57a.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-14942bd6fbe58da247bc91eac88c432118b45307.jar" />
     </item>
 
 </items>

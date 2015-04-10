@@ -1,9 +1,9 @@
-/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/classes/debug
-/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-d008f6bc85537c42e562b7ccb97a13812db09c79.jar
-/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/pre-dexed/debug/classes-71983c8a119d782447dc0fdf9a8d093cb41292bd.jar
-/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/pre-dexed/debug/classes-e80ea9b8665a25b024723bb63d1e6eac732b7f7f.jar
-/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/pre-dexed/debug/classes-d68e5fa0a17e63fbc4d18a95ee362b2e28a95f33.jar
-/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-6cc06675fd89a29feb4c330ec1958de332d5293f.jar
-/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/pre-dexed/debug/classes-8f304d6c7ec541b3a785b69855793617cd595d01.jar
-/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/pre-dexed/debug/classes-93bba30ee2e537154f80a1c6e79abd816681c43e.jar
-/Users/JiateLi/Desktop/April_9_Java/Application/build/intermediates/pre-dexed/debug/classes-c1f1b53379634488c15525bace3c417ca298968b.jar
+/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/classes/debug
+/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-14942bd6fbe58da247bc91eac88c432118b45307.jar
+/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-0c4df484584a58a90fbe46f618e11a1a04b5ad1f.jar
+/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-6988d985ac45edee6b2557b0d90a3a6e9f323477.jar
+/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-2cd64f794518cfa1d0245084f743c4f46eb07986.jar
+/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-2cf156b3e4ee10c66aa3a8f59804e608786a5e80.jar
+/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-b12b7827b00f687c3abea19d3ee9976a2fe0d57a.jar
+/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-bff3dcf5347d7c023269e20bf4e719a2fc4af4f7.jar
+/Users/Jackyliz/Documents/Course/JAVA /Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-d81867f0dcbb1f77e24e6b50c80e6beda5acea91.jar
