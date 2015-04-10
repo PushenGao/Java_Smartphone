@@ -36,7 +36,7 @@ public abstract class ChatRecordDBConnectorProxy {
     public void insertRecord(String name, String withuser, String time, String content)
     {
         ContentValues newRecord = new ContentValues();
-        newRecord.put("userid", name);
+        newRecord.put("senderuserid", name);
         newRecord.put("withuserid", withuser);
         newRecord.put("time", time);
         newRecord.put("content", content);
@@ -49,7 +49,7 @@ public abstract class ChatRecordDBConnectorProxy {
     public void updateRecord(long id, String name, String withuser, String time, String content)
     {
         ContentValues editRecord = new ContentValues();
-        editRecord.put("userid", name);
+        editRecord.put("senderuserid", name);
         editRecord.put("withuserid", withuser);
         editRecord.put("time", time);
         editRecord.put("content", content);
@@ -73,7 +73,7 @@ public abstract class ChatRecordDBConnectorProxy {
         for (; !cursor.isAfterLast(); cursor.moveToNext()) {
             sb.append(cursor.getString(cursor.getColumnIndex("_id")));
             sb.append(",");
-            sb.append(cursor.getString(cursor.getColumnIndex("userid")));
+            sb.append(cursor.getString(cursor.getColumnIndex("senderuserid")));
             sb.append(",");
             sb.append(cursor.getString(cursor.getColumnIndex("withuserid")));
             sb.append(",");
@@ -107,7 +107,7 @@ public abstract class ChatRecordDBConnectorProxy {
         public void onCreate(SQLiteDatabase db)
         {
             String createQuery = "CREATE TABLE chatrecords" +
-                    "(_id INTEGER PRIMARY KEY AUTOINCREMENT, userid TEXT, withuserid TEXT, " +
+                    "(_id INTEGER PRIMARY KEY AUTOINCREMENT, senderuserid TEXT, withuserid TEXT, " +
                     "time TEXT, content TEXT);";
             db.execSQL(createQuery);
         }

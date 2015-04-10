@@ -33,36 +33,24 @@ public abstract class AccountDBConnectorProxy {
             database.close();
     }
 
-    public void insertAccount(String id, String name, int runtime, double rundistance, int totalenergy,
-                              String gender, int age)
+    public void insertAccount(String id, String name)
     {
         ContentValues newAccount = new ContentValues();
         newAccount.put("userid", id);
         newAccount.put("name", name);
-        newAccount.put("runtime", runtime);
-        newAccount.put("rundistance", rundistance);
-        newAccount.put("totalenergy", totalenergy);
-        newAccount.put("gender", gender);
-        newAccount.put("age", age);
 
         open();
         database.insert("account", null, newAccount);
         close();
     }
 
-    public void updateAccount(String id, String name, int runtime, double rundistance, int totalenergy,
-                              String gender, int age)
+    public void updateAccount(String id, String name)
     {
         ContentValues editAccount = new ContentValues();
         editAccount.put("name", name);
-        editAccount.put("runtime", runtime);
-        editAccount.put("rundistance", rundistance);
-        editAccount.put("totalenergy", totalenergy);
-        editAccount.put("gender", gender);
-        editAccount.put("age", age);
 
         open();
-        database.update("account", editAccount, "_id=" + id, null);
+        database.update("account", editAccount, "userid=" + id, null);
         close();
     }
 
@@ -81,16 +69,6 @@ public abstract class AccountDBConnectorProxy {
             sb.append(cursor.getString(cursor.getColumnIndex("userid")));
             sb.append(",");
             sb.append(cursor.getString(cursor.getColumnIndex("name")));
-            sb.append(",");
-            sb.append(cursor.getInt(cursor.getColumnIndex("runtime")));
-            sb.append(",");
-            sb.append(cursor.getDouble(cursor.getColumnIndex("rundistance")));
-            sb.append(",");
-            sb.append(cursor.getInt(cursor.getColumnIndex("totalenergy")));
-            sb.append(",");
-            sb.append(cursor.getString(cursor.getColumnIndex("gender")));
-            sb.append(",");
-            sb.append(cursor.getInt(cursor.getColumnIndex("age")));
             sb.append(";");
         }
         cursor.close();
@@ -118,9 +96,7 @@ public abstract class AccountDBConnectorProxy {
         public void onCreate(SQLiteDatabase db)
         {
             String createQuery = "CREATE TABLE account" +
-                    "(userid TEXT PRIMARY KEY, name TEXT, " +
-                    "runtime INTEGER, rundistance REAL, totalenergy INTEGER," +
-                    "gender TEXT, age INTEGER);";
+                    "(userid TEXT PRIMARY KEY, name TEXT);";
 
             db.execSQL(createQuery);
         }
