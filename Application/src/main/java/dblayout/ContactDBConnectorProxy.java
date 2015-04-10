@@ -33,9 +33,10 @@ public abstract class ContactDBConnectorProxy {
             database.close();
     }
 
-    public void insertContact(String name, String gender, int age, int type)
+    public void insertContact(String id, String name, String gender, int age, int type)
     {
         ContentValues newContact = new ContentValues();
+        newContact.put("userid", id);
         newContact.put("name", name);
         newContact.put("gender", gender);
         newContact.put("age", age);
@@ -46,7 +47,7 @@ public abstract class ContactDBConnectorProxy {
         close();
     }
 
-    public void updateContact(long id, String name, String gender, int age, int type)
+    public void updateContact(String id, String name, String gender, int age, int type)
     {
         ContentValues editContact = new ContentValues();
         editContact.put("name", name);
@@ -55,14 +56,14 @@ public abstract class ContactDBConnectorProxy {
         editContact.put("type", type);
 
         open();
-        database.update("contacts", editContact, "_id=" + id, null);
+        database.update("contacts", editContact, "userid=" + id, null);
         close();
     }
 
-    public Cursor getContact(long id)
+    public Cursor getContact(String id)
     {
         return database.query(
-                "contacts", null, "_id=" + id, null, null, null, null);
+                "contacts", null, "userid=" + id, null, null, null, null);
     }
 
     public String getAllContact() {
@@ -71,7 +72,7 @@ public abstract class ContactDBConnectorProxy {
         cursor.moveToFirst();
         StringBuilder sb = new StringBuilder();
         for (; !cursor.isAfterLast(); cursor.moveToNext()) {
-            sb.append(cursor.getString(cursor.getColumnIndex("_id")));
+            sb.append(cursor.getString(cursor.getColumnIndex("userid")));
             sb.append(",");
             sb.append(cursor.getString(cursor.getColumnIndex("name")));
             sb.append(",");
@@ -88,10 +89,10 @@ public abstract class ContactDBConnectorProxy {
         return sb.toString();
     }
 
-    public void deleteContact(long id)
+    public void deleteContact(String id)
     {
         open();
-        database.delete("contacts", "_id=" + id, null);
+        database.delete("contacts", "userid=" + id, null);
         close();
     }
 
@@ -107,7 +108,7 @@ public abstract class ContactDBConnectorProxy {
         public void onCreate(SQLiteDatabase db)
         {
             String createQuery = "CREATE TABLE contacts" +
-                    "(_id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, " +
+                    "(userid TEXT PRIMARY KEY AUTOINCREMENT, name TEXT, " +
                     "gender TEXT, age INTEGER, type INTEGER);";
             db.execSQL(createQuery);
         }

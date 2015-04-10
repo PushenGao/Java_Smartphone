@@ -33,10 +33,11 @@ public abstract class AccountDBConnectorProxy {
             database.close();
     }
 
-    public void insertAccount(String name, int runtime, double rundistance, int totalenergy,
+    public void insertAccount(String id, String name, int runtime, double rundistance, int totalenergy,
                               String gender, int age)
     {
         ContentValues newAccount = new ContentValues();
+        newAccount.put("userid", id);
         newAccount.put("name", name);
         newAccount.put("runtime", runtime);
         newAccount.put("rundistance", rundistance);
@@ -49,7 +50,7 @@ public abstract class AccountDBConnectorProxy {
         close();
     }
 
-    public void updateAccount(long id, String name, int runtime, double rundistance, int totalenergy,
+    public void updateAccount(String id, String name, int runtime, double rundistance, int totalenergy,
                               String gender, int age)
     {
         ContentValues editAccount = new ContentValues();
@@ -65,10 +66,10 @@ public abstract class AccountDBConnectorProxy {
         close();
     }
 
-    public Cursor getAccount(long id)
+    public Cursor getAccount(String id)
     {
         return database.query(
-                "account", null, "_id=" + id, null, null, null, null);
+                "account", null, "userid=" + id, null, null, null, null);
     }
 
     public String getDataInfo() {
@@ -77,7 +78,7 @@ public abstract class AccountDBConnectorProxy {
         cursor.moveToFirst();
         StringBuilder sb = new StringBuilder();
         for (; !cursor.isAfterLast(); cursor.moveToNext()) {
-            sb.append(cursor.getString(cursor.getColumnIndex("_id")));
+            sb.append(cursor.getString(cursor.getColumnIndex("userid")));
             sb.append(",");
             sb.append(cursor.getString(cursor.getColumnIndex("name")));
             sb.append(",");
@@ -98,10 +99,10 @@ public abstract class AccountDBConnectorProxy {
         return sb.toString();
     }
 
-    public void deleteAccount(long id)
+    public void deleteAccount(String id)
     {
         open();
-        database.delete("account", "_id=" + id, null);
+        database.delete("account", "userid=" + id, null);
         close();
     }
 
@@ -117,7 +118,7 @@ public abstract class AccountDBConnectorProxy {
         public void onCreate(SQLiteDatabase db)
         {
             String createQuery = "CREATE TABLE account" +
-                    "(_id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, " +
+                    "(userid TEXT PRIMARY KEY, name TEXT, " +
                     "runtime INTEGER, rundistance REAL, totalenergy INTEGER," +
                     "gender TEXT, age INTEGER);";
 

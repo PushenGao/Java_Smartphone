@@ -33,10 +33,11 @@ public abstract class ChatRecordDBConnectorProxy {
             database.close();
     }
 
-    public void insertRecord(String name, String time, String content)
+    public void insertRecord(String name, String withuser, String time, String content)
     {
         ContentValues newRecord = new ContentValues();
-        newRecord.put("name", name);
+        newRecord.put("userid", name);
+        newRecord.put("withuserid", withuser);
         newRecord.put("time", time);
         newRecord.put("content", content);
 
@@ -45,10 +46,11 @@ public abstract class ChatRecordDBConnectorProxy {
         close();
     }
 
-    public void updateRecord(long id, String name, String time, String content)
+    public void updateRecord(long id, String name, String withuser, String time, String content)
     {
         ContentValues editRecord = new ContentValues();
-        editRecord.put("name", name);
+        editRecord.put("userid", name);
+        editRecord.put("withuserid", withuser);
         editRecord.put("time", time);
         editRecord.put("content", content);
 
@@ -71,7 +73,9 @@ public abstract class ChatRecordDBConnectorProxy {
         for (; !cursor.isAfterLast(); cursor.moveToNext()) {
             sb.append(cursor.getString(cursor.getColumnIndex("_id")));
             sb.append(",");
-            sb.append(cursor.getString(cursor.getColumnIndex("name")));
+            sb.append(cursor.getString(cursor.getColumnIndex("userid")));
+            sb.append(",");
+            sb.append(cursor.getString(cursor.getColumnIndex("withuserid")));
             sb.append(",");
             sb.append(cursor.getString(cursor.getColumnIndex("time")));
             sb.append(",");
@@ -103,7 +107,7 @@ public abstract class ChatRecordDBConnectorProxy {
         public void onCreate(SQLiteDatabase db)
         {
             String createQuery = "CREATE TABLE chatrecords" +
-                    "(_id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, " +
+                    "(_id INTEGER PRIMARY KEY AUTOINCREMENT, userid TEXT, withuserid TEXT, " +
                     "time TEXT, content TEXT);";
             db.execSQL(createQuery);
         }
