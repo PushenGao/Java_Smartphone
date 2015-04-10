@@ -10,6 +10,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
+//TODO contacts db needs to be redesigned.
 
 public abstract class ContactDBConnectorProxy {
     private static final String DATABASE_NAME = "WeRun";

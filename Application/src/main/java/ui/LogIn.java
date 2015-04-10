@@ -52,4 +52,9 @@ public class LogIn extends ActionBarActivity {
         Intent intent = new Intent(this,com.example.android.actionbarcompat.styled.MainActivity.class);
         startActivity(intent);
     }
+
+    public void register_werun(View view){
+        Intent intent = new Intent(this,RegisterActivity.class);
+        startActivity(intent);
+    }
 }

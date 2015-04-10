@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Total run"
+                android:text="@string/total_run"
                 android:id="@+id/total_run" />
         </TableRow>
 
@@ -41,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="15000miles"
+                android:text="@string/total_miles"
                 android:id="@+id/show_total_run"
                 android:paddingLeft="400dp" />
         </TableRow>
@@ -54,7 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Energy consumption"
+                android:text="@string/energy_consumption"
                 android:id="@+id/total_energy" />
         </TableRow>
 
@@ -66,7 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="10000Kal"
+                android:text="@string/total_kals"
                 android:id="@+id/show_total_energy"
                 android:paddingLeft="400dp" />
         </TableRow>
@@ -79,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Total time"
+                android:text="@string/total_time"
                 android:id="@+id/total_time" />
         </TableRow>
 
@@ -91,7 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="250hours"
+                android:text="@string/total_hour"
                 android:id="@+id/show_total_time"
                 android:paddingLeft="400dp" />
         </TableRow>

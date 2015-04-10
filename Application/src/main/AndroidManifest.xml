@@ -85,15 +85,14 @@
             android:label="@string/title_activity_tabSelect" >
         </activity>
         <activity
-            android:launchMode="singleTop"
             android:name="ui.Recommend"
-            android:label="@string/title_activity_recommend" >
+            android:label="@string/title_activity_recommend"
+            android:launchMode="singleTop" >
         </activity>
         <activity
-            android:parentActivityName="ui.Recommend"
             android:name="ui.Profile"
             android:label="@string/title_activity_profile"
-            >
+            android:parentActivityName="ui.Recommend" >
         </activity>
         <activity
             android:name="ui.ChatWindow"
@@ -104,21 +103,21 @@
         <activity
             android:name="ui.Contact"
             android:label="@string/title_activity_contact"
-            android:launchMode="singleTop">
-
+            android:launchMode="singleTop" >
         </activity>
         <activity
             android:name="ui.History"
             android:label="@string/title_activity_history" >
         </activity>
-
         <activity
             android:name="ui.ProfileAndRemove"
             android:label="@string/title_activity_profile_and_remove"
             android:parentActivityName="ui.Contact" >
-
         </activity>
-
+        <activity
+            android:name="ui.RegisterActivity"
+            android:label="@string/title_activity_register" >
+        </activity>
     </application>
 
 </manifest>
