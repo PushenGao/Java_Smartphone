@@ -31,7 +31,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:singleLine="true"
-        android:hint="FaceBook Id"/>
+        android:hint="@string/user_id"/>
 
 
     <EditText
@@ -45,9 +45,9 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
 
-        android:password="true"
+        android:inputType="textPassword"
         android:singleLine="true"
-        android:hint="Password"/>
+        android:hint="@string/password"/>
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -62,7 +62,7 @@
             android:layout_height="40dp"
             android:layout_marginRight="20dp"
             android:layout_alignParentRight="true"
-            android:text="LogIn"
+            android:text="@string/title_activity_log_in"
 
             android:textColor="#ffffff"
             android:textSize="18sp"

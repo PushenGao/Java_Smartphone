@@ -8,22 +8,22 @@
         <RadioGroup android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:checkedButton="@+id/first" android:id="@+id/states">
             <RadioButton android:id="@+id/first"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:checked="false"
-                android:text="Chat"
+                android:text="@string/chat_text"
                 android:textSize="15dp" />
             <RadioButton android:id="@+id/second"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="Contact"
+                android:text="@string/title_activity_contact"
                 android:checked="false"
                 android:textSize="15dp" />
             <RadioButton android:id="@+id/third"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="Run"
+                android:text="@string/run"
                 android:checked="false"
                 android:textSize="15dp" />
             <RadioButton android:id="@+id/fourth"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="Recommend"
+                android:text="@string/title_activity_recommend"
                 android:checked="false"
                 android:textSize="15dp" />
             <RadioButton android:id="@+id/fifth"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="History"
+                android:text="@string/title_activity_history"
                 android:checked="false"
                 android:textSize="15dp" />
         </RadioGroup>

@@ -16,43 +16,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="WeRun"
+            android:text="@string/we_run"
             android:layout_centerInParent="true"
             android:textSize="20sp"
             android:textColor="#ffffff" />
-        <!--<ImageButton
-            android:id="@+id/right_btn"
-            android:layout_width="67dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="5dp"
-            android:src="@drawable/titlebutton"
-            android:onClick="btnmainright"
-            />-->
-        <!--android:background="@drawable/title_btn_right"-->
     </RelativeLayout>
 
-    <!--<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:background="@drawable/searchbar" >
 
-        <EditText
-            android:id="@+id/editText1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="鎼滅储"
-            android:singleLine="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:textColor="#000"
-            android:background="@drawable/search_bar_edit_bg"
-            android:drawableLeft="@drawable/searchbaricon" >
-        </EditText>
-
-    </LinearLayout> -->
 
     <TableLayout
         android:layout_width="fill_parent"
@@ -67,6 +37,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:id="@+id/search_bar"
+                android:hint="add new friend here"
                 android:minWidth="500dp" />
 
             <Button
@@ -107,7 +78,7 @@
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/request_imageView"
                     android:padding="7dp"
-                    android:text="Pushen wants to connect with you"
+                    android:text="@string/pushen_wants_add_friend"
                     android:textColor="#000" />
 
             </RelativeLayout>
@@ -116,7 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/request_text"
-                android:text="Agree"
+                android:text="@string/agree"
                 android:id="@+id/agree_button"
                 android:layout_column="19" />
 
@@ -131,11 +102,7 @@
                 android:layout_height="60dp"
                 android:gravity="center_vertical"
                 android:id="@+id/contact_relative"
-
-
-
                 >
-                <!--android:background="@drawable/mm_listitem"-->
                 <ImageView
                     android:id="@+id/contact_head"
                     android:layout_width="55dp"
@@ -145,15 +112,13 @@
                     android:paddingLeft="5dp"
                     android:src="@drawable/zheng"
                     />
-                <!--android:src="@drawable/xiaohei"-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/contact_head"
                     android:padding="7dp"
-                    android:text="Zheng"
+                    android:text="@string/zheng"
                     android:textColor="#000" />
-
 
 
             </RelativeLayout>
