@@ -4,9 +4,18 @@ package model;
  * Created by Jackyliz on 4/10/15.
  */
 public class HistoryRecord {
+    private String userid;
     private String totalTime;
     private String totalDistance;
     private String totalConsumption;
+
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
 
     public String getTotalTime() {
         return totalTime;
