@@ -5,9 +5,9 @@ import android.content.Context;
 /**
  * Created by JiateLi on 15/4/9.
  */
-public class AccountDBConnector extends AccountDBConnectorProxy {
+public class DBConnector extends DBConnectorProxy {
 
-    public AccountDBConnector(Context context){
+    public DBConnector(Context context){
         super(context);
     }
 }

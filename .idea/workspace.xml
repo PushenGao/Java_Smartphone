@@ -50,11 +50,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AccountDBConnectorProxy.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/dblayout/AccountDBConnectorProxy.java">
+      <file leaf-file-name="DBConnectorProxy.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/dblayout/DBConnectorProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29829547" vertical-offset="0" max-vertical-offset="1620">
-              <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+            <state vertical-scroll-proportion="6.7329545" vertical-offset="0" max-vertical-offset="2625">
+              <caret line="167" column="37" selection-start-line="167" selection-start-column="37" selection-end-line="167" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -87,16 +87,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
               <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Register.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/model/Register.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="870">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,8 +132,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountDBConnector.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/dblayout/AccountDBConnector.java">
+      <file leaf-file-name="DBConnector.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/dblayout/DBConnector.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
               <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
@@ -1156,7 +1146,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/actionbarcompat/styled/MainActivity.java" />
         <option value="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/java/ui/ProfileAndRemove.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/ui/ChatWindow.java" />
@@ -1184,7 +1173,6 @@
         <option value="$PROJECT_DIR$/Application/src/main/res/layout/activity_contact.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/java/ui/Contact.java" />
         <option value="$PROJECT_DIR$/Application/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/dblayout/AccountDBConnectorProxy.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/dblayout/ChatRecordDBConnectorProxy.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/exception/ExceptionHandler.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/exception/UserIDNotFindExceptionHandler.java" />
@@ -1207,6 +1195,8 @@
         <option value="$PROJECT_DIR$/Application/src/main/java/ws/remote/UpdateAccountInfo.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/ws/local/GetChatRecord.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/ws/local/AccountDAO.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/dblayout/AccountDBConnectorProxy.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/dblayout/DBConnector.java" />
       </list>
     </option>
   </component>
@@ -1949,20 +1939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/dblayout/ChatRecordDBConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/dblayout/ChatRecordDBConnectorProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1186" max-vertical-offset="1770">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/ui_mainactivity.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -2085,7 +2061,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/dblayout/AccountDBConnector.java">
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/dblayout/DBConnector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
@@ -2093,10 +2069,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/dblayout/AccountDBConnectorProxy.java">
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/dblayout/DBConnectorProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29829547" vertical-offset="0" max-vertical-offset="1620">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        <state vertical-scroll-proportion="6.7329545" vertical-offset="0" max-vertical-offset="2625">
+          <caret line="167" column="37" selection-start-line="167" selection-start-column="37" selection-end-line="167" selection-end-column="37" />
           <folding />
         </state>
       </provider>
