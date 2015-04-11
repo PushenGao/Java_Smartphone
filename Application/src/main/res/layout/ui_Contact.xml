@@ -41,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:hint="add new friend here"
+                android:hint="@string/add_friend_hint"
                 android:minWidth="500dp" />
 
             <Button

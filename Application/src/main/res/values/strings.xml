@@ -33,6 +33,8 @@
     <string name="run">Run</string>
     <string name="we_run">WeRun</string>
     <string name="ok">OK</string>
+    <string name="add_friend_hint">add new friend here</string>
+
     <string name="gender">Gender</string>
     <string name="age">Age</string>
     <string name="location_ca">Location:CA</string>
