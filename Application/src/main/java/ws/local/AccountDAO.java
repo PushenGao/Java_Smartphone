@@ -1,9 +1,9 @@
-package local;
+package ws.local;
 
 /**
  * Created by JiateLi on 15/4/11.
  */
-public class AccountDAO implements IDAO{
+public class AccountDAO implements IDAO {
 
     @Override
     public void insertAccount() {

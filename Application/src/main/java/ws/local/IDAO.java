@@ -1,4 +1,4 @@
-package local;
+package ws.local;
 
 import java.util.HashMap;
 
