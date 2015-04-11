@@ -48,7 +48,7 @@ public class MainActivity extends TabActivity implements TabHost.TabContentFacto
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ui_MainActivity);
+        setContentView(R.layout.ui_mainactivity);
         TabHost tabHost = getTabHost();
         tabHost.addTab(tabHost.newTabSpec("chat").setIndicator("Chat").setContent(new Intent(this, Chathistory.class)));
         tabHost.addTab(tabHost.newTabSpec("contact").setIndicator("Contact").setContent(new Intent(this, Contact.class)));

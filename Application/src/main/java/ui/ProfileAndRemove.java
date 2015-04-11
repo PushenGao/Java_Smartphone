@@ -19,7 +19,7 @@ public class ProfileAndRemove extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ui_ProfileAndRemove);
+        setContentView(R.layout.ui_profileandremove);
 
         addButton = (Button) findViewById(R.id.profileandremove_add);
         addButton.setOnClickListener(new View.OnClickListener() {

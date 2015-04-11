@@ -16,7 +16,7 @@ public class Resultdisplay extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ui_Resultdisplay);
+        setContentView(R.layout.ui_resultdisplay);
         rstBtn = (Button)findViewById(R.id.result_btn);
         rstText = (TextView) findViewById(R.id.rstTexxt);
         StringBuilder sb = new StringBuilder();

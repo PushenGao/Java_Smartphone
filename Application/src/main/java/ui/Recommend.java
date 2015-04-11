@@ -16,7 +16,7 @@ public class Recommend extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ui_Recommend);
+        setContentView(R.layout.ui_recommend);
         bt = (Button)findViewById(R.id.recommend_button);
         bt.setOnClickListener(new View.OnClickListener() {
             @Override

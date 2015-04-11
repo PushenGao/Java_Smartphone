@@ -40,7 +40,7 @@ public class Mainpage extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ui_Mainpage);
+        setContentView(R.layout.ui_mainpage);
         setUpMapIfNeeded();
         startBtn = (Button)findViewById(R.id.googlemaps_start);
         LocationManager locationManager;

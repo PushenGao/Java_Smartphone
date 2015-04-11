@@ -19,7 +19,7 @@ public class ChatWindow extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ui_ChatWindow);
+        setContentView(R.layout.ui_chatwindow);
 
         callCameraButton = (Button) findViewById(R.id.button_callcamera);
         callCameraButton.setOnClickListener(new View.OnClickListener() {

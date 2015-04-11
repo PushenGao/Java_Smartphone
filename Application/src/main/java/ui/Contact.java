@@ -22,7 +22,7 @@ public class Contact extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ui_Contact);
+        setContentView(R.layout.ui_contact);
 
         layout = (RelativeLayout) findViewById(R.id.contact_relativelayout3);
         layout.setOnClickListener(new View.OnClickListener() {

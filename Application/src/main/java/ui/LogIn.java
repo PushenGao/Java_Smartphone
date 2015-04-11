@@ -19,7 +19,7 @@ public class LogIn extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ui_LogIn);
+        setContentView(R.layout.ui_login);
         userText = (EditText) findViewById(R.id.login_user_edit);
         passwordText = (EditText) findViewById(R.id.login_passwd_edit);
         loginBtn = (Button) findViewById(R.id.login_btn);

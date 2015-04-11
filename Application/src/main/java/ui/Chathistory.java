@@ -17,7 +17,7 @@ public class Chathistory extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ui_Chathistory);
+        setContentView(R.layout.ui_chathistory);
 
         layout = (RelativeLayout) findViewById(R.id.chat_relative);
         layout.setOnClickListener(new View.OnClickListener() {
