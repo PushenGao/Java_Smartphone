@@ -15,7 +15,7 @@ public class RegisterActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.ui_RegisterActivity);
     }
 
 
@@ -42,7 +42,7 @@ public class RegisterActivity extends ActionBarActivity {
     }
 
     public void onSubmitClicked(View view){
-        Intent intent = new Intent(this,com.example.android.actionbarcompat.styled.MainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }

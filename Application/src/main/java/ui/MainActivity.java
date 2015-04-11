@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.actionbarcompat.styled;
+package ui;
 
 import android.app.TabActivity;
 import android.content.Intent;
@@ -29,7 +29,7 @@ import android.widget.RadioGroup;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-import ui.*;
+import com.example.android.actionbarcompat.styled.R;
 
 /**
  * This sample shows you how to use ActionBarCompat with a customized theme. It utilizes a split
@@ -48,7 +48,7 @@ public class MainActivity extends TabActivity implements TabHost.TabContentFacto
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sample_main);
+        setContentView(R.layout.ui_MainActivity);
         TabHost tabHost = getTabHost();
         tabHost.addTab(tabHost.newTabSpec("chat").setIndicator("Chat").setContent(new Intent(this, Chathistory.class)));
         tabHost.addTab(tabHost.newTabSpec("contact").setIndicator("Contact").setContent(new Intent(this, Contact.class)));

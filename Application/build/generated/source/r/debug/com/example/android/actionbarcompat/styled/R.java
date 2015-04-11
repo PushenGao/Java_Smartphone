@@ -2037,18 +2037,18 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030013;
         public static final int abc_search_view=0x7f030014;
         public static final int abc_simple_dropdown_hint=0x7f030015;
-        public static final int activity_chat_window=0x7f030016;
-        public static final int activity_chathistory=0x7f030017;
-        public static final int activity_contact=0x7f030018;
-        public static final int activity_history=0x7f030019;
-        public static final int activity_log_in=0x7f03001a;
-        public static final int activity_mainpage=0x7f03001b;
-        public static final int activity_profile=0x7f03001c;
-        public static final int activity_profile_and_remove=0x7f03001d;
-        public static final int activity_recommend=0x7f03001e;
-        public static final int activity_register=0x7f03001f;
-        public static final int activity_resultdisplay=0x7f030020;
-        public static final int sample_main=0x7f030021;
+        public static final int ui_ChatWindow =0x7f030016;
+        public static final int ui_Chathistory =0x7f030017;
+        public static final int ui_Contact =0x7f030018;
+        public static final int ui_History =0x7f030019;
+        public static final int ui_LogIn =0x7f03001a;
+        public static final int ui_Mainpage =0x7f03001b;
+        public static final int ui_Profile =0x7f03001c;
+        public static final int ui_ProfileAndRemove =0x7f03001d;
+        public static final int ui_Recommend =0x7f03001e;
+        public static final int ui_RegisterActivity =0x7f03001f;
+        public static final int ui_Resultdisplay =0x7f030020;
+        public static final int ui_MainActivity =0x7f030021;
         public static final int support_simple_spinner_dropdown_item=0x7f030022;
     }
     public static final class menu {

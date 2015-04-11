@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 
 import com.example.android.actionbarcompat.styled.R;
 
@@ -17,7 +16,7 @@ public class Recommend extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recommend);
+        setContentView(R.layout.ui_Recommend);
         bt = (Button)findViewById(R.id.recommend_button);
         bt.setOnClickListener(new View.OnClickListener() {
             @Override

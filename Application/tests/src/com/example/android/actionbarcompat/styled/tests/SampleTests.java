@@ -15,9 +15,9 @@
 */
 package com.example.android.actionbarcompat.styled.tests;
 
-import com.example.android.actionbarcompat.styled.*;
-
 import android.test.ActivityInstrumentationTestCase2;
+
+import ui.MainActivity;
 
 /**
 * Tests for Styled sample.

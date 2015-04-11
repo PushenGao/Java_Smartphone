@@ -6,18 +6,14 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.location.Address;
 import android.location.Criteria;
-import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.android.actionbarcompat.styled.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -27,12 +23,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
-
-import java.io.IOException;
-import java.util.List;
-import java.util.Locale;
 
 public class Mainpage extends FragmentActivity {
 
@@ -49,7 +40,7 @@ public class Mainpage extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mainpage);
+        setContentView(R.layout.ui_Mainpage);
         setUpMapIfNeeded();
         startBtn = (Button)findViewById(R.id.googlemaps_start);
         LocationManager locationManager;

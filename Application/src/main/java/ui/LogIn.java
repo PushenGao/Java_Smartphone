@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.android.actionbarcompat.styled.MainActivity;
 import com.example.android.actionbarcompat.styled.R;
 
 
@@ -20,7 +19,7 @@ public class LogIn extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_log_in);
+        setContentView(R.layout.ui_LogIn);
         userText = (EditText) findViewById(R.id.login_user_edit);
         passwordText = (EditText) findViewById(R.id.login_passwd_edit);
         loginBtn = (Button) findViewById(R.id.login_btn);
@@ -49,7 +48,7 @@ public class LogIn extends ActionBarActivity {
     }
 
     public void login_werun(View view){
-        Intent intent = new Intent(this,com.example.android.actionbarcompat.styled.MainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 

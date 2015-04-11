@@ -81,7 +81,7 @@
             android:label="@string/title_activity_runningpage" >
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="ui.MainActivity"
             android:label="@string/title_activity_tabSelect" >
         </activity>
         <activity

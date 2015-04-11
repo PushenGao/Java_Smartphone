@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.android.actionbarcompat.styled.MainActivity;
 import com.example.android.actionbarcompat.styled.R;
 
 public class Resultdisplay extends ActionBarActivity {
@@ -17,7 +16,7 @@ public class Resultdisplay extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resultdisplay);
+        setContentView(R.layout.ui_Resultdisplay);
         rstBtn = (Button)findViewById(R.id.result_btn);
         rstText = (TextView) findViewById(R.id.rstTexxt);
         StringBuilder sb = new StringBuilder();
