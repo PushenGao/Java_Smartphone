@@ -1,4 +1,4 @@
-package servermodel;
+package model;
 
 /**
  * Created by Jackyliz on 4/10/15.

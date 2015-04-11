@@ -1,6 +1,6 @@
 package adapter;
 
-import localmodel.Register;
+import model.Register;
 
 /**
  * Created by Jackyliz on 4/10/15.

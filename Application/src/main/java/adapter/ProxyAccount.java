@@ -2,8 +2,8 @@ package adapter;
 
 import java.util.LinkedHashMap;
 
-import localmodel.Register;
-import servermodel.Account;
+import model.Register;
+import model.Account;
 
 /**
  * Created by Jackyliz on 4/10/15.

@@ -1,4 +1,4 @@
-package localmodel;
+package model;
 
 /**
  * Created by Jackyliz on 4/10/15.
@@ -28,5 +28,25 @@ public class Register {
 
     public String getAge() {
         return age;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
     }
 }
