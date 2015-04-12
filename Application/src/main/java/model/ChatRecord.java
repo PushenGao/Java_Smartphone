@@ -4,9 +4,14 @@ package model;
  * Created by Jackyliz on 4/10/15.
  */
 public class ChatRecord {
+    private String myName;
     private String friendName;
     private String timeStamp;
     private String chatContent;
+
+    public String getMyName() {
+        return myName;
+    }
 
     public String getFriendName() {
         return friendName;
@@ -18,6 +23,10 @@ public class ChatRecord {
 
     public String getChatContent() {
         return chatContent;
+    }
+
+    public void setMyName(String myName) {
+        this.myName = myName;
     }
 
     public void setFriendName(String friendName) {

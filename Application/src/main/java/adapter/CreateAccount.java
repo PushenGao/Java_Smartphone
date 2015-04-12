@@ -1,13 +1,10 @@
 package adapter;
 
-import model.Register;
+import model.Account;
 
 /**
- * Created by Jackyliz on 4/10/15.
+ * Created by JiateLi on 15/4/11.
  */
 public interface CreateAccount {
-
-    public void buildAccount(Register register);
-
-    public void printAccount();
+    public Account createAccount(String userid, String name);
 }
