@@ -1,21 +1,17 @@
 package model;
 
-import java.util.HashMap;
 import java.util.HashSet;
 
 /**
  * Created by Jackyliz on 4/10/15.
  */
-public class Account {
+public class Account extends BasicAccount {
     private String userId;
     private String password;
-    private String gender;
-    private String name;
-    private HashSet<String> friendSet;
-    private HashSet<String> pendingSet;
-    private HashSet<String> sendingSet;
-    private HistoryRecord historyRecord;
-    private HashMap<String, ChatRecord> map;
+    private String requestType;
+    private HashSet<BasicAccount> friendSet;
+    private HashSet<BasicAccount> pendingSet;
+    private HashSet<BasicAccount> sendingSet;
 
     public String getUserId() {
         return userId;
@@ -25,28 +21,16 @@ public class Account {
         return password;
     }
 
-    public String getGender() {
-        return gender;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public HashSet<String> getFriendSet() {
+    public HashSet<BasicAccount> getFriendSet() {
         return friendSet;
     }
 
-    public HashSet<String> getPendingSet() {
+    public HashSet<BasicAccount> getPendingSet() {
         return pendingSet;
     }
 
-    public HashSet<String> getSendingSet() {
+    public HashSet<BasicAccount> getSendingSet() {
         return sendingSet;
-    }
-
-    public HistoryRecord getHistoryRecord() {
-        return historyRecord;
     }
 
     public void setUserId(String userId) {
@@ -57,27 +41,41 @@ public class Account {
         this.password = password;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setFriendSet(HashSet<String> friendSet) {
+    public void setFriendSet(HashSet<BasicAccount> friendSet) {
         this.friendSet = friendSet;
     }
 
-    public void setPendingSet(HashSet<String> pendingSet) {
+    public void setPendingSet(HashSet<BasicAccount> pendingSet) {
         this.pendingSet = pendingSet;
     }
 
-    public void setSendingSet(HashSet<String> sendingSet) {
+    public void setSendingSet(HashSet<BasicAccount> sendingSet) {
         this.sendingSet = sendingSet;
     }
 
-    public void setHistoryRecord(HistoryRecord historyRecord) {
-        this.historyRecord = historyRecord;
+    public void friendRequest(String userid, String friendid, String requestType) {
+
     }
+
+    public void addFriend() {
+
+    }
+
+    public void acceptFriend() {
+
+    }
+
+    public void rejectFriend() {
+
+    }
+
+    public void deleteFriend() {
+
+    }
+
+    public void blockFriend() {
+
+    }
+
+
 }
