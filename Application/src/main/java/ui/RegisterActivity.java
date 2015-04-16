@@ -6,16 +6,43 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import com.example.android.actionbarcompat.styled.R;
 
+import exception.RegisterInputNullExceptionHandler;
+import model.Account;
+import ws.remote.RegisterAccountToServer;
+
 
 public class RegisterActivity extends ActionBarActivity {
+    private EditText userText;
+    private EditText passwordText;
+    private EditText nameText;
+    private EditText ageText;
+    private RadioGroup radioSexGroup;
+    private RadioButton radioSexButton;
+    private Button registerBtn;
+    private String inputUser;
+    private String inputPW;
+    private String inputName;
+    private int inputAge;
+    private String inputGender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_registeractivity);
+        userText = (EditText) findViewById(R.id.registerUserid);
+        passwordText = (EditText) findViewById(R.id.registerPassword);
+        nameText = (EditText) findViewById(R.id.registerName);
+        radioSexGroup = (RadioGroup) findViewById(R.id.registerGenderGroup);
+        ageText = (EditText) findViewById(R.id.registerAge);
+        registerBtn = (Button) findViewById(R.id.btn_register);
+
     }
 
 
@@ -42,7 +69,34 @@ public class RegisterActivity extends ActionBarActivity {
     }
 
     public void onSubmitClicked(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        //get the register information
+        try {
+            inputUser = userText.getText().toString();
+            inputPW = passwordText.getText().toString();
+            nameText = (EditText) findViewById(R.id.registerName);
+            radioSexGroup = (RadioGroup) findViewById(R.id.registerGenderGroup);
+            ageText = (EditText) findViewById(R.id.registerAge);
+            registerBtn = (Button) findViewById(R.id.btn_register);
+            inputName = nameText.getText().toString();
+            inputAge = Integer.parseInt(ageText.getText().toString());
+            int selectedId = radioSexGroup.getCheckedRadioButtonId();
+            radioSexButton = (RadioButton) findViewById(selectedId);
+            inputGender = radioSexButton.getText().toString();
+
+            Account newAccount = new Account();
+            RegisterAccountToServer registerAccountToServer = new RegisterAccountToServer();
+            registerAccountToServer.register(newAccount);
+            
+            LogIn.loginAccount = newAccount;
+
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }catch(Exception e){
+            RegisterInputNullExceptionHandler registerInputNullExceptionHandler = new RegisterInputNullExceptionHandler();
+            registerInputNullExceptionHandler.fix();
+        }
+
+
+
     }
 }

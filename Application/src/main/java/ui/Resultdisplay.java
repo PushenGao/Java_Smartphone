@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.example.android.actionbarcompat.styled.R;
 
+import ws.remote.UpdateRunningRecord;
+
 public class Resultdisplay extends ActionBarActivity {
     private Button rstBtn;
     private TextView rstText;
@@ -31,6 +33,13 @@ public class Resultdisplay extends ActionBarActivity {
         int intTime = (int) (time/1000);
         int min = intTime / 60;
         int second = intTime % 60;
+        //TODO 更新账号的historyRecord,下一句是与server更新,需要更新到DAO?(是否需要DAO).更新到数据库
+        LogIn.loginAccount.getHistoryRecord().addDistance(result[0]);
+        LogIn.loginAccount.getHistoryRecord().addTime(intTime);
+
+        UpdateRunningRecord updateRunningRecord = new UpdateRunningRecord();
+        updateRunningRecord.updateHistoryRecord(LogIn.loginAccount.getHistoryRecord());
+//updateAccount
         rstText.setText(result[0] + " meters " + min + " mins " + second + " s");
     }
 

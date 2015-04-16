@@ -9,7 +9,7 @@ import ui.History;
  */
 public class UpdateRunningRecord {
 
-    public void updateAccount(HistoryRecord history){
+    public void updateHistoryRecord(HistoryRecord history){
 
     }
 }

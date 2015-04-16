@@ -8,14 +8,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.android.actionbarcompat.styled.R;
+
+import exception.LoginInputNullExceptionHandler;
+import model.Account;
+import ws.remote.VerifyLoginAccount;
 
 
 public class LogIn extends ActionBarActivity {
     private EditText userText;
     private EditText passwordText;
     private Button loginBtn;
+    public static Account loginAccount;
+    public String inputUser;
+    public String inputPW;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,12 +58,29 @@ public class LogIn extends ActionBarActivity {
 
     public void login_werun(View view){
 
-        String inputUser = userText.getText().toString();
-        String inputPW = passwordText.getText().toString();
+        try {
+            inputUser = userText.getText().toString();
+            inputPW = passwordText.getText().toString();
 
+        }catch(Exception e){
+            LoginInputNullExceptionHandler loginInputNullExceptionHandler = new LoginInputNullExceptionHandler();
+            loginInputNullExceptionHandler.fix();
+        }
 
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        //verify the log in userid and password
+        VerifyLoginAccount verifyLoginAccount = new VerifyLoginAccount();
+        Account tryAccount = verifyLoginAccount.verifyAccount(inputUser,inputPW);
+        //if the server has the account
+        if(tryAccount != null){
+            loginAccount = tryAccount;
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+        //如果不存在账号需要提示账号不存在，提示注册
+        else{
+            Toast.makeText(getApplicationContext(), "The Account verification fails!",
+                    Toast.LENGTH_LONG).show();
+        }
     }
 
     public void register_werun(View view){
