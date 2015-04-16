@@ -2,60 +2,60 @@
 <items version="2" >
 
     <item
-        jar="/Users/JiateLi/Desktop/April_10_java/Application/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/22.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="c9e0c6fc22b22b96d0db564cf073ab6f288bb758">
-        <dex dex="/Users/JiateLi/Desktop/April_10_java/Application/build/intermediates/pre-dexed/debug/classes-9256fc7b87880c44f84366fe5eb29576792cec8e.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/April_10_java/Application/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="/Users/JiateLi/Desktop/April_10_java/Application/build/intermediates/pre-dexed/debug/classes-f531fdb989e85434702fd2f1b2b930219f254dc5.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/April_10_java/Application/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="/Users/JiateLi/Desktop/April_10_java/Application/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-ae96cfc76df30812e95c1dfe34a0625e7d2d3dd6.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/April_10_java/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/classes.jar"
+        jar="/Users/JiateLi/Desktop/werun/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="95482e7c792a7c0d5a9d5461e97726bd54fe9549">
-        <dex dex="/Users/JiateLi/Desktop/April_10_java/Application/build/intermediates/pre-dexed/debug/classes-cfa89006b462d434ce6df8dad425d110e8e22dc5.jar" />
+        <dex dex="/Users/JiateLi/Desktop/werun/Application/build/intermediates/pre-dexed/debug/classes-b471dc0c399d2bdd7ed5fd28c1370ee9edfb1578.jar" />
     </item>
     <item
-        jar="/Users/JiateLi/Desktop/April_10_java/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/22.0.0/classes.jar"
+        jar="/Users/JiateLi/Desktop/werun/Application/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/22.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="11842de6a309c447b3a3d60d73ad637a87c58994">
-        <dex dex="/Users/JiateLi/Desktop/April_10_java/Application/build/intermediates/pre-dexed/debug/classes-f725d22d05c56212c58f8b389cdddf2fee40f6f2.jar" />
+        sha1="c9e0c6fc22b22b96d0db564cf073ab6f288bb758">
+        <dex dex="/Users/JiateLi/Desktop/werun/Application/build/intermediates/pre-dexed/debug/classes-0c46711fb6cf84828513962f2f87c14e63f0da6c.jar" />
+    </item>
+    <item
+        jar="/Users/JiateLi/Desktop/werun/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a75b29dc51b364df032af8bcfcad7e54ccfda28d">
+        <dex dex="/Users/JiateLi/Desktop/werun/Application/build/intermediates/pre-dexed/debug/classes-25fb162e10a43074ec7aff29d7bad27377a49a87.jar" />
+    </item>
+    <item
+        jar="/Users/JiateLi/Desktop/werun/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/Users/JiateLi/Desktop/werun/Application/build/intermediates/pre-dexed/debug/classes-b0f1bd7f4d9a45aa546a41a051fb40665b3d072a.jar" />
     </item>
     <item
         jar="/Users/JiateLi/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="/Users/JiateLi/Desktop/April_10_java/Application/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-d008f6bc85537c42e562b7ccb97a13812db09c79.jar" />
+        <dex dex="/Users/JiateLi/Desktop/werun/Application/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-d008f6bc85537c42e562b7ccb97a13812db09c79.jar" />
     </item>
     <item
-        jar="/Users/JiateLi/Desktop/April_10_java/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jar="/Users/JiateLi/Desktop/werun/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/22.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
-        <dex dex="/Users/JiateLi/Desktop/April_10_java/Application/build/intermediates/pre-dexed/debug/classes-400002c82d97e685ead8a3677fcf5797b307b9eb.jar" />
+        sha1="11842de6a309c447b3a3d60d73ad637a87c58994">
+        <dex dex="/Users/JiateLi/Desktop/werun/Application/build/intermediates/pre-dexed/debug/classes-36bb254c591896faa69b5562b844bbdc758b544f.jar" />
     </item>
     <item
-        jar="/Users/JiateLi/Desktop/April_10_java/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/6.5.87/classes.jar"
+        jar="/Users/JiateLi/Desktop/werun/Application/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="a75b29dc51b364df032af8bcfcad7e54ccfda28d">
-        <dex dex="/Users/JiateLi/Desktop/April_10_java/Application/build/intermediates/pre-dexed/debug/classes-d1e44205aee8da899f3703c731a315c5dd2655af.jar" />
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/JiateLi/Desktop/werun/Application/build/intermediates/pre-dexed/debug/classes-25e7cf998b55e46090a07482217ed6fc63f467c7.jar" />
+    </item>
+    <item
+        jar="/Users/JiateLi/Desktop/werun/Application/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/JiateLi/Desktop/werun/Application/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-d416c6fa23ee76df7f9efdee7a92e4459d6bf43f.jar" />
     </item>
 
 </items>

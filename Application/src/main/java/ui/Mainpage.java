@@ -10,10 +10,12 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.SystemClock;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Chronometer;
 
 import com.example.android.actionbarcompat.styled.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -24,6 +26,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
+
+import java.text.NumberFormat;
 
 public class Mainpage extends FragmentActivity {
 
@@ -36,7 +40,15 @@ public class Mainpage extends FragmentActivity {
     public static final int RUNSTATE = 1;
     public static final int STOPSTATE = 0;
     public final static String SER_KEY = "ui";
+    public Location location;
+    public Location mylocation;
+    public Location startPoint;
+    public Location endPoint;
+//    public Chronometer chronometer;
+    public long startTime;
+    public long endTime;
 
+    public final static String EXTRA_MESSAGE = "com.mycompany.MortgageCalculation.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +59,7 @@ public class Mainpage extends FragmentActivity {
         String svcName= Context.LOCATION_SERVICE;
         locationManager = (LocationManager)getSystemService(svcName);
 
+//        chronometer = new Chronometer(this);
         Criteria criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
         criteria.setPowerRequirement(Criteria.POWER_LOW);
@@ -55,9 +68,10 @@ public class Mainpage extends FragmentActivity {
         criteria.setSpeedRequired(false);
         criteria.setCostAllowed(true);
         String provider = locationManager.getBestProvider(criteria, true);
-        Location location = null;
+        location = null;
         if(location != null) {
             location = locationManager.getLastKnownLocation(provider);
+            mylocation = location;
             LatLng latlng = fromLocationToLatLng(location);
             marker = mMap.addMarker(new MarkerOptions().position(latlng).icon(BitmapDescriptorFactory.defaultMarker(
                     BitmapDescriptorFactory.HUE_GREEN)));
@@ -66,8 +80,9 @@ public class Mainpage extends FragmentActivity {
 
         poly = new PolylineOptions();
         updateWithNewLocation(location);
-        locationManager.requestLocationUpdates(provider, 1000, 10,locationListener);
+        locationManager.requestLocationUpdates(provider, 1000, 10, locationListener);
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -81,14 +96,16 @@ public class Mainpage extends FragmentActivity {
     private void updateWithNewLocation(Location location) {
 
         if (location != null) {
+            mylocation = location;
             LatLng latlng=fromLocationToLatLng(location);
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng,17));
             if(marker !=null)
                 marker.remove();
-            marker =mMap.addMarker(new MarkerOptions().position(latlng).icon(BitmapDescriptorFactory.defaultMarker(
+            marker = mMap.addMarker(new MarkerOptions().position(latlng).icon(BitmapDescriptorFactory.defaultMarker(
                     BitmapDescriptorFactory.HUE_GREEN)).title("Running map"));
             double lat = location.getLatitude();
             double lng = location.getLongitude();
+
             poly.add(new LatLng(lat,lng));
             poly.color(Color.BLUE);
             poly.width(5);
@@ -126,13 +143,35 @@ public class Mainpage extends FragmentActivity {
         state++;
         if(state == RUNSTATE) {
             startBtn.setText("Stop");
+            //updateWithNewLocation(location);
+            startPoint = mylocation;
+
+            //chronometer.start();
+            startTime = SystemClock.elapsedRealtime();
         }else{
             state = STOPSTATE;
             try {
+                endPoint = mylocation;
+                float results[]=new float[1];
+                //現在緯度,現在經度,目標緯度,目標經度,
+                Location.distanceBetween(startPoint.getLatitude(), startPoint.getLongitude(),
+                        endPoint.getLatitude(), endPoint.getLongitude(), results);
+
                 //Bundle mBundle = new Bundle();
                 //Drawable drawable = CaptureMapScreen();
                 // mBundle.putSerializable(SER_KEY, drawable);
                 Intent intent = new Intent(this, Resultdisplay.class);
+                String distance = NumberFormat.getInstance().format(results[0]);
+                //chronometer.stop();
+                endTime = SystemClock.elapsedRealtime();
+                long totalTime = endTime - startTime;
+                String pastTime = String.valueOf(totalTime);
+                StringBuilder sb = new StringBuilder();
+                sb.append(distance);
+                sb.append("jiateli");
+                sb.append(pastTime);
+                intent.putExtra(EXTRA_MESSAGE, sb.toString());
+
                 startActivity(intent);
             } catch (Exception e) {
                 e.printStackTrace();

@@ -48,6 +48,11 @@ public class LogIn extends ActionBarActivity {
     }
 
     public void login_werun(View view){
+
+        String inputUser = userText.getText().toString();
+        String inputPW = passwordText.getText().toString();
+
+
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
