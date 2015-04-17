@@ -14,6 +14,7 @@ import com.example.android.actionbarcompat.styled.R;
 
 import exception.LoginInputNullExceptionHandler;
 import model.Account;
+import ws.remote.RemoteServerProxy;
 import ws.remote.VerifyLoginAccount;
 
 
@@ -68,8 +69,8 @@ public class LogIn extends ActionBarActivity {
         }
 
         //verify the log in userid and password
-        VerifyLoginAccount verifyLoginAccount = new VerifyLoginAccount();
-        Account tryAccount = verifyLoginAccount.verifyAccount(inputUser,inputPW);
+        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+        Account tryAccount = remoteServerProxy.verifyAccount(inputUser,inputPW);
         //if the server has the account
         if(tryAccount != null){
             loginAccount = tryAccount;
