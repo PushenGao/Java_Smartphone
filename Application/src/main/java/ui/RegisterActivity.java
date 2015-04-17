@@ -17,6 +17,7 @@ import com.example.android.actionbarcompat.styled.R;
 import exception.RegisterInputNullExceptionHandler;
 import model.Account;
 import ws.remote.RegisterAccountToServer;
+import ws.remote.RemoteServerProxy;
 
 
 public class RegisterActivity extends ActionBarActivity {
@@ -84,11 +85,11 @@ public class RegisterActivity extends ActionBarActivity {
             radioSexButton = (RadioButton) findViewById(selectedId);
             inputGender = radioSexButton.getText().toString();
 
-            //TODO 注册新的账号
-            Account newAccount = new Account();
+            String strAge = "" + inputAge;
+            Account newAccount = new Account(inputName, strAge, inputGender, inputUser, inputPW);
 
-            RegisterAccountToServer registerAccountToServer = new RegisterAccountToServer();
-            registerAccountToServer.register(newAccount);
+            RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+            remoteServerProxy.register(newAccount);
             //处理是否已经被注册
             //Toast.makeText(getApplicationContext(), "The userid has been registered",
             //Toast.LENGTH_LONG).show();

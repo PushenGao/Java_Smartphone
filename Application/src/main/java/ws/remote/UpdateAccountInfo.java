@@ -5,9 +5,8 @@ import model.Account;
 /**
  * Created by JiateLi on 15/4/11.
  */
-public class UpdateAccountInfo {
+public interface UpdateAccountInfo {
 
-    public void updateAccount(Account account){
+    public void updateAccount(Account account);
 
-    }
 }

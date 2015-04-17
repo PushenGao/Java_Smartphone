@@ -7,9 +7,7 @@ import ui.History;
 /**
  * Created by JiateLi on 15/4/11.
  */
-public class UpdateRunningRecord {
+public interface UpdateRunningRecord {
 
-    public void updateHistoryRecord(HistoryRecord history){
-
-    }
+    public void updateHistoryRecord(HistoryRecord history);
 }
