@@ -1,20 +1,39 @@
 package model;
 
+import java.util.HashMap;
 import java.util.HashSet;
+
+import ui.History;
 
 /**
  * Created by Jackyliz on 4/10/15.
  */
 public class Account extends BasicAccount {
-    private String userId;
+    private String userid;
     private String password;
-    private String requestType;
+    //    private String requestType;
     private HashSet<BasicAccount> friendSet;
     private HashSet<BasicAccount> pendingSet;
-    private HashSet<BasicAccount> sendingSet;
+
+    public Account() {
+
+    }
+
+    public Account(String name, String age, String gender, HistoryRecord historyRecord, HashMap<String, ChatRecord> chatRecordMap,
+                   String userid, String password, HashSet<BasicAccount> friendSet, HashSet<BasicAccount> pendingSet) {
+        this.setName(name);
+        this.setAge(age);
+        this.setGender(gender);
+        this.setHistoryRecord(historyRecord);
+        this.setChatMap(chatRecordMap);
+        this.userid = userid;
+        this.password = password;
+        this.friendSet = friendSet;
+        this.pendingSet = pendingSet;
+    }
 
     public String getUserId() {
-        return userId;
+        return userid;
     }
 
     public String getPassword() {
@@ -29,12 +48,8 @@ public class Account extends BasicAccount {
         return pendingSet;
     }
 
-    public HashSet<BasicAccount> getSendingSet() {
-        return sendingSet;
-    }
-
     public void setUserId(String userId) {
-        this.userId = userId;
+        this.userid = userId;
     }
 
     public void setPassword(String password) {
@@ -47,10 +62,6 @@ public class Account extends BasicAccount {
 
     public void setPendingSet(HashSet<BasicAccount> pendingSet) {
         this.pendingSet = pendingSet;
-    }
-
-    public void setSendingSet(HashSet<BasicAccount> sendingSet) {
-        this.sendingSet = sendingSet;
     }
 
     public void friendRequest(String userid, String friendid, String requestType) {
@@ -69,13 +80,19 @@ public class Account extends BasicAccount {
 
     }
 
-    public void deleteFriend() {
-
-    }
-
     public void blockFriend() {
 
     }
 
+    public void deleteFriend() {
 
+    }
+
+//    private HashSet<BasicAccount> sendingSet;
+//    public HashSet<BasicAccount> getSendingSet() {
+//        return sendingSet;
+//    }
+//    public void setSendingSet(HashSet<BasicAccount> sendingSet) {
+//        this.sendingSet = sendingSet;
+//    }
 }
