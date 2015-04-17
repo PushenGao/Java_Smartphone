@@ -143,9 +143,14 @@ public class Mainpage extends FragmentActivity {
         state++;
         if(state == RUNSTATE) {
             startBtn.setText("Stop");
-            //updateWithNewLocation(location);
-            startPoint = mylocation;
 
+            startPoint = mylocation;
+            //update the last location of logged in account
+            StringBuilder sb = new StringBuilder();
+            sb.append(startPoint.getLongitude());
+            sb.append("werun");
+            sb.append(startPoint.getLatitude());
+            LogIn.loginAccount.getHistoryRecord().setLastLocation(sb.toString());
             //chronometer.start();
             startTime = SystemClock.elapsedRealtime();
         }else{
@@ -153,7 +158,7 @@ public class Mainpage extends FragmentActivity {
             try {
                 endPoint = mylocation;
                 float results[]=new float[1];
-                //現在緯度,現在經度,目標緯度,目標經度,
+
                 Location.distanceBetween(startPoint.getLatitude(), startPoint.getLongitude(),
                         endPoint.getLatitude(), endPoint.getLongitude(), results);
 
@@ -168,7 +173,7 @@ public class Mainpage extends FragmentActivity {
                 String pastTime = String.valueOf(totalTime);
                 StringBuilder sb = new StringBuilder();
                 sb.append(distance);
-                sb.append("jiateli");
+                sb.append("werun");
                 sb.append(pastTime);
                 intent.putExtra(EXTRA_MESSAGE, sb.toString());
 

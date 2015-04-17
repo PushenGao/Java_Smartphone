@@ -23,23 +23,23 @@ public class Resultdisplay extends ActionBarActivity {
         String message = intent.getStringExtra(Mainpage.EXTRA_MESSAGE);
         rstBtn = (Button)findViewById(R.id.result_btn);
         rstText = (TextView) findViewById(R.id.rstTexxt);
-        StringBuilder sb = new StringBuilder();
-        sb.append("Running time: 39 min\n");
-        sb.append("Running distance: 2.5 mile\n");
-        sb.append("Energy consumption: 400 cal");
+//        StringBuilder sb = new StringBuilder();
+//        sb.append("Running time: 39 min\n");
+//        sb.append("Running distance: 2.5 mile\n");
+//        sb.append("Energy consumption: 400 cal");
         //rstText.setText(sb.toString());
-        String[] result = message.split("jiateli");
+        String[] result = message.split("werun");
         long time = Long.parseLong(result[1]);
         int intTime = (int) (time/1000);
         int min = intTime / 60;
         int second = intTime % 60;
-        //TODO 更新账号的historyRecord,下一句是与server更新,需要更新到DAO?(是否需要DAO).更新到数据库,historyRecord的lastlocation更新
+
         LogIn.loginAccount.getHistoryRecord().addDistance(result[0]);
         LogIn.loginAccount.getHistoryRecord().addTime(intTime);
 
         UpdateRunningRecord updateRunningRecord = new UpdateRunningRecord();
         updateRunningRecord.updateHistoryRecord(LogIn.loginAccount.getHistoryRecord());
-//updateAccount
+
         rstText.setText(result[0] + " meters " + min + " mins " + second + " s");
     }
 

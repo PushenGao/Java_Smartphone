@@ -84,9 +84,10 @@ public class RegisterActivity extends ActionBarActivity {
             inputGender = radioSexButton.getText().toString();
 
             Account newAccount = new Account();
+
             RegisterAccountToServer registerAccountToServer = new RegisterAccountToServer();
             registerAccountToServer.register(newAccount);
-
+            //处理是否已经被注册
             LogIn.loginAccount = newAccount;
 
             Intent intent = new Intent(this, MainActivity.class);

@@ -10,6 +10,13 @@ public class HistoryRecord {
     //private String totalConsumption;
     private String lastLocation;
 
+    public String getLastLocation() {
+        return lastLocation;
+    }
+
+    public void setLastLocation(String lastLocation) {
+        this.lastLocation = lastLocation;
+    }
 
     public String getUserid() {
         return userid;
