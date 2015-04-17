@@ -11,14 +11,24 @@ import ui.History;
 public class Account extends BasicAccount {
     private String userid;
     private String password;
-    //    private String requestType;
     private HashSet<BasicAccount> friendSet;
     private HashSet<BasicAccount> pendingSet;
 
+    // empty constructor
     public Account() {
 
     }
 
+    // register constructor
+    public Account(String name, String age, String gender, String userid, String password) {
+        this.setName(name);
+        this.setAge(age);
+        this.setGender(gender);
+        this.userid = userid;
+        this.password = password;
+    }
+
+    // complete constructor
     public Account(String name, String age, String gender, HistoryRecord historyRecord, HashMap<String, ChatRecord> chatRecordMap,
                    String userid, String password, HashSet<BasicAccount> friendSet, HashSet<BasicAccount> pendingSet) {
         this.setName(name);
