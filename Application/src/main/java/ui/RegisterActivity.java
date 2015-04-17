@@ -16,7 +16,6 @@ import com.example.android.actionbarcompat.styled.R;
 
 import exception.RegisterInputNullExceptionHandler;
 import model.Account;
-import ws.remote.RegisterAccountToServer;
 import ws.remote.RemoteServerProxy;
 
 
