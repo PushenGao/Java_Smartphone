@@ -33,7 +33,7 @@ public class Resultdisplay extends ActionBarActivity {
         int intTime = (int) (time/1000);
         int min = intTime / 60;
         int second = intTime % 60;
-        //TODO 更新账号的historyRecord,下一句是与server更新,需要更新到DAO?(是否需要DAO).更新到数据库
+        //TODO 更新账号的historyRecord,下一句是与server更新,需要更新到DAO?(是否需要DAO).更新到数据库,historyRecord的lastlocation更新
         LogIn.loginAccount.getHistoryRecord().addDistance(result[0]);
         LogIn.loginAccount.getHistoryRecord().addTime(intTime);
 

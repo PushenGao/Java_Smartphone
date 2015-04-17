@@ -86,7 +86,7 @@ public class RegisterActivity extends ActionBarActivity {
             Account newAccount = new Account();
             RegisterAccountToServer registerAccountToServer = new RegisterAccountToServer();
             registerAccountToServer.register(newAccount);
-            
+
             LogIn.loginAccount = newAccount;
 
             Intent intent = new Intent(this, MainActivity.class);

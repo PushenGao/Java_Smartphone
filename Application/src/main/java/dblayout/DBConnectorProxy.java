@@ -11,6 +11,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 
+import java.util.ArrayList;
+
+import model.ChatRecord;
+
 public abstract class DBConnectorProxy {
     private static final String DATABASE_NAME = "WeRun";
     private SQLiteDatabase database;
@@ -32,57 +36,57 @@ public abstract class DBConnectorProxy {
         if (database != null)
             database.close();
     }
-
-    public void insertAccount(String id, String name)
-    {
-        ContentValues newAccount = new ContentValues();
-        newAccount.put("userid", id);
-        newAccount.put("name", name);
-
-        open();
-        database.insert("account", null, newAccount);
-        close();
-    }
-
-    public void updateAccount(String id, String name)
-    {
-        ContentValues editAccount = new ContentValues();
-        editAccount.put("name", name);
-
-        open();
-        database.update("account", editAccount, "userid=" + id, null);
-        close();
-    }
-
-    public Cursor getAccount(String id)
-    {
-        return database.query(
-                "account", null, "userid=" + id, null, null, null, null);
-    }
-
-    public String getDataInfo() {
-        open();
-        Cursor cursor = database.rawQuery("SELECT * FROM account", null);
-        cursor.moveToFirst();
-        StringBuilder sb = new StringBuilder();
-        for (; !cursor.isAfterLast(); cursor.moveToNext()) {
-            sb.append(cursor.getString(cursor.getColumnIndex("userid")));
-            sb.append(",");
-            sb.append(cursor.getString(cursor.getColumnIndex("name")));
-            sb.append(";");
-        }
-        cursor.close();
-        close();
-        sb.setLength(sb.length() - 1);
-        return sb.toString();
-    }
-
-    public void deleteAccount(String id)
-    {
-        open();
-        database.delete("account", "userid=" + id, null);
-        close();
-    }
+//
+//    public void insertAccount(String id, String name)
+//    {
+//        ContentValues newAccount = new ContentValues();
+//        newAccount.put("userid", id);
+//        newAccount.put("name", name);
+//
+//        open();
+//        database.insert("account", null, newAccount);
+//        close();
+//    }
+//
+//    public void updateAccount(String id, String name)
+//    {
+//        ContentValues editAccount = new ContentValues();
+//        editAccount.put("name", name);
+//
+//        open();
+//        database.update("account", editAccount, "userid=" + id, null);
+//        close();
+//    }
+//
+//    public Cursor getAccount(String id)
+//    {
+//        return database.query(
+//                "account", null, "userid=" + id, null, null, null, null);
+//    }
+//
+//    public String getDataInfo() {
+//        open();
+//        Cursor cursor = database.rawQuery("SELECT * FROM account", null);
+//        cursor.moveToFirst();
+//        StringBuilder sb = new StringBuilder();
+//        for (; !cursor.isAfterLast(); cursor.moveToNext()) {
+//            sb.append(cursor.getString(cursor.getColumnIndex("userid")));
+//            sb.append(",");
+//            sb.append(cursor.getString(cursor.getColumnIndex("name")));
+//            sb.append(";");
+//        }
+//        cursor.close();
+//        close();
+//        sb.setLength(sb.length() - 1);
+//        return sb.toString();
+//    }
+//
+//    public void deleteAccount(String id)
+//    {
+//        open();
+//        database.delete("account", "userid=" + id, null);
+//        close();
+//    }
 
     public void insertRecord(String name, String withuser, String time, String content)
     {
@@ -116,27 +120,74 @@ public abstract class DBConnectorProxy {
                 "chatrecords", null, "_id=" + id, null, null, null, null);
     }
 
-    public String getAllRecords() {
+    //needs test
+    public long getRecordId(String senderuserid, String withuserid, String time){
         open();
-        Cursor cursor = database.rawQuery("SELECT * FROM chatrecords", null);
+        Cursor cursor = database.rawQuery("SELECT * FROM chatrecords where senderuserid = " + senderuserid +
+                ", withuserid = " + withuserid + ", time = " + time, null);
         cursor.moveToFirst();
-        StringBuilder sb = new StringBuilder();
+        long rst =  cursor.getLong(cursor.getColumnIndex("_id"));
+        cursor.close();
+        close();
+        return rst;
+    }
+
+
+    public ChatRecord getRecord(String senderuserid, String withuserid, String time){
+        open();
+        Cursor cursor = database.rawQuery("SELECT * FROM chatrecords where senderuserid = " + senderuserid +
+                ", withuserid = " + withuserid + ", time = " + time, null);
+        cursor.moveToFirst();
+        String sender = cursor.getString(cursor.getColumnIndex("senderuserid"));
+        String receiver = cursor.getString(cursor.getColumnIndex("withuserid"));
+        String sendTime = cursor.getString(cursor.getColumnIndex("time"));
+        String content = cursor.getString(cursor.getColumnIndex("content"));
+        ChatRecord chatRecord = new ChatRecord();
+        cursor.close();
+        close();
+        return chatRecord;
+    }
+//    public String getAllRecords() {
+//        open();
+//        Cursor cursor = database.rawQuery("SELECT * FROM chatrecords", null);
+//        cursor.moveToFirst();
+//        StringBuilder sb = new StringBuilder();
+//        for (; !cursor.isAfterLast(); cursor.moveToNext()) {
+//            sb.append(cursor.getString(cursor.getColumnIndex("_id")));
+//            sb.append(",");
+//            sb.append(cursor.getString(cursor.getColumnIndex("senderuserid")));
+//            sb.append(",");
+//            sb.append(cursor.getString(cursor.getColumnIndex("withuserid")));
+//            sb.append(",");
+//            sb.append(cursor.getString(cursor.getColumnIndex("time")));
+//            sb.append(",");
+//            sb.append(cursor.getString(cursor.getColumnIndex("content")));
+//            sb.append(";");
+//        }
+//        cursor.close();
+//        close();
+//        sb.setLength(sb.length() - 1);
+//        return sb.toString();
+//    }
+
+    public ArrayList<ChatRecord> getAllRecords(String senderuserid, String withuserid) {
+        ArrayList<ChatRecord> list = new ArrayList<ChatRecord>();
+        open();
+        Cursor cursor = database.rawQuery("SELECT * FROM chatrecords where senderuserid = " + senderuserid +
+                ", withuserid = " + withuserid, null);
+        cursor.moveToFirst();
         for (; !cursor.isAfterLast(); cursor.moveToNext()) {
-            sb.append(cursor.getString(cursor.getColumnIndex("_id")));
-            sb.append(",");
-            sb.append(cursor.getString(cursor.getColumnIndex("senderuserid")));
-            sb.append(",");
-            sb.append(cursor.getString(cursor.getColumnIndex("withuserid")));
-            sb.append(",");
-            sb.append(cursor.getString(cursor.getColumnIndex("time")));
-            sb.append(",");
-            sb.append(cursor.getString(cursor.getColumnIndex("content")));
-            sb.append(";");
+
+            String sender = cursor.getString(cursor.getColumnIndex("senderuserid"));
+            String receiver = cursor.getString(cursor.getColumnIndex("withuserid"));
+            String time = cursor.getString(cursor.getColumnIndex("time"));
+            String content = cursor.getString(cursor.getColumnIndex("content"));
+            ChatRecord chatRecord = new ChatRecord();
+            list.add(chatRecord);
         }
         cursor.close();
         close();
-        sb.setLength(sb.length() - 1);
-        return sb.toString();
+        return list;
     }
 
     public void deleteRecord(long id)
@@ -157,15 +208,15 @@ public abstract class DBConnectorProxy {
         @Override
         public void onCreate(SQLiteDatabase db)
         {
-            String createQuery = "CREATE TABLE account" +
-                    "(userid TEXT PRIMARY KEY, name TEXT);";
+//            String createQuery = "CREATE TABLE account" +
+//                    "(userid TEXT PRIMARY KEY, name TEXT);";
+//
+//            db.execSQL(createQuery);
 
-            db.execSQL(createQuery);
-
-            String createQuery1 = "CREATE TABLE chatrecords" +
+            String createQuery = "CREATE TABLE chatrecords if not exists" +
                     "(_id INTEGER PRIMARY KEY AUTOINCREMENT, senderuserid TEXT, withuserid TEXT, " +
                     "time TEXT, content TEXT);";
-            db.execSQL(createQuery1);
+            db.execSQL(createQuery);
         }
 
         @Override
