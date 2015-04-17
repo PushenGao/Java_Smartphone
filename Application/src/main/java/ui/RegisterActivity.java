@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.example.android.actionbarcompat.styled.R;
 
@@ -83,21 +84,22 @@ public class RegisterActivity extends ActionBarActivity {
             radioSexButton = (RadioButton) findViewById(selectedId);
             inputGender = radioSexButton.getText().toString();
 
+            //TODO 注册新的账号
             Account newAccount = new Account();
 
             RegisterAccountToServer registerAccountToServer = new RegisterAccountToServer();
             registerAccountToServer.register(newAccount);
             //处理是否已经被注册
+            //Toast.makeText(getApplicationContext(), "The userid has been registered",
+            //Toast.LENGTH_LONG).show();
             LogIn.loginAccount = newAccount;
 
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }catch(Exception e){
+            //待商量，如何处理错误，要不要设计一个exception class
             RegisterInputNullExceptionHandler registerInputNullExceptionHandler = new RegisterInputNullExceptionHandler();
             registerInputNullExceptionHandler.fix();
         }
-
-
-
     }
 }
