@@ -35,6 +35,7 @@ public class Resultdisplay extends ActionBarActivity {
         int min = intTime / 60;
         int second = intTime % 60;
 
+        LogIn.loginAccount.getHistoryRecord().setUserid(LogIn.loginAccount.getUserId());
         LogIn.loginAccount.getHistoryRecord().addDistance(result[0]);
         LogIn.loginAccount.getHistoryRecord().addTime(intTime);
 
