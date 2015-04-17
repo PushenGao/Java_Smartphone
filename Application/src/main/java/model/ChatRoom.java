@@ -9,4 +9,5 @@ public class ChatRoom {
     private LinkedHashMap<Integer, ChatRecord> chatmap = new LinkedHashMap<Integer, ChatRecord>();
     private int id;
 
+
 }

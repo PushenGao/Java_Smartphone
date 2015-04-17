@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.android.actionbarcompat.styled.R;
 
+import ws.remote.RemoteServerProxy;
 import ws.remote.UpdateRunningRecord;
 
 public class Resultdisplay extends ActionBarActivity {
@@ -37,8 +38,8 @@ public class Resultdisplay extends ActionBarActivity {
         LogIn.loginAccount.getHistoryRecord().addDistance(result[0]);
         LogIn.loginAccount.getHistoryRecord().addTime(intTime);
 
-        UpdateRunningRecord updateRunningRecord = new UpdateRunningRecord();
-        updateRunningRecord.updateHistoryRecord(LogIn.loginAccount.getHistoryRecord());
+        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+        remoteServerProxy.updateHistoryRecord(LogIn.loginAccount.getHistoryRecord());
 
         rstText.setText(result[0] + " meters " + min + " mins " + second + " s");
     }
