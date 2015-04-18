@@ -7,7 +7,7 @@ public class HistoryRecord {
     private String userid;
     private String totalTime;
     private String totalDistance;
-    //private String totalConsumption;
+    private String totalConsumption;
     private String lastLocation;
 
     public String getLastLocation() {
@@ -34,9 +34,9 @@ public class HistoryRecord {
         return totalDistance;
     }
 
-//    public String getTotalConsumption() {
-//        return totalConsumption;
-//    }
+    public String getTotalConsumption() {
+        return totalConsumption;
+    }
 
     public void setTotalTime(String totalTime) {
         this.totalTime = totalTime;
@@ -46,9 +46,9 @@ public class HistoryRecord {
         this.totalDistance = totalDistance;
     }
 
-//    public void setTotalConsumption(String totalConsumption) {
-//        this.totalConsumption = totalConsumption;
-//    }
+    public void setTotalConsumption(String totalConsumption) {
+        this.totalConsumption = totalConsumption;
+    }
 
     public void addDistance(String newDistance){
         long curDistance = Long.parseLong(totalDistance);

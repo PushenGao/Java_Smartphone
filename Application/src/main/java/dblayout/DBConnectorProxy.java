@@ -190,6 +190,26 @@ public abstract class DBConnectorProxy {
         return list;
     }
 
+//TODO 每个好友只需要一个，而且是双向的里面找last
+    public ArrayList<ChatRecord> getAllRecentRecords(String senderuserid) {
+        ArrayList<ChatRecord> list = new ArrayList<ChatRecord>();
+        open();
+        Cursor cursor = database.rawQuery("SELECT * FROM chatrecords where senderuserid = " + senderuserid, null);
+        cursor.moveToFirst();
+        for (; !cursor.isAfterLast(); cursor.moveToNext()) {
+
+            String sender = cursor.getString(cursor.getColumnIndex("senderuserid"));
+            String receiver = cursor.getString(cursor.getColumnIndex("withuserid"));
+            String time = cursor.getString(cursor.getColumnIndex("time"));
+            String content = cursor.getString(cursor.getColumnIndex("content"));
+            ChatRecord chatRecord = new ChatRecord();
+            list.add(chatRecord);
+        }
+        cursor.close();
+        close();
+        return list;
+    }
+
     public void deleteRecord(long id)
     {
         open();

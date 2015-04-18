@@ -32,4 +32,9 @@ public class ChatRecordDAO implements IChatRecordDAO {
     public ChatRecord getRecord(String userid, String withUserid, String time) {
         return null;
     }
+
+    @Override
+    public ArrayList<ChatRecord> getAllRecentRecord(String userid) {
+        return null;
+    }
 }

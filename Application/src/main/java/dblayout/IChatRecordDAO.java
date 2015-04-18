@@ -20,4 +20,6 @@ public interface IChatRecordDAO {
     public ArrayList<ChatRecord> getAllRecord(String userid, String withUserid);
 
     public ChatRecord getRecord(String userid, String withUserid, String time);
+
+    public ArrayList<ChatRecord> getAllRecentRecord(String userid);
 }
