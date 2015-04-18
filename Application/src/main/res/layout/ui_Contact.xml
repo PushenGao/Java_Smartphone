@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
     android:id="@+id/contact"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
     android:background="#fcfcfc"
     tools:context="ui.Contact"
     android:orientation="vertical">
@@ -29,7 +29,7 @@
     <TableLayout
         android:id="@+id/contact_tablelayout1"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="wrap_content">
 
         <TableRow
             android:id="@+id/contact_tablerow1"
@@ -139,7 +139,11 @@
 
     </TableLayout>
 
-
+    <ListView
+        android:id="@+id/contact_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
 
 
 </LinearLayout>

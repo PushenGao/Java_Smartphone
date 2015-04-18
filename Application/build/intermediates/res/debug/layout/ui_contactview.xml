@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/contact_photo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/zheng"/>
+    <TextView
+        android:id="@+id/contactview_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jiate"
+        android:layout_toRightOf="@id/contact_photo"
+        android:layout_centerVertical="true"
+        android:layout_margin="2dp"/>
+
+
+</RelativeLayout><!-- From: file:/Users/JiateLi/Desktop/werun/Application/src/main/res/layout/ui_contactview.xml -->

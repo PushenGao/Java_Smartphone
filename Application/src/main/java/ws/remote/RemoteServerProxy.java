@@ -35,7 +35,7 @@ UpdateAccountInfo, UpdateRunningRecord, VerifyLoginAccount{
 
     @Override
     public Account verifyAccount(String userId, String passWord) {
-        return null;
+        return new Account();
     }
 
     @Override
