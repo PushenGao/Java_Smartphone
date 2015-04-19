@@ -9,7 +9,6 @@ import ui.History;
  * Created by Jackyliz on 4/10/15.
  */
 public class Account extends BasicAccount {
-    private String userid;
     private String password;
     private HashSet<BasicAccount> friendSet;
     private HashSet<BasicAccount> pendingSet;
@@ -24,7 +23,6 @@ public class Account extends BasicAccount {
         this.setName(name);
         this.setAge(age);
         this.setGender(gender);
-        this.userid = userid;
         this.password = password;
     }
 
@@ -35,19 +33,11 @@ public class Account extends BasicAccount {
         this.setAge(age);
         this.setGender(gender);
         this.setHistoryRecord(historyRecord);
-        this.setChatMap(chatRecordMap);
-        this.userid = userid;
         this.password = password;
         this.friendSet = friendSet;
         this.pendingSet = pendingSet;
     }
 
-
-
-
-    public String getUserId() {
-        return userid;
-    }
 
     public String getPassword() {
         return password;
@@ -59,10 +49,6 @@ public class Account extends BasicAccount {
 
     public HashSet<BasicAccount> getPendingSet() {
         return pendingSet;
-    }
-
-    public void setUserId(String userId) {
-        this.userid = userId;
     }
 
     public void setPassword(String password) {
@@ -81,31 +67,5 @@ public class Account extends BasicAccount {
 
     }
 
-    public void addFriend() {
 
-    }
-
-    public void acceptFriend() {
-
-    }
-
-    public void rejectFriend() {
-
-    }
-
-    public void blockFriend() {
-
-    }
-
-    public void deleteFriend() {
-
-    }
-
-//    private HashSet<BasicAccount> sendingSet;
-//    public HashSet<BasicAccount> getSendingSet() {
-//        return sendingSet;
-//    }
-//    public void setSendingSet(HashSet<BasicAccount> sendingSet) {
-//        this.sendingSet = sendingSet;
-//    }
 }

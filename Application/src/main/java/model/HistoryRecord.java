@@ -4,10 +4,9 @@ package model;
  * Created by Jackyliz on 4/10/15.
  */
 public class HistoryRecord {
-    private String userid;
+    private String userId;
     private String totalTime;
     private String totalDistance;
-    private String totalConsumption;
     private String lastLocation;
 
     public String getLastLocation() {
@@ -19,11 +18,11 @@ public class HistoryRecord {
     }
 
     public String getUserid() {
-        return userid;
+        return userId;
     }
 
     public void setUserid(String userid) {
-        this.userid = userid;
+        this.userId = userid;
     }
 
     public String getTotalTime() {
@@ -34,9 +33,6 @@ public class HistoryRecord {
         return totalDistance;
     }
 
-    public String getTotalConsumption() {
-        return totalConsumption;
-    }
 
     public void setTotalTime(String totalTime) {
         this.totalTime = totalTime;
@@ -44,10 +40,6 @@ public class HistoryRecord {
 
     public void setTotalDistance(String totalDistance) {
         this.totalDistance = totalDistance;
-    }
-
-    public void setTotalConsumption(String totalConsumption) {
-        this.totalConsumption = totalConsumption;
     }
 
     public void addDistance(String newDistance){

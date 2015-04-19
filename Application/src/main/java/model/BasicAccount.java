@@ -10,7 +10,6 @@ public abstract class BasicAccount {
     private String age;
     private String gender;
     private HistoryRecord historyRecord;
-    private HashMap<String, ChatRecord> chatRecordMap;
 
     public BasicAccount() {
 
@@ -21,7 +20,6 @@ public abstract class BasicAccount {
         this.age = age;
         this.gender = gender;
         this.historyRecord = historyRecord;
-        this.chatRecordMap = charRecordMap;
     }
 
     public String getGender() {
@@ -38,10 +36,6 @@ public abstract class BasicAccount {
         return historyRecord;
     }
 
-    public HashMap<String, ChatRecord> getChatMap() {
-        return chatRecordMap;
-    }
-
     public void setGender(String gender) {
         this.gender = gender;
     }
@@ -54,10 +48,6 @@ public abstract class BasicAccount {
 
     public void setHistoryRecord(HistoryRecord historyRecord) {
         this.historyRecord = historyRecord;
-    }
-
-    public void setChatMap(HashMap<String, ChatRecord> map) {
-        this.chatRecordMap = map;
     }
 
 }

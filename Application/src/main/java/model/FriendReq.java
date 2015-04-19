@@ -4,16 +4,16 @@ package model;
  * Created by Michael-Gao on 2015/4/11.
  */
 public class FriendReq {
-    private String sender;
-    private String receiver;
+    private String senderId;
+    private String receiverId;
     private String action;
 
     public String getReceiver() {
-        return receiver;
+        return receiverId;
     }
 
     public void setReceiver(String receiver) {
-        this.receiver = receiver;
+        this.receiverId = receiver;
     }
 
     public String getAction() {
@@ -25,11 +25,11 @@ public class FriendReq {
     }
 
     public String getSender() {
-        return sender;
+        return senderId;
     }
 
     public void setSender(String sender) {
-        this.sender = sender;
+        this.senderId = sender;
     }
 
 }
