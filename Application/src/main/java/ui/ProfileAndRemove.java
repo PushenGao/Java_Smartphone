@@ -13,8 +13,8 @@ import com.example.android.actionbarcompat.styled.R;
 
 public class ProfileAndRemove extends ActionBarActivity {
 
-    Button addButton;
-    Button removeButton;
+    private Button addButton;
+    private Button removeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

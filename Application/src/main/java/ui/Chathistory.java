@@ -12,7 +12,7 @@ import com.example.android.actionbarcompat.styled.R;
 
 
 public class Chathistory extends ActionBarActivity {
-    RelativeLayout layout;
+    private RelativeLayout layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

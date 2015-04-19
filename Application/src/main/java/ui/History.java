@@ -10,10 +10,10 @@ import com.example.android.actionbarcompat.styled.R;
 
 
 public class History extends ActionBarActivity {
-    String totalDistance;
-    String totalTime;
-    TextView showDistance;
-    TextView showTime;
+    private String totalDistance;
+    private String totalTime;
+    private TextView showDistance;
+    private TextView showTime;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

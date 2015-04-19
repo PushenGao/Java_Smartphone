@@ -89,7 +89,7 @@ public class RegisterActivity extends ActionBarActivity {
 
             RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
             remoteServerProxy.register(newAccount);
-            //处理是否已经被注册
+            //TODO if it has been registered
             //Toast.makeText(getApplicationContext(), "The userid has been registered",
             //Toast.LENGTH_LONG).show();
             LogIn.loginAccount = newAccount;
@@ -97,7 +97,7 @@ public class RegisterActivity extends ActionBarActivity {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }catch(Exception e){
-            //待商量，如何处理错误，要不要设计一个exception class
+            //TODO do we need an exception class
             RegisterInputNullExceptionHandler registerInputNullExceptionHandler = new RegisterInputNullExceptionHandler();
             registerInputNullExceptionHandler.fix();
         }

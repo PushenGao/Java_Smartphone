@@ -39,7 +39,7 @@ UpdateAccountInfo, UpdateRunningRecord, VerifyLoginAccount{
     }
 
     @Override
-    public void register(Account newAccount) {
-
+    public Account register(Account newAccount) {
+        return null;
     }
 }

@@ -20,11 +20,11 @@ import model.Account;
 
 
 public class Contact extends ActionBarActivity {
-    RelativeLayout layout;
-    Button searchButton;
-    Button agreeButton;
-    EditText search_bar;
-    ListView contact_listView;
+    private RelativeLayout layout;
+    private Button searchButton;
+    private Button agreeButton;
+    private EditText search_bar;
+    private ListView contact_listView;
     private FriendAdapter mAdaper;
 
     @Override
