@@ -29,8 +29,4 @@
         android:state_pressed="false" />
     <item android:drawable="@drawable/spinner_ab_default_styled" />
 
-<<<<<<< HEAD
 </selector><!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/drawable/spinner_background_ab.xml -->
-=======
-</selector><!-- From: file:/Users/Jackyliz/Desktop/Java_Smartphone/Application/src/main/res/drawable/spinner_background_ab.xml -->
->>>>>>> fb713f7ec04ce57aade14bdfb84815fe59ea8688

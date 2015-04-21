@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
     <!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values-w360dp-v13/values.xml -->
-=======
-    <!-- From: file:/Users/Jackyliz/Desktop/Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values-w360dp-v13/values.xml -->
->>>>>>> fb713f7ec04ce57aade14bdfb84815fe59ea8688
     <eat-comment/>
     <integer name="abc_max_action_buttons">3</integer>
 </resources>

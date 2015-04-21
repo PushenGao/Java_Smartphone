@@ -59,8 +59,4 @@
     <!-- Checkbox, and/or radio button will be inserted here. -->
 
 </android.support.v7.internal.view.menu.ListMenuItemView>
-<<<<<<< HEAD
 <!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-dev/frameworks/support/v7/appcompat/res/layout/abc_popup_menu_item_layout.xml --><!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/layout/abc_popup_menu_item_layout.xml -->
-=======
-<!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-dev/frameworks/support/v7/appcompat/res/layout/abc_popup_menu_item_layout.xml --><!-- From: file:/Users/Jackyliz/Desktop/Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/layout/abc_popup_menu_item_layout.xml -->
->>>>>>> fb713f7ec04ce57aade14bdfb84815fe59ea8688
