@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/pending_photo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/zheng"/>
+    <TextView
+        android:id="@+id/pengdingview_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:layout_toRightOf="@id/pending_photo"
+        android:layout_centerVertical="true"
+        android:layout_margin="2dp"/>
+
+    <Button
+        android:id="@+id/pending_btn"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight = "true"
+        android:text="@string/agree"
+
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:onClick="login_werun"
+        />
+</RelativeLayout><!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/layout/ui_pengdingfriendsview.xml -->

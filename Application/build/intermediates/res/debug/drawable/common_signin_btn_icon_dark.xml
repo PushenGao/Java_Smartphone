@@ -16,4 +16,8 @@
     <item
         android:drawable="@drawable/common_signin_btn_icon_normal_dark" />
 </selector>
-<!-- From: file:/Users/JiateLi/Desktop/werun/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/drawable/common_signin_btn_icon_dark.xml -->
+<<<<<<< HEAD
+<!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/drawable/common_signin_btn_icon_dark.xml -->
+=======
+<!-- From: file:/Users/Jackyliz/Desktop/Java_Smartphone/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/drawable/common_signin_btn_icon_dark.xml -->
+>>>>>>> fb713f7ec04ce57aade14bdfb84815fe59ea8688

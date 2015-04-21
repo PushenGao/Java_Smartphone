@@ -24,4 +24,8 @@
 
     <solid android:color="@color/pressed_styled"/>
 
-</shape><!-- From: file:/Users/JiateLi/Desktop/werun/Application/src/main/res/drawable/pressed_background.xml -->
+<<<<<<< HEAD
+</shape><!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/drawable/pressed_background.xml -->
+=======
+</shape><!-- From: file:/Users/Jackyliz/Desktop/Java_Smartphone/Application/src/main/res/drawable/pressed_background.xml -->
+>>>>>>> fb713f7ec04ce57aade14bdfb84815fe59ea8688

@@ -18,4 +18,8 @@
             android:paddingMode="stack">
     <item android:drawable="@drawable/abc_cab_background_internal_bg" />
     <item android:drawable="@drawable/abc_cab_background_top_mtrl_alpha" />
-</layer-list><!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-dev/frameworks/support/v7/appcompat/res/drawable/abc_cab_background_top_material.xml --><!-- From: file:/Users/JiateLi/Desktop/werun/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/drawable/abc_cab_background_top_material.xml -->
+<<<<<<< HEAD
+</layer-list><!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-dev/frameworks/support/v7/appcompat/res/drawable/abc_cab_background_top_material.xml --><!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/drawable/abc_cab_background_top_material.xml -->
+=======
+</layer-list><!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-dev/frameworks/support/v7/appcompat/res/drawable/abc_cab_background_top_material.xml --><!-- From: file:/Users/Jackyliz/Desktop/Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/drawable/abc_cab_background_top_material.xml -->
+>>>>>>> fb713f7ec04ce57aade14bdfb84815fe59ea8688
