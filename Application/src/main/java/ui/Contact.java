@@ -37,9 +37,14 @@ public class Contact extends ActionBarActivity {
         contact_listView=(ListView) findViewById(R.id.contact_listview);
         mAdaper=new FriendAdapter(this, getData());
 
+<<<<<<< HEAD
         pending_listView=(ListView) findViewById(R.id.contact_pendinglistview);
         pendingAdaper=new PendingRequestAdapter(this, getData());
 
+=======
+        contact_listView.setAdapter(mAdaper);
+        
+>>>>>>> fb713f7ec04ce57aade14bdfb84815fe59ea8688
         layout = (RelativeLayout) findViewById(R.id.contact_relativelayout3);
         layout.setOnClickListener(new View.OnClickListener() {
             @Override

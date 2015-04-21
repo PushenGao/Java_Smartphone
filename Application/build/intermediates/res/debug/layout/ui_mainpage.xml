@@ -16,4 +16,8 @@
         android:layout_centerHorizontal="true"
         android:onClick="buttonClicked"
         android:text="@string/run"/>
+<<<<<<< HEAD
 </RelativeLayout><!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/layout/ui_mainpage.xml -->
+=======
+</RelativeLayout><!-- From: file:/Users/Jackyliz/Desktop/Java_Smartphone/Application/src/main/res/layout/ui_mainpage.xml -->
+>>>>>>> fb713f7ec04ce57aade14bdfb84815fe59ea8688
