@@ -26,6 +26,8 @@ public class Contact extends ActionBarActivity {
     private EditText search_bar;
     private ListView contact_listView;
     private FriendAdapter mAdaper;
+    private ListView pending_listView;
+    private PendingRequestAdapter pendingAdaper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,9 @@ public class Contact extends ActionBarActivity {
 
         contact_listView=(ListView) findViewById(R.id.contact_listview);
         mAdaper=new FriendAdapter(this, getData());
+
+        pending_listView=(ListView) findViewById(R.id.contact_pendinglistview);
+        pendingAdaper=new PendingRequestAdapter(this, getData());
 
         layout = (RelativeLayout) findViewById(R.id.contact_relativelayout3);
         layout.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +63,8 @@ public class Contact extends ActionBarActivity {
         search_bar = (EditText) findViewById(R.id.search_bar);
 
         contact_listView.setAdapter(mAdaper);
+
+        pending_listView.setAdapter(pendingAdaper);
     }
 
     private List<Account> getData()

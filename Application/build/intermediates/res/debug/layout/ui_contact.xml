@@ -140,6 +140,12 @@
     </TableLayout>
 
     <ListView
+        android:id="@+id/contact_pendinglistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+    <ListView
         android:id="@+id/contact_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -147,4 +153,4 @@
 
 
 </LinearLayout>
-<!-- From: file:/Users/JiateLi/Desktop/werun/Application/src/main/res/layout/ui_contact.xml -->
+<!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/layout/ui_contact.xml -->
