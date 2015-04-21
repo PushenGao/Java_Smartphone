@@ -1,5 +1,7 @@
 package model;
 
+import com.google.gson.Gson;
+
 /**
  * Created by Jackyliz on 4/10/15.
  */
@@ -53,5 +55,10 @@ public class HistoryRecord {
         long curTime = Long.parseLong(totalTime);
         curTime = curTime + newTime;
         totalTime = String.valueOf(curTime);
+    }
+
+    @Override
+    public String toString() {
+        return new Gson().toJson(this);
     }
 }

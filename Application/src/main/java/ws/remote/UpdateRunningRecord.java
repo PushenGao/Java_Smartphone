@@ -9,5 +9,5 @@ import ui.History;
  */
 public interface UpdateRunningRecord {
 
-    public void updateHistoryRecord(HistoryRecord history);
+    public String updateHistoryRecord(HistoryRecord history);
 }

@@ -1,5 +1,7 @@
 package model;
 
+import com.google.gson.Gson;
+
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -66,6 +68,12 @@ public class Account extends BasicAccount {
     public void friendRequest(String userid, String friendid, String requestType) {
 
     }
+
+    @Override
+    public String toString() {
+        return new Gson().toJson(this);
+    }
+
 
 
 }

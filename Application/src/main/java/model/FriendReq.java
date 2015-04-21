@@ -1,5 +1,7 @@
 package model;
 
+import com.google.gson.Gson;
+
 /**
  * Created by Michael-Gao on 2015/4/11.
  */
@@ -30,6 +32,11 @@ public class FriendReq {
 
     public void setSender(String sender) {
         this.senderId = sender;
+    }
+
+    @Override
+    public String toString() {
+        return new Gson().toJson(this);
     }
 
 }

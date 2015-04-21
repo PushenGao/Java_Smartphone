@@ -1,11 +1,13 @@
 package model;
 
+import com.google.gson.Gson;
+
 import java.util.HashMap;
 
 /**
  * Created by Jackyliz on 4/11/15.
  */
-public abstract class BasicAccount {
+public class BasicAccount {
     private String name;
     private String age;
     private String gender;
@@ -48,6 +50,11 @@ public abstract class BasicAccount {
 
     public void setHistoryRecord(HistoryRecord historyRecord) {
         this.historyRecord = historyRecord;
+    }
+
+    @Override
+    public String toString() {
+        return new Gson().toJson(this);
     }
 
 }
