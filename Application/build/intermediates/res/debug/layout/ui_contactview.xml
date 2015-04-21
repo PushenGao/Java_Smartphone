@@ -12,10 +12,10 @@
         android:id="@+id/contactview_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jiate"
+        android:text="@string/name"
         android:layout_toRightOf="@id/contact_photo"
         android:layout_centerVertical="true"
         android:layout_margin="2dp"/>
 
 
-</RelativeLayout><!-- From: file:/Users/JiateLi/Desktop/werun/Application/src/main/res/layout/ui_contactview.xml -->
+</RelativeLayout><!-- From: file:/Users/Jackyliz/Desktop/Java_Smartphone/Application/src/main/res/layout/ui_contactview.xml -->

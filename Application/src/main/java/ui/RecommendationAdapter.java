@@ -43,11 +43,11 @@ public class RecommendationAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        View view=View.inflate(context, R.layout.ui_contactview, null);
+        View view=View.inflate(context, R.layout.ui_recommendview, null);
         Account friend= mData.get(position);
 
-        TextView contactview=(TextView) view.findViewById(R.id.contactview_textview);
-        contactview.setText(friend.getName());
+        TextView recommendview=(TextView) view.findViewById(R.id.recommendview_textview);
+        recommendview.setText(friend.getName());
         return view;
     }
 

@@ -7,16 +7,31 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 
 import com.example.android.actionbarcompat.styled.R;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import model.Account;
 
 
 public class Recommend extends ActionBarActivity {
     private Button bt;
+    private ListView recommend_listview;
+    private RecommendationAdapter mAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_recommend);
+
+        recommend_listview = (ListView) findViewById(R.id.recommend_listview);
+        mAdapter = new RecommendationAdapter(this, getData());
+
+        recommend_listview.setAdapter(mAdapter);
+
         bt = (Button)findViewById(R.id.recommend_button);
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,6 +42,24 @@ public class Recommend extends ActionBarActivity {
         });
     }
 
+    private List<Account> getData()
+    {
+        List<Account> list=new ArrayList<Account>();
+        Account friend1=new Account();
+        friend1.setName("Nancy");
+
+        Account friend2=new Account();
+        friend2.setName("Joe");
+
+        Account friend3=new Account();
+        friend3.setName("Annie");
+
+        list.add(friend1);
+        list.add(friend2);
+        list.add(friend3);
+
+        return list;
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

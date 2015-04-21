@@ -35,6 +35,8 @@ public class Contact extends ActionBarActivity {
         contact_listView=(ListView) findViewById(R.id.contact_listview);
         mAdaper=new FriendAdapter(this, getData());
 
+        contact_listView.setAdapter(mAdaper);
+        
         layout = (RelativeLayout) findViewById(R.id.contact_relativelayout3);
         layout.setOnClickListener(new View.OnClickListener() {
             @Override

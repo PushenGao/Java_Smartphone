@@ -71,5 +71,11 @@
 
     </RelativeLayout>
 
+    <ListView
+        android:id="@+id/recommend_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
 </LinearLayout>
-<!-- From: file:/Users/JiateLi/Desktop/werun/Application/src/main/res/layout/ui_recommend.xml -->
+<!-- From: file:/Users/Jackyliz/Desktop/Java_Smartphone/Application/src/main/res/layout/ui_recommend.xml -->
