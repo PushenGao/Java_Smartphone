@@ -4,16 +4,42 @@ import com.google.gson.Gson;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 
 import ui.History;
 
 /**
  * Created by Jackyliz on 4/10/15.
  */
-public class Account extends BasicAccount {
+public class Account{
     private String password;
-    private HashSet<BasicAccount> friendSet;
-    private HashSet<BasicAccount> pendingSet;
+    private BasicAccount basicAccount;
+    private List<BasicAccount> activeFriends;
+    private List<BasicAccount> pendingFriends;
+
+    public BasicAccount getBasicAccount() {
+        return basicAccount;
+    }
+
+    public void setBasicAccount(BasicAccount basicAccount) {
+        this.basicAccount = basicAccount;
+    }
+
+    public List<BasicAccount> getActiveFriends() {
+        return activeFriends;
+    }
+
+    public void setActiveFriends(List<BasicAccount> activeFriends) {
+        this.activeFriends = activeFriends;
+    }
+
+    public List<BasicAccount> getPendingFriends() {
+        return pendingFriends;
+    }
+
+    public void setPendingFriends(List<BasicAccount> pendingFriends) {
+        this.pendingFriends = pendingFriends;
+    }
 
     // empty constructor
     public Account() {
@@ -21,49 +47,22 @@ public class Account extends BasicAccount {
     }
 
     // register constructor
-    public Account(String name, String age, String gender, String userid, String password) {
-        this.setName(name);
-        this.setAge(age);
-        this.setGender(gender);
+    public Account(String password) {
         this.password = password;
     }
 
-    // complete constructor
-    public Account(String name, String age, String gender, HistoryRecord historyRecord, HashMap<String, ChatRecord> chatRecordMap,
-                   String userid, String password, HashSet<BasicAccount> friendSet, HashSet<BasicAccount> pendingSet) {
-        this.setName(name);
-        this.setAge(age);
-        this.setGender(gender);
-        this.setHistoryRecord(historyRecord);
-        this.password = password;
-        this.friendSet = friendSet;
-        this.pendingSet = pendingSet;
-    }
 
 
     public String getPassword() {
         return password;
     }
 
-    public HashSet<BasicAccount> getFriendSet() {
-        return friendSet;
-    }
-
-    public HashSet<BasicAccount> getPendingSet() {
-        return pendingSet;
-    }
 
     public void setPassword(String password) {
         this.password = password;
     }
 
-    public void setFriendSet(HashSet<BasicAccount> friendSet) {
-        this.friendSet = friendSet;
-    }
 
-    public void setPendingSet(HashSet<BasicAccount> pendingSet) {
-        this.pendingSet = pendingSet;
-    }
 
     public void friendRequest(String userid, String friendid, String requestType) {
 
