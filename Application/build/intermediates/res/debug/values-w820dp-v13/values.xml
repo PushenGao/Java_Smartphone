@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
-    <!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/values-w820dp/dimens.xml -->
-=======
-    <!-- From: file:/Users/Jackyliz/Desktop/Java_Smartphone/Application/src/main/res/values-w820dp/dimens.xml -->
->>>>>>> fb713f7ec04ce57aade14bdfb84815fe59ea8688
+    <!-- From: file:/Users/JiateLi/Desktop/werun/Application/src/main/res/values-w820dp/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">64dp</dimen>
 </resources>

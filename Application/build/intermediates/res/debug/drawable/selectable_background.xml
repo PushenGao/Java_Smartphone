@@ -29,8 +29,4 @@
     <item android:drawable="@drawable/pressed_background" android:state_pressed="true"/>
     <item android:drawable="@android:color/transparent"/>
 
-<<<<<<< HEAD
-</selector><!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/drawable/selectable_background.xml -->
-=======
-</selector><!-- From: file:/Users/Jackyliz/Desktop/Java_Smartphone/Application/src/main/res/drawable/selectable_background.xml -->
->>>>>>> fb713f7ec04ce57aade14bdfb84815fe59ea8688
+</selector><!-- From: file:/Users/JiateLi/Desktop/werun/Application/src/main/res/drawable/selectable_background.xml -->
