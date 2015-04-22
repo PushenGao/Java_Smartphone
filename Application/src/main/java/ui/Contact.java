@@ -36,10 +36,13 @@ public class Contact extends ActionBarActivity {
 
         contact_listView=(ListView) findViewById(R.id.contact_listview);
         mAdaper=new FriendAdapter(this, getData());
-
+        //use in real time
+        //mAdaper = new FriendAdapter(this, LogIn.loginAccount.getActiveFriends());
 
         pending_listView=(ListView) findViewById(R.id.contact_pendinglistview);
         pendingAdaper=new PendingRequestAdapter(this, getData());
+        //use in real time
+        //pendingAdaper=new PendingRequestAdapter(this, LogIn.loginAccount.getPendingFriends());
 
         contact_listView.setAdapter(mAdaper);
         

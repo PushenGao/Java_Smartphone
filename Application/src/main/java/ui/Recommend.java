@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.Account;
+import model.BasicAccount;
+import ws.remote.RemoteServerProxy;
 
 
 public class Recommend extends ActionBarActivity {
@@ -29,6 +31,10 @@ public class Recommend extends ActionBarActivity {
 
         recommend_listview = (ListView) findViewById(R.id.recommend_listview);
         mAdapter = new RecommendationAdapter(this, getData());
+        //will be used in real time
+        //RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+        //List<BasicAccount> basicAccountList = remoteServerProxy.getRecommend(LogIn.loginAccount.getBasicAccount().getName());
+        //mAdapter = new RecommendationAdapter(this, basicAccountList);
 
         recommend_listview.setAdapter(mAdapter);
 

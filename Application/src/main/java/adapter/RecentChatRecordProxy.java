@@ -8,7 +8,7 @@ import model.ChatRecord;
  * Created by JiateLi on 15/4/11.
  */
 public abstract class RecentChatRecordProxy {
-    private LinkedHashMap<String, ChatRecord> chatrecordMap = new LinkedHashMap<String, ChatRecord>();
+    public static LinkedHashMap<String, ChatRecord> chatrecordMap = new LinkedHashMap<String, ChatRecord>();
 
     public void addRecentChatRecord(ChatRecord chatRecord){
 

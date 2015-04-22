@@ -12,9 +12,13 @@ import android.widget.RelativeLayout;
 import com.example.android.actionbarcompat.styled.R;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import adapter.BuildRecentChatRecord;
 import model.Account;
+import model.ChatRecord;
 
 
 public class Chathistory extends ActionBarActivity {
@@ -29,6 +33,14 @@ public class Chathistory extends ActionBarActivity {
 
         chat_listview = (ListView) findViewById(R.id.chat_listview);
         mAdpter = new RecentChatAdapter(this, getData());
+        //used in real time
+//        HashMap<String, ChatRecord> chatRecordHashMap = BuildRecentChatRecord.chatrecordMap;
+//        List<ChatRecord> chatRecordList = new ArrayList<ChatRecord>();
+//
+//        for (Map.Entry<String, ChatRecord> entry : chatRecordHashMap.entrySet()) {
+//            chatRecordList.add(entry.getValue());
+//        }
+//        mAdpter = new RecentChatAdapter(this, chatRecordList);
 
         chat_listview.setAdapter(mAdpter);
 
