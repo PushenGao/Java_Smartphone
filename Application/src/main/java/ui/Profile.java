@@ -1,19 +1,29 @@
 package ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.android.actionbarcompat.styled.R;
 
+import ws.remote.RemoteServerProxy;
+
 
 public class Profile extends ActionBarActivity {
+    private Button addFriendBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_profile);
+
+        addFriendBtn = (Button) findViewById(R.id.profile_button1);
+
+
     }
 
 
@@ -37,5 +47,11 @@ public class Profile extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    //TODO after add the button, can set the friend request to server
+    public void addFriend(View view){
+        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+
     }
 }
