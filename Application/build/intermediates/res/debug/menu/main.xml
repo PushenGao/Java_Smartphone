@@ -47,8 +47,4 @@
         android:title="@string/menu_settings"
         support:showAsAction="never"/>
 
-<<<<<<< HEAD
 </menu><!-- From: file:/Users/JiateLi/Desktop/werun/Application/src/main/res/menu/main.xml -->
-=======
-</menu><!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/menu/main.xml -->
->>>>>>> e50478a49a5c7e9359306f59fd9d85bf2c317e86

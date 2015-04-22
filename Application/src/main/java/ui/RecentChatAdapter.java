@@ -47,7 +47,7 @@ public class RecentChatAdapter extends BaseAdapter {
         Account friend= mData.get(position);
 
         TextView chatview=(TextView) view.findViewById(R.id.chatview_textview);
-        chatview.setText(friend.getName());
+        chatview.setText(friend.getBasicAccount().getName());
 
         return view;
     }

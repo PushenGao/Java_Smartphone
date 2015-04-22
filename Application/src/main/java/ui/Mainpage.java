@@ -151,7 +151,7 @@ public class Mainpage extends FragmentActivity {
             sb.append("werun");
             sb.append(startPoint.getLatitude());
             //update last location
-            LogIn.loginAccount.getHistoryRecord().setLastLocation(sb.toString());
+            LogIn.loginAccount.getBasicAccount().getHistoryRecord().setLastLocation(sb.toString());
             //chronometer.start();
             startTime = SystemClock.elapsedRealtime();
         }else{

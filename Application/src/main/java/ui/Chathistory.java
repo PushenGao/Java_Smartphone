@@ -46,13 +46,13 @@ public class Chathistory extends ActionBarActivity {
     {
         List<Account> list=new ArrayList<Account>();
         Account friend1=new Account();
-        friend1.setName("Nancy");
+        friend1.getBasicAccount().setName("Nancy");
 
         Account friend2=new Account();
-        friend2.setName("Joe");
+        friend2.getBasicAccount().setName("Joe");
 
         Account friend3=new Account();
-        friend3.setName("Annie");
+        friend3.getBasicAccount().setName("Annie");
 
         list.add(friend1);
         list.add(friend2);

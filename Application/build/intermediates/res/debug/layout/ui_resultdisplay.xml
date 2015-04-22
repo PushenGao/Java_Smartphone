@@ -30,8 +30,4 @@
         android:textSize="18sp"
         android:onClick="returntomain"
         />
-<<<<<<< HEAD
 </LinearLayout><!-- From: file:/Users/JiateLi/Desktop/werun/Application/src/main/res/layout/ui_resultdisplay.xml -->
-=======
-</LinearLayout><!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/layout/ui_resultdisplay.xml -->
->>>>>>> e50478a49a5c7e9359306f59fd9d85bf2c317e86

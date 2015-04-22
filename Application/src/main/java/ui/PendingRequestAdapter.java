@@ -46,7 +46,7 @@ public class PendingRequestAdapter extends BaseAdapter {
         View view=View.inflate(context, R.layout.ui_pengdingfriendsview, null);
         Account friend= mData.get(position);
         TextView contactview=(TextView) view.findViewById(R.id.pengdingview_textview);
-        contactview.setText(friend.getName());
+        contactview.setText(friend.getBasicAccount().getName());
         return view;
     }
 

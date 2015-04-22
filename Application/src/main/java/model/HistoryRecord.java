@@ -11,6 +11,17 @@ public class HistoryRecord {
     private String totalDistance;
     private String lastLocation;
 
+    public HistoryRecord(){
+
+    }
+
+    public HistoryRecord(String myUserID, String myTotalTime, String myTotalDistance){
+        userId = myUserID;
+        totalTime = myTotalTime;
+        totalDistance = myTotalDistance;
+        lastLocation = "100000werun1000000";
+    }
+
     public String getLastLocation() {
         return lastLocation;
     }

@@ -47,7 +47,7 @@ public class FriendAdapter extends BaseAdapter {
         Account friend= mData.get(position);
 
         TextView contactview=(TextView) view.findViewById(R.id.contactview_textview);
-        contactview.setText(friend.getName());
+        contactview.setText(friend.getBasicAccount().getName());
 
         return view;
     }

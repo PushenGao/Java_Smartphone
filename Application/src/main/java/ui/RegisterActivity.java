@@ -16,6 +16,8 @@ import com.example.android.actionbarcompat.styled.R;
 
 import exception.RegisterInputNullExceptionHandler;
 import model.Account;
+import model.BasicAccount;
+import model.HistoryRecord;
 import ws.remote.RemoteServerProxy;
 
 
@@ -85,7 +87,11 @@ public class RegisterActivity extends ActionBarActivity {
             inputGender = radioSexButton.getText().toString();
 
             String strAge = "" + inputAge;
-            Account newAccount = new Account(inputName, strAge, inputGender, inputUser, inputPW);
+
+
+            BasicAccount newBasicAccount = new BasicAccount(inputName, strAge, inputGender);
+            Account newAccount = new Account(inputPW);
+            newAccount.setBasicAccount(newBasicAccount);
 
             RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
             remoteServerProxy.register(newAccount);

@@ -37,14 +37,12 @@ public class Contact extends ActionBarActivity {
         contact_listView=(ListView) findViewById(R.id.contact_listview);
         mAdaper=new FriendAdapter(this, getData());
 
-<<<<<<< HEAD
+
         pending_listView=(ListView) findViewById(R.id.contact_pendinglistview);
         pendingAdaper=new PendingRequestAdapter(this, getData());
 
-=======
         contact_listView.setAdapter(mAdaper);
         
->>>>>>> fb713f7ec04ce57aade14bdfb84815fe59ea8688
         layout = (RelativeLayout) findViewById(R.id.contact_relativelayout3);
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,13 +74,13 @@ public class Contact extends ActionBarActivity {
     {
         List<Account> list=new ArrayList<Account>();
         Account friend1=new Account();
-        friend1.setName("Nancy");
+        friend1.getBasicAccount().setName("Nancy");
 
         Account friend2=new Account();
-        friend2.setName("Joe");
+        friend2.getBasicAccount().setName("Joe");
 
         Account friend3=new Account();
-        friend3.setName("Annie");
+        friend3.getBasicAccount().setName("Annie");
 
         list.add(friend1);
         list.add(friend2);

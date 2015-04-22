@@ -17,7 +17,14 @@ public class BasicAccount {
 
     }
 
-    public BasicAccount(String name, String age, String gender, HistoryRecord historyRecord, HashMap<String, ChatRecord> charRecordMap) {
+    public BasicAccount(String name, String age, String gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.historyRecord = historyRecord;
+    }
+
+    public BasicAccount(String name, String age, String gender, HistoryRecord historyRecord) {
         this.name = name;
         this.age = age;
         this.gender = gender;

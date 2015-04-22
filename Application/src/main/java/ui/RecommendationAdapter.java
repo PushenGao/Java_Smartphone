@@ -47,7 +47,7 @@ public class RecommendationAdapter extends BaseAdapter {
         Account friend= mData.get(position);
 
         TextView recommendview=(TextView) view.findViewById(R.id.recommendview_textview);
-        recommendview.setText(friend.getName());
+        recommendview.setText(friend.getBasicAccount().getName());
         return view;
     }
 
