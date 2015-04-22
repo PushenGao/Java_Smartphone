@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.example.android.actionbarcompat.styled.R;
 
+import model.FriendReq;
 import ws.remote.RemoteServerProxy;
 
 
@@ -52,6 +53,9 @@ public class Profile extends ActionBarActivity {
     //TODO after add the button, can set the friend request to server
     public void addFriend(View view){
         RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
-
+        FriendReq friendReq = new FriendReq();
+        friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
+        // friendReq.setReceiver();
+        friendReq.setAction("request");
     }
 }
