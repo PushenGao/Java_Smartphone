@@ -6,14 +6,22 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.android.actionbarcompat.styled.R;
+
+import model.FriendReq;
+import ws.remote.RemoteServerProxy;
 
 
 public class Profile extends ActionBarActivity {
     private TextView showName;
     private TextView showAge;
     private TextView showGender;
+    private Button addFriendBtn;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +39,9 @@ public class Profile extends ActionBarActivity {
         showName.setText(name);
         showAge.setText(age);
         showGender.setText(gender);
+        addFriendBtn = (Button) findViewById(R.id.profile_button1);
+
+
     }
 
 
@@ -54,5 +65,14 @@ public class Profile extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    //TODO after add the button, can set the friend request to server
+    public void addFriend(View view){
+        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+        FriendReq friendReq = new FriendReq();
+        friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
+        // friendReq.setReceiver();
+        friendReq.setAction("request");
     }
 }

@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 import com.example.android.actionbarcompat.styled.R;
 
+import model.FriendReq;
+import ws.remote.RemoteServerProxy;
+
 
 public class ProfileAndRemove extends ActionBarActivity {
     private Button addButton;
@@ -66,5 +69,14 @@ public class ProfileAndRemove extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+//TODO after add the button, can delete the friend request to server
+    public void deleteFriend(View view){
+        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+        FriendReq friendReq = new FriendReq();
+        friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
+       // friendReq.setReceiver();
+        friendReq.setAction("delete");
     }
 }
