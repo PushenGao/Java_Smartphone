@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost" android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:theme="@android:style/Theme.Holo.Light" >
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="0dip" android:layout_weight="1"  android:background="#fff"/>
+
+        <RadioGroup android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:checkedButton="@+id/first" android:id="@+id/states">
+            <RadioButton android:id="@+id/first"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/chat_text"
+                android:textSize="15dp" />
+            <RadioButton android:id="@+id/second"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/title_activity_contact"
+                android:checked="false"
+                android:textSize="15dp" />
+            <RadioButton android:id="@+id/third"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/run"
+                android:checked="false"
+                android:textSize="15dp" />
+            <RadioButton android:id="@+id/fourth"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/title_activity_recommend"
+                android:checked="false"
+                android:textSize="15dp" />
+            <RadioButton android:id="@+id/fifth"  android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/title_activity_history"
+                android:checked="false"
+                android:textSize="15dp" />
+        </RadioGroup>
+
+        <TabWidget android:id="@android:id/tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0" android:visibility="gone" />
+    </LinearLayout>
+</TabHost>
+
+
+<!-- From: file:/Users/Jackyliz/Documents/Java_Smartphone/Application/src/main/res/layout/ui_mainactivity.xml -->

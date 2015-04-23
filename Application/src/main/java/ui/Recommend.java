@@ -51,13 +51,20 @@ public class Recommend extends ActionBarActivity {
     private List<Account> getData()
     {
         List<Account> list=new ArrayList<Account>();
+
+        BasicAccount basicAccount1 = new BasicAccount();
         Account friend1=new Account();
+        friend1.setBasicAccount(basicAccount1);
         friend1.getBasicAccount().setName("Nancy");
 
+        BasicAccount basicAccount2 = new BasicAccount();
         Account friend2=new Account();
+        friend2.setBasicAccount(basicAccount2);
         friend2.getBasicAccount().setName("Joe");
 
+        BasicAccount basicAccount3 = new BasicAccount();
         Account friend3=new Account();
+        friend3.setBasicAccount(basicAccount3);
         friend3.getBasicAccount().setName("Annie");
 
         list.add(friend1);

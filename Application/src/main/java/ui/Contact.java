@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.Account;
+import model.BasicAccount;
 
 
 public class Contact extends ActionBarActivity {
@@ -76,13 +77,22 @@ public class Contact extends ActionBarActivity {
     private List<Account> getData()
     {
         List<Account> list=new ArrayList<Account>();
-        Account friend1=new Account();
-        friend1.getBasicAccount().setName("Nancy");
 
+        BasicAccount basicAccount1 = new BasicAccount();
+        Account friend1=new Account();
+        friend1.setBasicAccount(basicAccount1);
+        friend1.getBasicAccount().setName("Nancy");
+        friend1.getBasicAccount().setAge("18");
+        friend1.getBasicAccount().setGender("F");
+
+        BasicAccount basicAccount2 = new BasicAccount();
         Account friend2=new Account();
+        friend2.setBasicAccount(basicAccount2);
         friend2.getBasicAccount().setName("Joe");
 
+        BasicAccount basicAccount3 = new BasicAccount();
         Account friend3=new Account();
+        friend3.setBasicAccount(basicAccount3);
         friend3.getBasicAccount().setName("Annie");
 
         list.add(friend1);

@@ -1,19 +1,36 @@
 package ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.example.android.actionbarcompat.styled.R;
 
 
 public class Profile extends ActionBarActivity {
-
+    private TextView showName;
+    private TextView showAge;
+    private TextView showGender;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_profile);
+
+        showName = (TextView) findViewById(R.id.profile_textview2);
+        showAge = (TextView) findViewById(R.id.profile_textView3);
+        showGender = (TextView) findViewById(R.id.profile_textView4);
+
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("name");
+        String age = intent.getStringExtra("age");
+        String gender = intent.getStringExtra("gender");
+
+        showName.setText(name);
+        showAge.setText(age);
+        showGender.setText(gender);
     }
 
 

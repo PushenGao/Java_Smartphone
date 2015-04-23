@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:id="@+id/recommend_linearlayout1"
+    android:layout_height="fill_parent"
+    android:background="#fcfcfc"
+    tools:context="ui.Recommend"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/recommend_relativelayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bar"
+        android:gravity="center_vertical"  >
+
+
+        <TextView
+            android:id="@+id/recommend_textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/we_run"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/recommend_relativelayout2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+
+        >
+
+        <ImageView
+            android:id="@+id/recommend_imageview1"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="5dp"
+            android:src="@drawable/pushen"
+            android:layout_alignParentBottom="true" />
+
+        <TextView
+            android:id="@+id/recommend_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:text="@string/pushen"
+            android:textColor="#000"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/recommend_imageview1"
+            android:layout_toEndOf="@+id/recommend_imageview1"
+            android:textStyle="bold|italic"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_friend"
+            android:id="@+id/recommend_button"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/recommend_textview2"
+            android:layout_alignTop="@+id/recommend_textview2"
+            />
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/recommend_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+</LinearLayout>
+<!-- From: file:/Users/Jackyliz/Documents/Java_Smartphone/Application/src/main/res/layout/ui_recommend.xml -->

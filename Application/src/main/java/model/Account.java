@@ -17,6 +17,8 @@ public class Account{
     private List<BasicAccount> activeFriends;
     private List<BasicAccount> pendingFriends;
 
+
+
     public BasicAccount getBasicAccount() {
         return basicAccount;
     }
@@ -43,7 +45,6 @@ public class Account{
 
     // empty constructor
     public Account() {
-
     }
 
     // register constructor

@@ -7,19 +7,31 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.android.actionbarcompat.styled.R;
 
 
 public class ProfileAndRemove extends ActionBarActivity {
-
     private Button addButton;
     private Button removeButton;
+    private TextView showName;
+    private TextView showAge;
+    private TextView showGender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_profileandremove);
+
+        showName = (TextView) findViewById(R.id.profileandremove_textview2);
+        showAge = (TextView) findViewById(R.id.profileandremove_textview3);
+        showGender = (TextView) findViewById(R.id.profileandremove_textview4);
+
+        Intent intent = getIntent();
+        showName.setText(intent.getStringExtra("name"));
+        showAge.setText(intent.getStringExtra("age"));
+        showGender.setText(intent.getStringExtra("gender"));
 
         addButton = (Button) findViewById(R.id.profileandremove_add);
         addButton.setOnClickListener(new View.OnClickListener() {

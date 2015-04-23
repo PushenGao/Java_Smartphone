@@ -1,9 +1,12 @@
 package ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.android.actionbarcompat.styled.R;
@@ -18,6 +21,8 @@ import model.Account;
 public class FriendAdapter extends BaseAdapter {
     private List<Account> mData;
     private Context context;
+    private RelativeLayout layout;
+
     public FriendAdapter(Context context, List data){
         this.mData=data;
         this.context=context;
@@ -44,11 +49,23 @@ public class FriendAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent)
     {
         View view=View.inflate(context, R.layout.ui_contactview, null);
-        Account friend= mData.get(position);
+        final Account friend= mData.get(position);
 
         TextView contactview=(TextView) view.findViewById(R.id.contactview_textview);
         contactview.setText(friend.getBasicAccount().getName());
 
+        layout = (RelativeLayout) view.findViewById(R.id.contact_layout);
+        layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ProfileAndRemove.class);
+                intent.putExtra("name", friend.getBasicAccount().getName())
+                        .putExtra("age", friend.getBasicAccount().getAge())
+                        .putExtra("gender", friend.getBasicAccount().getGender());
+
+                context.startActivity(intent);
+            }
+        });
         return view;
     }
 

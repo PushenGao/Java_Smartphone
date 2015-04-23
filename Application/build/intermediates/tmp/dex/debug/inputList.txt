@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-C:\Users\Michael-Gao\AndroidStudioProjects\Java_Smartphone\Application\build\intermediates\classes\debug
-C:\Users\Michael-Gao\AndroidStudioProjects\Java_Smartphone\Application\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-5168915fcdbed0602d22aaea7505c5b116aec7f5.jar
-C:\Users\Michael-Gao\AndroidStudioProjects\Java_Smartphone\Application\build\intermediates\pre-dexed\debug\classes-9442e720a24e505f214360e60a7a98c861946ae7.jar
-C:\Users\Michael-Gao\AndroidStudioProjects\Java_Smartphone\Application\build\intermediates\pre-dexed\debug\classes-784fa25efdf60cf6145f73c9a00d6f5f3aa2b23b.jar
-C:\Users\Michael-Gao\AndroidStudioProjects\Java_Smartphone\Application\build\intermediates\pre-dexed\debug\classes-436533b1493d20e4168a652a03f63e0e86972d3d.jar
-C:\Users\Michael-Gao\AndroidStudioProjects\Java_Smartphone\Application\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-0561ffc3ae58f28e6993727143a4860d08acabdf.jar
-C:\Users\Michael-Gao\AndroidStudioProjects\Java_Smartphone\Application\build\intermediates\pre-dexed\debug\classes-16562f60ec7046ba34a32cbba76a373081fe679d.jar
-C:\Users\Michael-Gao\AndroidStudioProjects\Java_Smartphone\Application\build\intermediates\pre-dexed\debug\classes-582acf9ba7b472de5823ac4ba1ec02090ffb6c7d.jar
-C:\Users\Michael-Gao\AndroidStudioProjects\Java_Smartphone\Application\build\intermediates\pre-dexed\debug\classes-3a827f3c4d5d75ad9416d09d14f7263ec5333cde.jar
-=======
-/Users/Jackyliz/Desktop/Java_Smartphone/Application/build/intermediates/classes/debug
-/Users/Jackyliz/Desktop/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-14942bd6fbe58da247bc91eac88c432118b45307.jar
-/Users/Jackyliz/Desktop/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-ccf62568223eb473aeffe7923861d19e33d7fbcc.jar
-/Users/Jackyliz/Desktop/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-cbd0e3a9faa2d4d706c17fbac39d04d2ab2c9052.jar
-/Users/Jackyliz/Desktop/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-3f2a761c6d93082a508f9f00b663cad5471d58fb.jar
-/Users/Jackyliz/Desktop/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-5dd01bf364f80d9fee99dcd3e5ebe8ef6620bfa5.jar
-/Users/Jackyliz/Desktop/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-a1d84922d2b3e135abd4a81ae204d94973264bd7.jar
-/Users/Jackyliz/Desktop/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-12085f918e2b0302aff5d552b4f9d3eb9d18137b.jar
-/Users/Jackyliz/Desktop/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-1bf7b4a42857dfacd599e4e34efb5b3035bed902.jar
->>>>>>> fb713f7ec04ce57aade14bdfb84815fe59ea8688
+/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/classes/debug
+/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-14942bd6fbe58da247bc91eac88c432118b45307.jar
+/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/json_simple-1.1-1c1865abb392ffbd0034db1607122e86af7179bc.jar
+/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-7b70038af0406dc07b8968a6df1aad1fa6499f59.jar
+/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-7ae37f3645a67a56cf022da2e1d8e32661cb11d8.jar
+/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-f2f254b494d7c0b5cd16f9de12221fb0b0f393ad.jar
+/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/gson-2.2.3-b38ca05647438477ab0955619e5d47284c240461.jar
+/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-5ec564c24c3fee7c1738133427fb251b9d8d480a.jar
+/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-50b16baf5bf7109a9d70188779eddc4ce132ab8d.jar
+/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-36fe3431fdf94ed0893392440f23778a9c2df4f3.jar
+/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-3345fb2305c86a182d939cacfbcc450c58aa448f.jar

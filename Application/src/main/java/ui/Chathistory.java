@@ -18,6 +18,7 @@ import java.util.Map;
 
 import adapter.BuildRecentChatRecord;
 import model.Account;
+import model.BasicAccount;
 import model.ChatRecord;
 
 
@@ -54,21 +55,32 @@ public class Chathistory extends ActionBarActivity {
         });
     }
 
-    private List<Account> getData()
+    private List<ChatRecord> getData()
     {
-        List<Account> list=new ArrayList<Account>();
-        Account friend1=new Account();
-        friend1.getBasicAccount().setName("Nancy");
+        List<ChatRecord> list=new ArrayList<ChatRecord>();
 
-        Account friend2=new Account();
-        friend2.getBasicAccount().setName("Joe");
+        ChatRecord record1 = new ChatRecord();
+        record1.setMyName("zheng");
+        record1.setFriendName("jiate");
+        record1.setTimeStamp("2014-12-12");
+        record1.setChatContent("hello");
+//        Account friend1=new Account();
 
-        Account friend3=new Account();
-        friend3.getBasicAccount().setName("Annie");
+//        friend1.getBasicAccount().setName("Nancy");
+//
+//        BasicAccount basicAccount2 = new BasicAccount();
+//        Account friend2=new Account();
+//        friend2.setBasicAccount(basicAccount2);
+//        friend2.getBasicAccount().setName("Joe");
+//
+//        BasicAccount basicAccount3 = new BasicAccount();
+//        Account friend3=new Account();
+//        friend3.setBasicAccount(basicAccount3);
+//        friend3.getBasicAccount().setName("Annie");
 
-        list.add(friend1);
-        list.add(friend2);
-        list.add(friend3);
+        list.add(record1);
+//        list.add(friend2);
+//        list.add(friend3);
 
         return list;
     }

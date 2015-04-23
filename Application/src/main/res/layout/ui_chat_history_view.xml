@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_layout"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,7 +10,7 @@
         android:layout_height="70dp"
         android:src="@drawable/zheng"/>
     <TextView
-        android:id="@+id/chatview_textview"
+        android:id="@+id/chatview_textview1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/name"
@@ -17,6 +18,16 @@
         android:layout_centerVertical="true"
         android:layout_margin="2dp"/>
     <TextView
+        android:id="@+id/chatview_textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/chat_photo"
+        android:layout_alignParentBottom="true"
+        android:padding="7dp"
+        android:text="@string/come_on"
+        android:textColor="#666" />
+    <TextView
+        android:id="@+id/chatview_textview3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/last_night"

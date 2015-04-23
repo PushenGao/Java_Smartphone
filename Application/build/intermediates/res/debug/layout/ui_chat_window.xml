@@ -9,7 +9,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".CallCamera">
 
-    <TableLayout
+    <RelativeLayout
         android:id="@+id/chat_window_tablelayout"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -35,8 +35,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/take_photo" />
         </TableRow>
-    </TableLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
 
-<!-- From: file:/Users/JiateLi/Desktop/werun/Application/src/main/res/layout/ui_chat_window.xml -->
+<!-- From: file:/Users/Jackyliz/Documents/Java_Smartphone/Application/src/main/res/layout/ui_chat_window.xml -->
