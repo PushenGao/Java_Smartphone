@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.android.actionbarcompat.styled.R;
 
@@ -21,6 +22,9 @@ public class ProfileAndRemove extends ActionBarActivity {
     private TextView showName;
     private TextView showAge;
     private TextView showGender;
+    private String name;
+    private String age;
+    private String gender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +36,14 @@ public class ProfileAndRemove extends ActionBarActivity {
         showGender = (TextView) findViewById(R.id.profileandremove_textview4);
 
         Intent intent = getIntent();
-        showName.setText(intent.getStringExtra("name"));
-        showAge.setText(intent.getStringExtra("age"));
-        showGender.setText(intent.getStringExtra("gender"));
+
+        name = intent.getStringExtra("name");
+        age = intent.getStringExtra("age");
+        gender = intent.getStringExtra("gender");
+
+        showName.setText(name);
+        showAge.setText(age);
+        showGender.setText(gender);
 
         addButton = (Button) findViewById(R.id.profileandremove_add);
         addButton.setOnClickListener(new View.OnClickListener() {
@@ -73,10 +82,12 @@ public class ProfileAndRemove extends ActionBarActivity {
 
 //TODO after add the button, can delete the friend request to server
     public void deleteFriend(View view){
-        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
-        FriendReq friendReq = new FriendReq();
-        friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
-       // friendReq.setReceiver();
-        friendReq.setAction("delete");
+        Toast.makeText(getApplicationContext(), "hello", Toast.LENGTH_SHORT).show();
+
+//        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+//        FriendReq friendReq = new FriendReq();
+//        friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
+//        friendReq.setReceiver(name);
+//        friendReq.setAction("delete");
     }
 }

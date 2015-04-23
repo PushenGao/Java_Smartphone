@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.example.android.actionbarcompat.styled.R;
 
@@ -18,6 +19,8 @@ import java.util.List;
 
 import model.Account;
 import model.BasicAccount;
+import ws.remote.RemoteServerProxy;
+import ws.remote.SearchAccount;
 
 
 public class Contact extends ActionBarActivity {
@@ -60,14 +63,30 @@ public class Contact extends ActionBarActivity {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent searchIntent = new Intent(Contact.this, Profile.class);
-                startActivity(searchIntent);
+//                RemoteServerProxy rsp = new RemoteServerProxy();
+//                BasicAccount searchRst = rsp.searchAccount(userid);
+//                if(searchRst != null){
+//                    String name = searchRst.getName();
+//                    String age = searchRst.getAge();
+//                    String gender = searchRst.getGender();
+//                    Intent searchIntent = new Intent(Contact.this, Profile.class);
+//                    searchIntent.putExtra("name", name)
+//                            .putExtra("age", age)
+//                            .putExtra("gender", gender);
+//                    startActivity(searchIntent);
+//                }else{
+//                    //TODO cannot find
+//                }
+                search_bar = (EditText) findViewById(R.id.search_bar);
+                String userid = search_bar.getText().toString();
+                Toast.makeText(getApplicationContext(), userid, Toast.LENGTH_SHORT).show();
+
             }
         });
 
         agreeButton = (Button) findViewById(R.id.agree_button);
 
-        search_bar = (EditText) findViewById(R.id.search_bar);
+
 
         contact_listView.setAdapter(mAdaper);
 

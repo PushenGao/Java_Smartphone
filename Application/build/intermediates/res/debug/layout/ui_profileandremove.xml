@@ -88,6 +88,7 @@
         android:id="@+id/profileandremove_delete"
         android:layout_gravity="center_horizontal"
         android:textSize="25dp"
+        android:onClick="deleteFriend"
         android:background="#ff561713"
         android:paddingTop="30dp" />
 

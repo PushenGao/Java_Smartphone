@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.android.actionbarcompat.styled.R;
 
@@ -20,6 +21,9 @@ public class Profile extends ActionBarActivity {
     private TextView showAge;
     private TextView showGender;
     private Button addFriendBtn;
+    private String name;
+    private String age;
+    private String gender;
 
 
     @Override
@@ -32,9 +36,9 @@ public class Profile extends ActionBarActivity {
         showGender = (TextView) findViewById(R.id.profile_textView4);
 
         Intent intent = getIntent();
-        String name = intent.getStringExtra("name");
-        String age = intent.getStringExtra("age");
-        String gender = intent.getStringExtra("gender");
+        name = intent.getStringExtra("name");
+        age = intent.getStringExtra("age");
+        gender = intent.getStringExtra("gender");
 
         showName.setText(name);
         showAge.setText(age);
@@ -69,10 +73,12 @@ public class Profile extends ActionBarActivity {
 
     //TODO after add the button, can set the friend request to server
     public void addFriend(View view){
-        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
-        FriendReq friendReq = new FriendReq();
-        friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
-        // friendReq.setReceiver();
-        friendReq.setAction("request");
+        Toast.makeText(getApplicationContext(), "hello", Toast.LENGTH_SHORT).show();
+
+//        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+//        FriendReq friendReq = new FriendReq();
+//        friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
+//        friendReq.setReceiver(name);
+//        friendReq.setAction("request");
     }
 }
