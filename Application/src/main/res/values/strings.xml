@@ -72,6 +72,9 @@
     <string name="title_activity_profile_and_remove">Profile and Remove</string>
     <string name="title_activity_profile">Profile</string>
     <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_shake_activity_to_be_added_into_recommend">
+        ShakeActivityToBeAddedIntoRecommend
+    </string>
 
 
 
