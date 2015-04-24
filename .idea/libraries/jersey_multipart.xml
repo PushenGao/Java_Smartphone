@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jersey-multipart">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Application/src/main/java/libs/jersey-multipart.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

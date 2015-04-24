@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mimepull-1.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Application/src/main/java/libs/mimepull-1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -11,7 +11,9 @@ import java.util.List;
 
 import model.Account;
 import model.BasicAccount;
+import model.ChatRecord;
 import model.HistoryRecord;
+import ui.Chathistory;
 import ui.History;
 
 /**
@@ -92,5 +94,21 @@ public class JsonUtil {
         }
         return account;
 
+    }
+
+    public ChatRecord parseChatRecFromJson(String chatJson){
+        ChatRecord chatRec = new ChatRecord();
+        JSONParser parser=new JSONParser();
+        JSONObject objs = null;
+        try {
+            objs = (JSONObject)parser.parse(chatJson);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        chatRec.setMyName((String) objs.get("myName"));
+        chatRec.setFriendName((String) objs.get("friendName"));
+        chatRec.setTimeStamp((String) objs.get("timeStamp"));
+        chatRec.setChatContent((String) objs.get("chatContent"));
+        return chatRec;
     }
 }

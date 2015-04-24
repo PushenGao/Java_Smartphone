@@ -30,4 +30,4 @@
         android:textSize="18sp"
         android:onClick="returntomain"
         />
-</LinearLayout><!-- From: file:/Users/Jackyliz/Documents/Java_Smartphone/Application/src/main/res/layout/ui_resultdisplay.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/layout/ui_resultdisplay.xml -->
