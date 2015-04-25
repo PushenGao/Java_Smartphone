@@ -2061,23 +2061,24 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030013;
         public static final int abc_search_view=0x7f030014;
         public static final int abc_simple_dropdown_hint=0x7f030015;
-        public static final int support_simple_spinner_dropdown_item=0x7f030016;
-        public static final int ui_chat_history=0x7f030017;
-        public static final int ui_chat_history_view=0x7f030018;
-        public static final int ui_chat_window=0x7f030019;
-        public static final int ui_contact=0x7f03001a;
-        public static final int ui_contactview=0x7f03001b;
-        public static final int ui_history=0x7f03001c;
-        public static final int ui_login=0x7f03001d;
-        public static final int ui_mainactivity=0x7f03001e;
-        public static final int ui_mainpage=0x7f03001f;
-        public static final int ui_pengdingfriendsview=0x7f030020;
-        public static final int ui_profile=0x7f030021;
-        public static final int ui_profileandremove=0x7f030022;
-        public static final int ui_recommend=0x7f030023;
-        public static final int ui_recommendview=0x7f030024;
-        public static final int ui_registeractivity=0x7f030025;
-        public static final int ui_resultdisplay=0x7f030026;
+        public static final int activity_shake_activity_to_be_added_into_recommend=0x7f030016;
+        public static final int support_simple_spinner_dropdown_item=0x7f030017;
+        public static final int ui_chat_history=0x7f030018;
+        public static final int ui_chat_history_view=0x7f030019;
+        public static final int ui_chat_window=0x7f03001a;
+        public static final int ui_contact=0x7f03001b;
+        public static final int ui_contactview=0x7f03001c;
+        public static final int ui_history=0x7f03001d;
+        public static final int ui_login=0x7f03001e;
+        public static final int ui_mainactivity=0x7f03001f;
+        public static final int ui_mainpage=0x7f030020;
+        public static final int ui_pengdingfriendsview=0x7f030021;
+        public static final int ui_profile=0x7f030022;
+        public static final int ui_profileandremove=0x7f030023;
+        public static final int ui_recommend=0x7f030024;
+        public static final int ui_recommendview=0x7f030025;
+        public static final int ui_registeractivity=0x7f030026;
+        public static final int ui_resultdisplay=0x7f030027;
     }
     public static final class menu {
         public static final int main=0x7f0d0000;
@@ -2085,6 +2086,7 @@ containing a value of this type.
         public static final int menu_profile=0x7f0d0002;
         public static final int menu_recommend=0x7f0d0003;
         public static final int menu_register=0x7f0d0004;
+        public static final int menu_shake_activity_to_be_added_into_recommend=0x7f0d0005;
     }
     public static final class raw {
         public static final int gtm_analytics=0x7f050000;
@@ -2181,15 +2183,16 @@ containing a value of this type.
         public static final int title_activity_recommend=0x7f0b0058;
         public static final int title_activity_register=0x7f0b0059;
         public static final int title_activity_runningpage=0x7f0b005a;
-        public static final int title_activity_tabSelect=0x7f0b005b;
-        public static final int total_hour=0x7f0b005c;
-        public static final int total_kals=0x7f0b005d;
-        public static final int total_miles=0x7f0b005e;
-        public static final int total_run=0x7f0b005f;
-        public static final int total_time=0x7f0b0060;
-        public static final int user_id=0x7f0b0061;
-        public static final int we_run=0x7f0b0062;
-        public static final int zheng=0x7f0b0063;
+        public static final int title_activity_shake_activity_to_be_added_into_recommend=0x7f0b005b;
+        public static final int title_activity_tabSelect=0x7f0b005c;
+        public static final int total_hour=0x7f0b005d;
+        public static final int total_kals=0x7f0b005e;
+        public static final int total_miles=0x7f0b005f;
+        public static final int total_run=0x7f0b0060;
+        public static final int total_time=0x7f0b0061;
+        public static final int user_id=0x7f0b0062;
+        public static final int we_run=0x7f0b0063;
+        public static final int zheng=0x7f0b0064;
     }
     public static final class style {
         public static final int Animation_AppCompat_DropDownUp=0x7f0c0000;

@@ -1,6 +1,8 @@
 package ui;
 
 import android.content.Intent;
+import android.os.Handler;
+import android.os.Vibrator;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.android.actionbarcompat.styled.R;
 
@@ -23,6 +26,8 @@ public class Recommend extends ActionBarActivity {
     private Button bt;
     private ListView recommend_listview;
     private RecommendationAdapter mAdapter;
+    private ShakeListener mShakeListener = null;
+    private Vibrator mVibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +49,40 @@ public class Recommend extends ActionBarActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Recommend.this, Profile.class);
                 startActivity(intent);
+            }
+        });
+
+
+        mVibrator = (Vibrator) getApplication().getSystemService(
+                VIBRATOR_SERVICE);
+        mShakeListener = new ShakeListener(Recommend.this);
+
+        mShakeListener.setOnShakeListener(new ShakeListener.OnShakeListener() {
+
+            public void onShake() {
+                /*
+                * mAdapter = new RecommendationAdapter(this, getData());
+        //will be used in real time
+        //RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+        //List<BasicAccount> basicAccountList = remoteServerProxy.getRecommend(LogIn.loginAccount.getBasicAccount().getName());
+        //mAdapter = new RecommendationAdapter(this, basicAccountList);
+
+        recommend_listview.setAdapter(mAdapter);
+                * */
+                mShakeListener.stop();
+                startVibrato();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast mtoast;
+                        int time = 10;
+                        mtoast = Toast.makeText(Recommend.this,
+                                "摇啊摇啊摇啊摇",Toast.LENGTH_LONG);
+                        mtoast.show();
+                        mVibrator.cancel();
+                        mShakeListener.start();
+                    }
+                }, 2000);
             }
         });
     }
@@ -100,4 +139,18 @@ public class Recommend extends ActionBarActivity {
         Intent intent = new Intent(this,Profile.class);
         startActivity(intent);
     }
+
+
+    public void startVibrato() {
+        mVibrator.vibrate(new long[] { 500, 200, 500, 200 }, -1);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mShakeListener != null) {
+            mShakeListener.stop();
+        }
+    }
+
 }

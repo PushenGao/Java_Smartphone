@@ -28,4 +28,4 @@
         android:textSize="18sp"
         android:onClick="login_werun"
         />
-</RelativeLayout><!-- From: file:/C:/Users/Michael-Gao/AndroidStudioProjects/Java_Smartphone/Application/src/main/res/layout/ui_pengdingfriendsview.xml -->
+</RelativeLayout><!-- From: file:/Users/JiateLi/Desktop/java-werun-424/Application/src/main/res/layout/ui_pengdingfriendsview.xml -->

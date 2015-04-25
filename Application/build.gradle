@@ -47,6 +47,14 @@ android {
         targetSdkVersion 21
     }
 
+    packagingOptions{
+        exclude 'META-INF/jersey-module-version'
+        exclude 'META-INF/services/com.sun.jersey.spi.container.ResourceMethodCustomInvokerDispatchProvider'
+        exclude 'META-INF/services/com.sun.jersey.spi.container.ResourceMethodDispatchProvider'
+        exclude 'META-INF/services/com.sun.jersey.spi.inject.InjectableProvider'
+        exclude 'META-INF/services/javax.ws.rs.ext.MessageBodyReader'
+        exclude 'META-INF/services/javax.ws.rs.ext.MessageBodyWriter'
+    }
     sourceSets {
         main {
             dirs.each { dir ->
