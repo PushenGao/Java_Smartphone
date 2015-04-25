@@ -26,6 +26,15 @@
 
         android:textColor="#ffffff"
         android:textSize="18sp"
-        android:onClick="login_werun"
         />
+
+    <Button
+        android:id="@+id/reject_btn"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_toLeftOf ="@id/pending_btn"
+        android:text="@string/reject"
+
+        android:textColor="#ffffff"
+        android:textSize="18sp"/>
 </RelativeLayout><!-- From: file:/Users/JiateLi/Desktop/java-werun-424/Application/src/main/res/layout/ui_pengdingfriendsview.xml -->

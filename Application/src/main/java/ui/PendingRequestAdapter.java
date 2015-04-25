@@ -24,6 +24,8 @@ public class PendingRequestAdapter extends BaseAdapter {
     private List<Account> mData;
     private Context context;
     private Button agreeBtn;
+    private Button rejectBtn;
+
     public PendingRequestAdapter(Context context, List data){
         this.mData=data;
         this.context=context;
@@ -67,6 +69,21 @@ public class PendingRequestAdapter extends BaseAdapter {
                 Toast.makeText(context, "hello", Toast.LENGTH_SHORT).show();
             }
         });
+
+        rejectBtn = (Button) view.findViewById(R.id.reject_btn);
+        rejectBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                RemoteServerProxy rsp = new RemoteServerProxy();
+//                FriendReq friendReq = new FriendReq();
+//                friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
+//                friendReq.setReceiver(friend.getBasicAccount().getName());
+//                friendReq.setAction("reject");
+//                rsp.reqFriend(friendReq);
+                Toast.makeText(context, "hello", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         return view;
     }
 

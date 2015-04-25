@@ -310,6 +310,7 @@
     <string name="pushen_wants_add_friend">Pushen wants to connect with you</string>
     <string name="recommend">Recommend Activity</string>
     <string name="register">Register</string>
+    <string name="reject">Reject</string>
     <string name="remove">Remove</string>
     <string name="run">Run</string>
     <string name="stop">Stop</string>
