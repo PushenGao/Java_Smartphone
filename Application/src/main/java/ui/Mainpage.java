@@ -45,8 +45,8 @@ public class Mainpage extends FragmentActivity {
     public Location startPoint;
     public Location endPoint;
 //    public Chronometer chronometer;
-    public long startTime;
-    public long endTime;
+    public double startTime;
+    public double endTime;
 
     public final static String EXTRA_MESSAGE = "com.mycompany.MortgageCalculation.MESSAGE";
     @Override
@@ -148,7 +148,7 @@ public class Mainpage extends FragmentActivity {
             //update the last location of logged in account
             StringBuilder sb = new StringBuilder();
             sb.append(startPoint.getLongitude());
-            sb.append("werun");
+            sb.append(",");
             sb.append(startPoint.getLatitude());
             //update last location
             LogIn.loginAccount.getBasicAccount().getHistoryRecord().setLastLocation(sb.toString());
@@ -170,7 +170,7 @@ public class Mainpage extends FragmentActivity {
                 String distance = NumberFormat.getInstance().format(results[0]);
                 //chronometer.stop();
                 endTime = SystemClock.elapsedRealtime();
-                long totalTime = endTime - startTime;
+                double totalTime = endTime - startTime;
                 String pastTime = String.valueOf(totalTime);
                 StringBuilder sb = new StringBuilder();
                 sb.append(distance);

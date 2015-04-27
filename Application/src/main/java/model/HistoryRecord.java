@@ -59,8 +59,8 @@ public class HistoryRecord {
         if(totalDistance.length() == 0){
             totalDistance = "0";
         }
-        long curDistance = Long.parseLong(totalDistance);
-        long newdistance = Long.parseLong(newDistance);
+        double curDistance = Double.parseDouble(totalDistance);
+        double newdistance = Double.parseDouble(newDistance);
         curDistance = curDistance + newdistance;
         totalDistance = String.valueOf(curDistance);
     }
@@ -69,7 +69,7 @@ public class HistoryRecord {
         if(totalTime.length() == 0){
             totalTime = "0";
         }
-        long curTime = Long.parseLong(totalTime);
+        double curTime = Double.parseDouble(totalTime);
         curTime = curTime + newTime;
         totalTime = String.valueOf(curTime);
     }

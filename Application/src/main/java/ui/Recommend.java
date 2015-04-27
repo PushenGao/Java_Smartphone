@@ -63,22 +63,18 @@ public class Recommend extends ActionBarActivity {
 
                  //mAdapter = new RecommendationAdapter(this, getData());
         //will be used in real time
-        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
-        List<BasicAccount> basicAccountList = remoteServerProxy.getRecommend(LogIn.loginAccount.getBasicAccount().getName());
-        //mAdapter = new RecommendationAdapter(this, basicAccountList);
-
-        recommend_listview.setAdapter(mAdapter);
 
                 mShakeListener.stop();
                 startVibrato();
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Toast mtoast;
-                        int time = 10;
-                        mtoast = Toast.makeText(Recommend.this,
-                                "摇啊摇啊摇啊摇",Toast.LENGTH_LONG);
-                        mtoast.show();
+                        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+                        List<BasicAccount> basicAccountList = remoteServerProxy.getRecommend(LogIn.loginAccount.getBasicAccount().getName());
+                        mAdapter = new RecommendationAdapter(Recommend.this, basicAccountList);
+
+                        recommend_listview.setAdapter(mAdapter);
+//                        int time = 10;
                         mVibrator.cancel();
                         mShakeListener.start();
                     }
