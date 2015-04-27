@@ -10,14 +10,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import com.example.android.actionbarcompat.styled.R;
 
 import exception.RegisterInputNullExceptionHandler;
 import model.Account;
 import model.BasicAccount;
-import model.HistoryRecord;
 import ws.remote.RemoteServerProxy;
 
 
@@ -93,8 +91,11 @@ public class RegisterActivity extends ActionBarActivity {
             Account newAccount = new Account(inputPW);
             newAccount.setBasicAccount(newBasicAccount);
 
+            //new GetRegisterResult().execute(newAccount.toString(),"http://10.0.22.230:8080/Jersey/rest/werun/register");
+//10.0.2.2:8080
             RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
-            remoteServerProxy.register(newAccount);
+            String isOK = remoteServerProxy.register(newAccount);
+            System.out.println("jiate" + isOK);
             //TODO if it has been registered
             //Toast.makeText(getApplicationContext(), "The userid has been registered",
             //Toast.LENGTH_LONG).show();
@@ -103,6 +104,7 @@ public class RegisterActivity extends ActionBarActivity {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }catch(Exception e){
+            System.out.println("register exception:"+e);
             //TODO do we need an exception class
             RegisterInputNullExceptionHandler registerInputNullExceptionHandler = new RegisterInputNullExceptionHandler();
             registerInputNullExceptionHandler.fix();

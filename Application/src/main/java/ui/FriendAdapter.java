@@ -14,12 +14,13 @@ import com.example.android.actionbarcompat.styled.R;
 import java.util.List;
 
 import model.Account;
+import model.BasicAccount;
 
 /**
  * Created by JiateLi on 15/4/17.
  */
 public class FriendAdapter extends BaseAdapter {
-    private List<Account> mData;
+    private List<BasicAccount> mData;
     private Context context;
     private RelativeLayout layout;
 
@@ -49,19 +50,19 @@ public class FriendAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent)
     {
         View view=View.inflate(context, R.layout.ui_contactview, null);
-        final Account friend= mData.get(position);
+        final BasicAccount friend= mData.get(position);
 
         TextView contactview=(TextView) view.findViewById(R.id.contactview_textview);
-        contactview.setText(friend.getBasicAccount().getName());
+        contactview.setText(friend.getName());
 
         layout = (RelativeLayout) view.findViewById(R.id.contact_layout);
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, ProfileAndRemove.class);
-                intent.putExtra("name", friend.getBasicAccount().getName())
-                        .putExtra("age", friend.getBasicAccount().getAge())
-                        .putExtra("gender", friend.getBasicAccount().getGender());
+                intent.putExtra("name", friend.getName())
+                        .putExtra("age", friend.getAge())
+                        .putExtra("gender", friend.getGender());
 
                 context.startActivity(intent);
             }

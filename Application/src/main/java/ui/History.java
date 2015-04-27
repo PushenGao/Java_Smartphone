@@ -22,11 +22,11 @@ public class History extends ActionBarActivity {
         showDistance = (TextView) findViewById(R.id.show_total_run);
         showTime = (TextView) findViewById(R.id.show_total_time);
 
-//        totalDistance = LogIn.loginAccount.getHistoryRecord().getTotalDistance();
-//        totalTime = LogIn.loginAccount.getHistoryRecord().getTotalTime();
+        totalDistance = LogIn.loginAccount.getBasicAccount().getHistoryRecord().getTotalDistance();
+        totalTime = LogIn.loginAccount.getBasicAccount().getHistoryRecord().getTotalTime();
 //
-//        showDistance.setText(totalDistance);
-//        showTime.setText(totalTime);
+        showDistance.setText(totalDistance);
+        showTime.setText(totalTime);
     }
 
     @Override

@@ -75,10 +75,11 @@ public class Profile extends ActionBarActivity {
     public void addFriend(View view){
         Toast.makeText(getApplicationContext(), "hello", Toast.LENGTH_SHORT).show();
 
-//        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
-//        FriendReq friendReq = new FriendReq();
-//        friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
-//        friendReq.setReceiver(name);
-//        friendReq.setAction("request");
+        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+        FriendReq friendReq = new FriendReq();
+        friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
+        friendReq.setReceiver(name);
+        friendReq.setAction("request");
+        remoteServerProxy.reqFriend(friendReq);
     }
 }

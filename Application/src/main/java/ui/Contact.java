@@ -39,14 +39,14 @@ public class Contact extends ActionBarActivity {
         setContentView(R.layout.ui_contact);
 
         contact_listView=(ListView) findViewById(R.id.contact_listview);
-        mAdaper=new FriendAdapter(this, getData());
+        //mAdaper=new FriendAdapter(this, getData());
         //use in real time
-        //mAdaper = new FriendAdapter(this, LogIn.loginAccount.getActiveFriends());
+        mAdaper = new FriendAdapter(this, LogIn.loginAccount.getActiveFriends());
 
         pending_listView=(ListView) findViewById(R.id.contact_pendinglistview);
-        pendingAdaper=new PendingRequestAdapter(this, getData());
+       // pendingAdaper=new PendingRequestAdapter(this, getData());
         //use in real time
-        //pendingAdaper=new PendingRequestAdapter(this, LogIn.loginAccount.getPendingFriends());
+        pendingAdaper=new PendingRequestAdapter(this, LogIn.loginAccount.getPendingFriends());
 
         contact_listView.setAdapter(mAdaper);
         
@@ -63,23 +63,25 @@ public class Contact extends ActionBarActivity {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                RemoteServerProxy rsp = new RemoteServerProxy();
-//                BasicAccount searchRst = rsp.searchAccount(userid);
-//                if(searchRst != null){
-//                    String name = searchRst.getName();
-//                    String age = searchRst.getAge();
-//                    String gender = searchRst.getGender();
-//                    Intent searchIntent = new Intent(Contact.this, Profile.class);
-//                    searchIntent.putExtra("name", name)
-//                            .putExtra("age", age)
-//                            .putExtra("gender", gender);
-//                    startActivity(searchIntent);
-//                }else{
-//                    //TODO cannot find
-//                }
                 search_bar = (EditText) findViewById(R.id.search_bar);
                 String userid = search_bar.getText().toString();
-                Toast.makeText(getApplicationContext(), userid, Toast.LENGTH_SHORT).show();
+                RemoteServerProxy rsp = new RemoteServerProxy();
+                BasicAccount searchRst = rsp.searchAccount(userid);
+                if(searchRst.getName() != null){
+                    String name = searchRst.getName();
+                    String age = searchRst.getAge();
+                    String gender = searchRst.getGender();
+                    Intent searchIntent = new Intent(Contact.this, Profile.class);
+                    searchIntent.putExtra("name", name)
+                            .putExtra("age", age)
+                            .putExtra("gender", gender);
+                    startActivity(searchIntent);
+                }else{
+                    //TODO cannot find
+                    Toast.makeText(getApplicationContext(), "cannot find", Toast.LENGTH_SHORT).show();
+                }
+
+                //Toast.makeText(getApplicationContext(), userid, Toast.LENGTH_SHORT).show();
 
             }
         });

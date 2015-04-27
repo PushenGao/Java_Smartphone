@@ -69,19 +69,19 @@ public class LogIn extends ActionBarActivity {
         }
 
 //        //verify the log in userid and password
-//        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
-//        Account tryAccount = remoteServerProxy.verifyAccount(inputUser,inputPW);
+        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+        Account tryAccount = remoteServerProxy.verifyAccount(inputUser,inputPW);
 //        //if the server has the account
-//        if(tryAccount != null){
-//            loginAccount = tryAccount;
+        if(tryAccount.getPassword() != null){
+            loginAccount = tryAccount;
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
-//        }
+        }
 //        //如果不存在账号需要提示账号不存在，提示注册
-//        else{
-//            Toast.makeText(getApplicationContext(), "The Account verification fails!",
-//                    Toast.LENGTH_LONG).show();
-//        }
+        else{
+            Toast.makeText(getApplicationContext(), "The Account verification fails!",
+                    Toast.LENGTH_LONG).show();
+        }
     }
 
     public void register_werun(View view){

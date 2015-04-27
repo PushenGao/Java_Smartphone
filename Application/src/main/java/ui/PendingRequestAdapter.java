@@ -14,6 +14,7 @@ import com.example.android.actionbarcompat.styled.R;
 import java.util.List;
 
 import model.Account;
+import model.BasicAccount;
 import model.FriendReq;
 import ws.remote.RemoteServerProxy;
 
@@ -21,7 +22,7 @@ import ws.remote.RemoteServerProxy;
  * Created by JiateLi on 15/4/17.
  */
 public class PendingRequestAdapter extends BaseAdapter {
-    private List<Account> mData;
+    private List<BasicAccount> mData;
     private Context context;
     private Button agreeBtn;
     private Button rejectBtn;
@@ -52,21 +53,21 @@ public class PendingRequestAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent)
     {
         View view=View.inflate(context, R.layout.ui_pengdingfriendsview, null);
-        final Account friend= mData.get(position);
+        final BasicAccount friend= mData.get(position);
         TextView contactview=(TextView) view.findViewById(R.id.pengdingview_textview);
-        contactview.setText(friend.getBasicAccount().getName());
+        contactview.setText(friend.getName());
 
         agreeBtn = (Button) view.findViewById(R.id.pending_btn);
         agreeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                RemoteServerProxy rsp = new RemoteServerProxy();
-//                FriendReq friendReq = new FriendReq();
-//                friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
-//                friendReq.setReceiver(friend.getBasicAccount().getName());
-//                friendReq.setAction("request");
-//                rsp.reqFriend(friendReq);
-                Toast.makeText(context, "hello", Toast.LENGTH_SHORT).show();
+                RemoteServerProxy rsp = new RemoteServerProxy();
+                FriendReq friendReq = new FriendReq();
+                friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
+                friendReq.setReceiver(friend.getName());
+                friendReq.setAction("add");
+                rsp.reqFriend(friendReq);
+                //Toast.makeText(context, "hello", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -74,13 +75,13 @@ public class PendingRequestAdapter extends BaseAdapter {
         rejectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                RemoteServerProxy rsp = new RemoteServerProxy();
-//                FriendReq friendReq = new FriendReq();
-//                friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
-//                friendReq.setReceiver(friend.getBasicAccount().getName());
-//                friendReq.setAction("reject");
-//                rsp.reqFriend(friendReq);
-                Toast.makeText(context, "hello", Toast.LENGTH_SHORT).show();
+                RemoteServerProxy rsp = new RemoteServerProxy();
+                FriendReq friendReq = new FriendReq();
+                friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
+                friendReq.setReceiver(friend.getName());
+                friendReq.setAction("reject");
+                rsp.reqFriend(friendReq);
+               // Toast.makeText(context, "hello", Toast.LENGTH_SHORT).show();
             }
         });
 

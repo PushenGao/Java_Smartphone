@@ -68,6 +68,8 @@ public class JsonUtil {
 
         try {
             accountJson = (JSONObject)parser.parse(accountString);
+            if(accountJson.get("password") == null)
+                return account;
             account.setPassword((String)accountJson.get("password"));
             account.setBasicAccount(this.parseBasicAccountFromJson(accountJson.get("account").toString()));
             String activeFri = accountJson.get("activeFriends").toString();

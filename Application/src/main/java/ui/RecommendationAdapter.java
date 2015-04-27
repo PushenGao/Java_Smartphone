@@ -13,12 +13,13 @@ import com.example.android.actionbarcompat.styled.R;
 import java.util.List;
 
 import model.Account;
+import model.BasicAccount;
 
 /**
  * Created by JiateLi on 15/4/17.
  */
 public class RecommendationAdapter extends BaseAdapter {
-    private List<Account> mData;
+    private List<BasicAccount> mData;
     private Context context;
     private Button btn;
     public RecommendationAdapter(Context context, List data){
@@ -47,19 +48,19 @@ public class RecommendationAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent)
     {
         View view=View.inflate(context, R.layout.ui_recommendview, null);
-        final Account friend= mData.get(position);
+        final BasicAccount friend= mData.get(position);
 
         TextView recommendview=(TextView) view.findViewById(R.id.recommendview_textview);
-        recommendview.setText(friend.getBasicAccount().getName());
+        recommendview.setText(friend.getName());
 
         btn = (Button) view.findViewById(R.id.recommend_btn);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, Profile.class);
-                intent.putExtra("name", friend.getBasicAccount().getName())
-                        .putExtra("age", friend.getBasicAccount().getAge())
-                        .putExtra("gender", friend.getBasicAccount().getGender());
+                intent.putExtra("name", friend.getName())
+                        .putExtra("age", friend.getAge())
+                        .putExtra("gender", friend.getGender());
 
                 context.startActivity(intent);
             }

@@ -35,11 +35,11 @@ public class Recommend extends ActionBarActivity {
         setContentView(R.layout.ui_recommend);
 
         recommend_listview = (ListView) findViewById(R.id.recommend_listview);
-        mAdapter = new RecommendationAdapter(this, getData());
+        //mAdapter = new RecommendationAdapter(this, getData());
         //will be used in real time
-        //RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
-        //List<BasicAccount> basicAccountList = remoteServerProxy.getRecommend(LogIn.loginAccount.getBasicAccount().getName());
-        //mAdapter = new RecommendationAdapter(this, basicAccountList);
+        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+        List<BasicAccount> basicAccountList = remoteServerProxy.getRecommend(LogIn.loginAccount.getBasicAccount().getName());
+        mAdapter = new RecommendationAdapter(this, basicAccountList);
 
         recommend_listview.setAdapter(mAdapter);
 
@@ -60,15 +60,15 @@ public class Recommend extends ActionBarActivity {
         mShakeListener.setOnShakeListener(new ShakeListener.OnShakeListener() {
 
             public void onShake() {
-                /*
-                * mAdapter = new RecommendationAdapter(this, getData());
+
+                 //mAdapter = new RecommendationAdapter(this, getData());
         //will be used in real time
-        //RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
-        //List<BasicAccount> basicAccountList = remoteServerProxy.getRecommend(LogIn.loginAccount.getBasicAccount().getName());
+        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+        List<BasicAccount> basicAccountList = remoteServerProxy.getRecommend(LogIn.loginAccount.getBasicAccount().getName());
         //mAdapter = new RecommendationAdapter(this, basicAccountList);
 
         recommend_listview.setAdapter(mAdapter);
-                * */
+
                 mShakeListener.stop();
                 startVibrato();
                 new Handler().postDelayed(new Runnable() {
