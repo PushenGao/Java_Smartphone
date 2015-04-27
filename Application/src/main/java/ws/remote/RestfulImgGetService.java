@@ -26,6 +26,7 @@ public class RestfulImgGetService extends AsyncTask<String,Void,Object> {
 
     @Override
     protected Object doInBackground(String... params) {
+        //String userId, String targetURL
         List<String> results = new ArrayList<String>();
         try {
 

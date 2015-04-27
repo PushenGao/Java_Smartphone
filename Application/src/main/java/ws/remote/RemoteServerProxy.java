@@ -148,7 +148,15 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
     @Override
     public List<String> getImageFromServer(String receiverId) {
         String targetURL = "http://" + ipAddress + "/Jersey/rest/werun/getImage/" + receiverId;
-        List<String> resp = RestfulImgOperation.getImgFromServer(receiverId, targetURL);
+       // List<String> resp = RestfulImgOperation.getImgFromServer(receiverId, targetURL);
+        List<String> resp = null;
+        try {
+            resp = (List<String>) new RestfulImgGetService().execute(receiverId, targetURL).get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
         return resp;
     }
 
@@ -156,7 +164,14 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
 
     @Override
     public void uploadOrDeleteImage(String senderId, String receiverId, String filePath, String action,String timeStamp) {
-        RestfulImgOperation.uploadOrDeleteImage(senderId, receiverId, filePath, action, timeStamp);
+       // RestfulImgOperation.uploadOrDeleteImage(senderId, receiverId, filePath, action, timeStamp);
+        try {
+            String rst = new RestfulImgUploadService().execute(senderId, receiverId, filePath, action, timeStamp).get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
