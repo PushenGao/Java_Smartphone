@@ -35,9 +35,7 @@ public class RestfulImgOperation {
     public static void uploadOrDeleteImage(String senderId, String receiverId, String filePath, String action, String timeStamp){
         ClientConfig config = new DefaultClientConfig();
         Client client = Client.create(config);
-
         WebResource resource = client.resource(getBaseURI()).path("upload/" + receiverId + "/" + action);
-
         BodyPart part1=new BodyPart();
         part1.setMediaType(MediaType.TEXT_PLAIN_TYPE);
         part1.getHeaders().add("Content-SenderId","form-data; name=\"senderId\"");
@@ -98,7 +96,6 @@ public class RestfulImgOperation {
             }
 
             httpConnection.disconnect();
-
         } catch (MalformedURLException e) {
 
             e.printStackTrace();
