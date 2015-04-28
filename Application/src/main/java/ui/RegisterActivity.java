@@ -101,9 +101,13 @@ public class RegisterActivity extends ActionBarActivity {
             RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
             String isOK = remoteServerProxy.register(newAccount);
 
+            if(isOK.equals("fail")){
+                Toast.makeText(getApplicationContext(), "The userid has been registered",
+                Toast.LENGTH_LONG).show();
+                return;
+            }
             //TODO if it has been registered
-            //Toast.makeText(getApplicationContext(), "The userid has been registered",
-            //Toast.LENGTH_LONG).show();
+
             LogIn.loginAccount = newAccount;
 
             Intent intent = new Intent(this, MainActivity.class);
