@@ -1,6 +1,8 @@
 -- Merging decision tree log ---
 manifest
 ADDED from AndroidManifest.xml:17:1
+	xmlns:android
+		ADDED from AndroidManifest.xml:17:11
 	package
 		ADDED from AndroidManifest.xml:18:5
 	android:versionName
@@ -9,8 +11,6 @@ ADDED from AndroidManifest.xml:17:1
 		ADDED from AndroidManifest.xml:19:5
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
-	xmlns:android
-		ADDED from AndroidManifest.xml:17:11
 uses-permission#android.permission.INTERNET
 ADDED from AndroidManifest.xml:22:5
 	android:name
@@ -76,23 +76,23 @@ ADDED from AndroidManifest.xml:52:17
 		ADDED from AndroidManifest.xml:52:27
 meta-data#android.support.UI_OPTIONS
 ADDED from AndroidManifest.xml:60:13
-	android:value
-		ADDED from AndroidManifest.xml:62:17
 	android:name
 		ADDED from AndroidManifest.xml:61:17
+	android:value
+		ADDED from AndroidManifest.xml:62:17
 meta-data#com.google.android.gms.version
 ADDED from AndroidManifest.xml:65:9
 MERGED from com.google.android.gms:play-services-base:6.5.87:21:9
-	android:value
-		ADDED from AndroidManifest.xml:67:13
 	android:name
 		ADDED from AndroidManifest.xml:66:13
+	android:value
+		ADDED from AndroidManifest.xml:67:13
 meta-data#com.google.android.maps.v2.API_KEY
 ADDED from AndroidManifest.xml:68:9
-	android:value
-		ADDED from AndroidManifest.xml:70:13
 	android:name
 		ADDED from AndroidManifest.xml:69:13
+	android:value
+		ADDED from AndroidManifest.xml:70:13
 activity#ui.Mainpage
 ADDED from AndroidManifest.xml:72:9
 	android:label
@@ -121,10 +121,10 @@ activity#ui.Recommend
 ADDED from AndroidManifest.xml:88:9
 	android:label
 		ADDED from AndroidManifest.xml:90:13
-	android:launchMode
-		ADDED from AndroidManifest.xml:91:13
 	android:name
 		ADDED from AndroidManifest.xml:89:13
+	android:launchMode
+		ADDED from AndroidManifest.xml:91:13
 activity#ui.Profile
 ADDED from AndroidManifest.xml:93:9
 	android:label
@@ -145,10 +145,10 @@ activity#ui.Contact
 ADDED from AndroidManifest.xml:104:9
 	android:label
 		ADDED from AndroidManifest.xml:106:13
-	android:launchMode
-		ADDED from AndroidManifest.xml:107:13
 	android:name
 		ADDED from AndroidManifest.xml:105:13
+	android:launchMode
+		ADDED from AndroidManifest.xml:107:13
 activity#ui.History
 ADDED from AndroidManifest.xml:109:9
 	android:label
