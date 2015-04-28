@@ -106,9 +106,9 @@ public class RegisterActivity extends ActionBarActivity {
                 Toast.LENGTH_LONG).show();
                 return;
             }
-            //TODO if it has been registered
 
-            LogIn.loginAccount = newAccount;
+            Account tryAccount = remoteServerProxy.verifyAccount(inputUser,inputPW);
+            LogIn.loginAccount = tryAccount;
 
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
