@@ -28,8 +28,8 @@ public class PendingRequestAdapter extends BaseAdapter {
     private Button rejectBtn;
 
     public PendingRequestAdapter(Context context, List data){
-        this.mData=data;
-        this.context=context;
+        this.mData = data;
+        this.context = context;
     }
     @Override
     public int getCount()
@@ -52,9 +52,9 @@ public class PendingRequestAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        View view=View.inflate(context, R.layout.ui_pengdingfriendsview, null);
-        final BasicAccount friend= mData.get(position);
-        TextView contactview=(TextView) view.findViewById(R.id.pengdingview_textview);
+        View view = View.inflate(context, R.layout.ui_pengdingfriendsview, null);
+        final BasicAccount friend = mData.get(position);
+        TextView contactview = (TextView) view.findViewById(R.id.pengdingview_textview);
         contactview.setText(friend.getName());
 
         agreeBtn = (Button) view.findViewById(R.id.pending_btn);

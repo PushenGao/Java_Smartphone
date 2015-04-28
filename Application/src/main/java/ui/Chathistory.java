@@ -45,14 +45,14 @@ public class Chathistory extends ActionBarActivity {
 
         chat_listview.setAdapter(mAdpter);
 
-        layout = (RelativeLayout) findViewById(R.id.chat_relative);
-        layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Chathistory.this, ChatWindow.class);
-                startActivity(intent);
-            }
-        });
+//        layout = (RelativeLayout) findViewById(R.id.chat_relative);
+//        layout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Chathistory.this, ChatWindow.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     private List<ChatRecord> getData()

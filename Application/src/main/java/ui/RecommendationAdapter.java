@@ -23,8 +23,8 @@ public class RecommendationAdapter extends BaseAdapter {
     private Context context;
     private Button btn;
     public RecommendationAdapter(Context context, List data){
-        this.mData=data;
-        this.context=context;
+        this.mData = data;
+        this.context = context;
     }
     @Override
     public int getCount()
@@ -47,10 +47,10 @@ public class RecommendationAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        View view=View.inflate(context, R.layout.ui_recommendview, null);
-        final BasicAccount friend= mData.get(position);
+        View view = View.inflate(context, R.layout.ui_recommendview, null);
+        final BasicAccount friend = mData.get(position);
 
-        TextView recommendview=(TextView) view.findViewById(R.id.recommendview_textview);
+        TextView recommendview = (TextView) view.findViewById(R.id.recommendview_textview);
         recommendview.setText(friend.getName());
 
         btn = (Button) view.findViewById(R.id.recommend_btn);

@@ -97,9 +97,9 @@ public class Mainpage extends FragmentActivity {
 
         if (location != null) {
             mylocation = location;
-            LatLng latlng=fromLocationToLatLng(location);
+            LatLng latlng = fromLocationToLatLng(location);
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng,17));
-            if(marker !=null)
+            if(marker != null)
                 marker.remove();
             marker = mMap.addMarker(new MarkerOptions().position(latlng).icon(BitmapDescriptorFactory.defaultMarker(
                     BitmapDescriptorFactory.HUE_GREEN)).title("Running map"));

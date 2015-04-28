@@ -29,6 +29,7 @@ public class Recommend extends ActionBarActivity {
     private ShakeListener mShakeListener = null;
     private Vibrator mVibrator;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,14 +44,14 @@ public class Recommend extends ActionBarActivity {
 
         recommend_listview.setAdapter(mAdapter);
 
-        bt = (Button)findViewById(R.id.recommend_button);
-        bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Recommend.this, Profile.class);
-                startActivity(intent);
-            }
-        });
+//        bt = (Button)findViewById(R.id.recommend_button);
+//        bt.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Recommend.this, Profile.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
         mVibrator = (Vibrator) getApplication().getSystemService(
@@ -85,20 +86,20 @@ public class Recommend extends ActionBarActivity {
 
     private List<Account> getData()
     {
-        List<Account> list=new ArrayList<Account>();
+        List<Account> list = new ArrayList<Account>();
 
         BasicAccount basicAccount1 = new BasicAccount();
-        Account friend1=new Account();
+        Account friend1 = new Account();
         friend1.setBasicAccount(basicAccount1);
         friend1.getBasicAccount().setName("Nancy");
 
         BasicAccount basicAccount2 = new BasicAccount();
-        Account friend2=new Account();
+        Account friend2 = new Account();
         friend2.setBasicAccount(basicAccount2);
         friend2.getBasicAccount().setName("Joe");
 
         BasicAccount basicAccount3 = new BasicAccount();
-        Account friend3=new Account();
+        Account friend3 = new Account();
         friend3.setBasicAccount(basicAccount3);
         friend3.getBasicAccount().setName("Annie");
 

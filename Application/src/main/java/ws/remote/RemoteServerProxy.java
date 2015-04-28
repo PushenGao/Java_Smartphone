@@ -21,7 +21,8 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
  UpdateRunningRecord, VerifyLoginAccount, SearchAccount,GetChatRec,GetImage,UploadChatRec,UploadImage{
 
     //final String ipAddress = "localhost:8080";
-    final String ipAddress = "10.0.22.230:8080";
+    final String ipAddress = "10.0.22.230:8080";//Building 19
+    //final String ipAddress = "10.0.19.163:8080";//Building 23
     @Override
     public String reqFriend(FriendReq freq) {
         String targetURL = "http://" + ipAddress + "/Jersey/rest/werun/friquest";
@@ -164,7 +165,7 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
 
     @Override
     public void uploadOrDeleteImage(String senderId, String receiverId, String filePath, String action,String timeStamp) {
-       // RestfulImgOperation.uploadOrDeleteImage(senderId, receiverId, filePath, action, timeStamp);
+        RestfulImgOperation.uploadOrDeleteImage(senderId, receiverId, filePath, action, timeStamp);
         try {
             String rst = new RestfulImgUploadService().execute(senderId, receiverId, filePath, action, timeStamp).get();
         } catch (InterruptedException e) {

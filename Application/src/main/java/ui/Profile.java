@@ -1,6 +1,9 @@
 package ui;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -24,7 +27,7 @@ public class Profile extends ActionBarActivity {
     private String name;
     private String age;
     private String gender;
-
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +48,10 @@ public class Profile extends ActionBarActivity {
         showGender.setText(gender);
         addFriendBtn = (Button) findViewById(R.id.profile_button1);
 
+       // intent = new Intent(this, BroadcastService.class);
 
     }
+
 
 
     @Override

@@ -25,8 +25,8 @@ public class FriendAdapter extends BaseAdapter {
     private RelativeLayout layout;
 
     public FriendAdapter(Context context, List data){
-        this.mData=data;
-        this.context=context;
+        this.mData = data;
+        this.context = context;
     }
     @Override
     public int getCount()
@@ -49,10 +49,10 @@ public class FriendAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        View view=View.inflate(context, R.layout.ui_contactview, null);
-        final BasicAccount friend= mData.get(position);
+        View view = View.inflate(context, R.layout.ui_contactview, null);
+        final BasicAccount friend = mData.get(position);
 
-        TextView contactview=(TextView) view.findViewById(R.id.contactview_textview);
+        TextView contactview = (TextView) view.findViewById(R.id.contactview_textview);
         contactview.setText(friend.getName());
 
         layout = (RelativeLayout) view.findViewById(R.id.contact_layout);
