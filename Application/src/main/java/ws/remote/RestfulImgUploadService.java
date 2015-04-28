@@ -23,13 +23,13 @@ import javax.ws.rs.core.UriBuilder;
 public class RestfulImgUploadService extends AsyncTask<String,Void,String> {
     @Override
     protected String doInBackground(String... params) {
-
+//String senderId, String receiverId, String filePath, String action, String timeStamp
         ClientConfig config = new DefaultClientConfig();
         Client client = Client.create(config);
 
         WebResource resource = client.resource(getBaseURI()).path("upload/" + params[1] + "/" + params[3]);
 
-        BodyPart part1=new BodyPart();
+        BodyPart part1 = new BodyPart();
         part1.setMediaType(MediaType.TEXT_PLAIN_TYPE);
         part1.getHeaders().add("Content-SenderId","form-data; name=\"senderId\"");
         part1.setEntity(params[0]);

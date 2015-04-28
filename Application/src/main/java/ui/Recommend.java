@@ -29,6 +29,7 @@ public class Recommend extends ActionBarActivity {
     private ShakeListener mShakeListener = null;
     private Vibrator mVibrator;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,14 +44,14 @@ public class Recommend extends ActionBarActivity {
 
         recommend_listview.setAdapter(mAdapter);
 
-        bt = (Button)findViewById(R.id.recommend_button);
-        bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Recommend.this, Profile.class);
-                startActivity(intent);
-            }
-        });
+//        bt = (Button)findViewById(R.id.recommend_button);
+//        bt.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Recommend.this, Profile.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
         mVibrator = (Vibrator) getApplication().getSystemService(
@@ -63,22 +64,18 @@ public class Recommend extends ActionBarActivity {
 
                  //mAdapter = new RecommendationAdapter(this, getData());
         //will be used in real time
-        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
-        List<BasicAccount> basicAccountList = remoteServerProxy.getRecommend(LogIn.loginAccount.getBasicAccount().getName());
-        //mAdapter = new RecommendationAdapter(this, basicAccountList);
-
-        recommend_listview.setAdapter(mAdapter);
 
                 mShakeListener.stop();
                 startVibrato();
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Toast mtoast;
-                        int time = 10;
-                        mtoast = Toast.makeText(Recommend.this,
-                                "摇啊摇啊摇啊摇",Toast.LENGTH_LONG);
-                        mtoast.show();
+                        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+                        List<BasicAccount> basicAccountList = remoteServerProxy.getRecommend(LogIn.loginAccount.getBasicAccount().getName());
+                        mAdapter = new RecommendationAdapter(Recommend.this, basicAccountList);
+
+                        recommend_listview.setAdapter(mAdapter);
+//                        int time = 10;
                         mVibrator.cancel();
                         mShakeListener.start();
                     }
@@ -89,20 +86,20 @@ public class Recommend extends ActionBarActivity {
 
     private List<Account> getData()
     {
-        List<Account> list=new ArrayList<Account>();
+        List<Account> list = new ArrayList<Account>();
 
         BasicAccount basicAccount1 = new BasicAccount();
-        Account friend1=new Account();
+        Account friend1 = new Account();
         friend1.setBasicAccount(basicAccount1);
         friend1.getBasicAccount().setName("Nancy");
 
         BasicAccount basicAccount2 = new BasicAccount();
-        Account friend2=new Account();
+        Account friend2 = new Account();
         friend2.setBasicAccount(basicAccount2);
         friend2.getBasicAccount().setName("Joe");
 
         BasicAccount basicAccount3 = new BasicAccount();
-        Account friend3=new Account();
+        Account friend3 = new Account();
         friend3.setBasicAccount(basicAccount3);
         friend3.getBasicAccount().setName("Annie");
 

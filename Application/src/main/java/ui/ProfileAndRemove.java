@@ -25,6 +25,7 @@ public class ProfileAndRemove extends ActionBarActivity {
     private String name;
     private String age;
     private String gender;
+//    private BroadcastReceiver broadcastReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,10 +85,11 @@ public class ProfileAndRemove extends ActionBarActivity {
     public void deleteFriend(View view){
         Toast.makeText(getApplicationContext(), "hello", Toast.LENGTH_SHORT).show();
 
-//        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
-//        FriendReq friendReq = new FriendReq();
-//        friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
-//        friendReq.setReceiver(name);
-//        friendReq.setAction("delete");
+        RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+        FriendReq friendReq = new FriendReq();
+        friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
+        friendReq.setReceiver(name);
+        friendReq.setAction("delete");
+        remoteServerProxy.reqFriend(friendReq);
     }
 }

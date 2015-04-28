@@ -9,6 +9,17 @@ public class ChatRecord {
     private String timeStamp;
     private String chatContent;
 
+    public ChatRecord() {
+
+    }
+
+    public ChatRecord(String myName, String friendName, String timeStamp, String chatContent) {
+        this.myName = myName;
+        this.friendName = friendName;
+        this.timeStamp = timeStamp;
+        this.chatContent = chatContent;
+    }
+
     public String getMyName() {
         return myName;
     }

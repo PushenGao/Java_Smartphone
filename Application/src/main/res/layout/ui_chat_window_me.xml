@@ -8,8 +8,8 @@
         android:id="@+id/Header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="3dp"
-        android:src="@drawable/zheng" />
+        android:layout_margin="3dp"/>
+    <!--android:src="@drawable/user" />-->
     <TextView
         android:id="@+id/From_Content"
         android:layout_width="wrap_content"

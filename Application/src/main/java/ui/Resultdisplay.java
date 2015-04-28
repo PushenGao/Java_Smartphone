@@ -30,7 +30,7 @@ public class Resultdisplay extends ActionBarActivity {
 //        sb.append("Energy consumption: 400 cal");
         //rstText.setText(sb.toString());
         String[] result = message.split("werun");
-        long time = Long.parseLong(result[1]);
+        long time = (long)Double.parseDouble(result[1]);
         int intTime = (int) (time/1000);
         int min = intTime / 60;
         int second = intTime % 60;

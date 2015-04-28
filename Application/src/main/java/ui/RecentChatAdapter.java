@@ -24,8 +24,8 @@ public class RecentChatAdapter extends BaseAdapter {
     private RelativeLayout layout;
 
     public RecentChatAdapter(Context context, List data){
-        this.mData=data;
-        this.context=context;
+        this.mData = data;
+        this.context = context;
     }
     @Override
     public int getCount()
@@ -48,10 +48,10 @@ public class RecentChatAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        View view=View.inflate(context, R.layout.ui_chat_history_view, null);
-        final ChatRecord friend= mData.get(position);
+        View view = View.inflate(context, R.layout.ui_chat_history_view, null);
+        final ChatRecord friend = mData.get(position);
 
-        TextView chatview=(TextView) view.findViewById(R.id.chatview_textview1);
+        TextView chatview = (TextView) view.findViewById(R.id.chatview_textview1);
         chatview.setText(friend.getFriendName());
 
         TextView chatview2 = (TextView) view.findViewById(R.id.chatview_textview2);

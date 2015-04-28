@@ -9,8 +9,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_margin="3dp"
-        android:src="@drawable/zheng" />
+        android:layout_margin="3dp"/>
+    <!--android:src="@drawable/zheng" />-->
     <TextView
         android:id="@+id/To_Content"
         android:layout_width="wrap_content"
