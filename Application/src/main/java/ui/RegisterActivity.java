@@ -3,6 +3,7 @@ package ui;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.example.android.actionbarcompat.styled.R;
 
@@ -79,23 +81,26 @@ public class RegisterActivity extends ActionBarActivity {
             ageText = (EditText) findViewById(R.id.registerAge);
             registerBtn = (Button) findViewById(R.id.btn_register);
             inputName = nameText.getText().toString();
+
             inputAge = Integer.parseInt(ageText.getText().toString());
             int selectedId = radioSexGroup.getCheckedRadioButtonId();
             radioSexButton = (RadioButton) findViewById(selectedId);
             inputGender = radioSexButton.getText().toString();
 
             String strAge = "" + inputAge;
-
+            if(inputUser.length() == 0 || inputPW.length() == 0 || inputName.length() == 0 || strAge.length() == 0
+                    || inputGender.length() == 0){
+                Toast.makeText(getApplicationContext(), "Please input valid user information",
+                        Toast.LENGTH_LONG).show();
+                return;
+            }
 
             BasicAccount newBasicAccount = new BasicAccount(inputName, strAge, inputGender);
             Account newAccount = new Account(inputPW);
             newAccount.setBasicAccount(newBasicAccount);
-
-            //new GetRegisterResult().execute(newAccount.toString(),"http://10.0.22.230:8080/Jersey/rest/werun/register");
-//10.0.2.2:8080
             RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
             String isOK = remoteServerProxy.register(newAccount);
-            System.out.println("jiate" + isOK);
+
             //TODO if it has been registered
             //Toast.makeText(getApplicationContext(), "The userid has been registered",
             //Toast.LENGTH_LONG).show();
@@ -104,10 +109,9 @@ public class RegisterActivity extends ActionBarActivity {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }catch(Exception e){
-            System.out.println("register exception:"+e);
-            //TODO do we need an exception class
+            Log.d("register exception:", e.toString());
             RegisterInputNullExceptionHandler registerInputNullExceptionHandler = new RegisterInputNullExceptionHandler();
-            registerInputNullExceptionHandler.fix();
+            registerInputNullExceptionHandler.fix(inputUser);
         }
     }
 }

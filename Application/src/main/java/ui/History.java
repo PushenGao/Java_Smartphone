@@ -78,6 +78,8 @@ public class History extends ActionBarActivity {
 //
         showDistance.setText(totalDistance);
         showTime.setText(totalTime);
+//        showDistance.setText(String.valueOf(count++));
+//        showTime.setText(String.valueOf(count1++));
     }
 //    @Override
 //    public void onResume() {

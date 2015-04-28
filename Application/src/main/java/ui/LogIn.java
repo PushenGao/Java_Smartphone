@@ -3,6 +3,7 @@ package ui;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -65,9 +66,15 @@ public class LogIn extends ActionBarActivity {
 
         }catch(Exception e){
             LoginInputNullExceptionHandler loginInputNullExceptionHandler = new LoginInputNullExceptionHandler();
-            loginInputNullExceptionHandler.fix();
+            inputUser = loginInputNullExceptionHandler.fix(inputUser);
+            return;
         }
 
+        if(inputUser.length() == 0 || inputPW.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please input valid user information",
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
 //        //verify the log in userid and password
         RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
         Account tryAccount = remoteServerProxy.verifyAccount(inputUser,inputPW);

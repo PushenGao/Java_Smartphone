@@ -5,7 +5,7 @@ package exception;
  */
 public class RegisterInputNullExceptionHandler extends ExceptionHandler{
 
-    public void fix(){
-
+    public String fix(String userid){
+        return "";
     }
 }
