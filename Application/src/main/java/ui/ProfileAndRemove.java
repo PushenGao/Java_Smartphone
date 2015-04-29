@@ -15,6 +15,9 @@ import com.example.android.actionbarcompat.styled.R;
 import model.FriendReq;
 import ws.remote.RemoteServerProxy;
 
+/**
+ * Created by Jackyliz on 4/10/15.
+ */
 
 public class ProfileAndRemove extends ActionBarActivity {
     private Button addButton;
@@ -51,6 +54,7 @@ public class ProfileAndRemove extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProfileAndRemove.this, ChatWindow.class);
+                intent.putExtra("name", name);
                 startActivity(intent);
             }
         });

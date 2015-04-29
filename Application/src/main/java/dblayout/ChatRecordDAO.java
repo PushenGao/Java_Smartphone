@@ -1,5 +1,7 @@
 package dblayout;
 
+import android.content.Context;
+
 import java.util.ArrayList;
 
 import model.ChatRecord;
@@ -8,9 +10,19 @@ import model.ChatRecord;
  * Created by JiateLi on 15/4/17.
  */
 public class ChatRecordDAO implements IChatRecordDAO {
+    private Context context;
+    private DBConnector connector;
+    public ChatRecordDAO(Context context) {
+        this.context = context;
+        connector = new DBConnector(context);
+    }
     @Override
     public void insertRecord(ChatRecord chatRecord) {
-
+        String myName = chatRecord.getMyName();
+        String friendName = chatRecord.getFriendName();
+        String time = chatRecord.getTimeStamp();
+        String content = chatRecord.getChatContent();
+        connector.insertRecord(myName,friendName,time,content);
     }
 
     @Override
@@ -25,7 +37,7 @@ public class ChatRecordDAO implements IChatRecordDAO {
 
     @Override
     public ArrayList<ChatRecord> getAllRecord(String userid, String withUserid) {
-        return null;
+        return connector.getAllRecords(userid, withUserid);
     }
 
     @Override

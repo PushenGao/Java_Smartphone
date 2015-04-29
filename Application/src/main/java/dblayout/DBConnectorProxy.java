@@ -142,7 +142,7 @@ public abstract class DBConnectorProxy {
         String receiver = cursor.getString(cursor.getColumnIndex("withuserid"));
         String sendTime = cursor.getString(cursor.getColumnIndex("time"));
         String content = cursor.getString(cursor.getColumnIndex("content"));
-        ChatRecord chatRecord = new ChatRecord();
+        ChatRecord chatRecord = new ChatRecord(sender, receiver, time, content);
         cursor.close();
         close();
         return chatRecord;
@@ -173,8 +173,8 @@ public abstract class DBConnectorProxy {
     public ArrayList<ChatRecord> getAllRecords(String senderuserid, String withuserid) {
         ArrayList<ChatRecord> list = new ArrayList<ChatRecord>();
         open();
-        Cursor cursor = database.rawQuery("SELECT * FROM chatrecords where senderuserid = " + senderuserid +
-                ", withuserid = " + withuserid, null);
+        Cursor cursor = database.rawQuery("SELECT * FROM chatrecords where senderuserid = '" + senderuserid +
+                "' and withuserid = '" + withuserid + "'", null);
         cursor.moveToFirst();
         for (; !cursor.isAfterLast(); cursor.moveToNext()) {
 
@@ -182,7 +182,7 @@ public abstract class DBConnectorProxy {
             String receiver = cursor.getString(cursor.getColumnIndex("withuserid"));
             String time = cursor.getString(cursor.getColumnIndex("time"));
             String content = cursor.getString(cursor.getColumnIndex("content"));
-            ChatRecord chatRecord = new ChatRecord();
+            ChatRecord chatRecord = new ChatRecord(sender, receiver, time, content);
             list.add(chatRecord);
         }
         cursor.close();
@@ -202,7 +202,7 @@ public abstract class DBConnectorProxy {
             String receiver = cursor.getString(cursor.getColumnIndex("withuserid"));
             String time = cursor.getString(cursor.getColumnIndex("time"));
             String content = cursor.getString(cursor.getColumnIndex("content"));
-            ChatRecord chatRecord = new ChatRecord();
+            ChatRecord chatRecord = new ChatRecord(sender, receiver, time, content);
             list.add(chatRecord);
         }
         cursor.close();
@@ -233,7 +233,7 @@ public abstract class DBConnectorProxy {
 //
 //            db.execSQL(createQuery);
 
-            String createQuery = "CREATE TABLE chatrecords if not exists" +
+            String createQuery = "CREATE TABLE if not exists chatrecords" +
                     "(_id INTEGER PRIMARY KEY AUTOINCREMENT, senderuserid TEXT, withuserid TEXT, " +
                     "time TEXT, content TEXT);";
             db.execSQL(createQuery);

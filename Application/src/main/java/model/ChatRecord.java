@@ -1,5 +1,7 @@
 package model;
 
+import com.google.gson.Gson;
+
 /**
  * Created by Jackyliz on 4/10/15.
  */
@@ -50,5 +52,10 @@ public class ChatRecord {
 
     public void setChatContent(String chatContent) {
         this.chatContent = chatContent;
+    }
+
+    @Override
+    public String toString() {
+        return new Gson().toJson(this);
     }
 }
