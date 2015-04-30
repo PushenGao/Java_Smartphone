@@ -24,7 +24,6 @@ dependencies {
     compile files('src/main/java/libs/json_simple-1.1.jar')
     compile files('src/main/java/libs/mimepull-1.4.jar')
     compile files('src/main/java/libs/jersey-bundle-1.8.jar')
-    compile files('src/main/java/libs/jersey-multipart.jar')
     compile files('src/main/java/libs/grizzly-servlet-webserver-1.9.45.jar')
     compile files('src/main/java/libs/jackson-jaxrs-1.9.2.jar')
     compile files('src/main/java/libs/jsr311-api-1.1.1.jar')
@@ -48,12 +47,7 @@ android {
     }
 
     packagingOptions{
-        exclude 'META-INF/jersey-module-version'
-        exclude 'META-INF/services/com.sun.jersey.spi.container.ResourceMethodCustomInvokerDispatchProvider'
-        exclude 'META-INF/services/com.sun.jersey.spi.container.ResourceMethodDispatchProvider'
-        exclude 'META-INF/services/com.sun.jersey.spi.inject.InjectableProvider'
-        exclude 'META-INF/services/javax.ws.rs.ext.MessageBodyReader'
-        exclude 'META-INF/services/javax.ws.rs.ext.MessageBodyWriter'
+
     }
     sourceSets {
         main {

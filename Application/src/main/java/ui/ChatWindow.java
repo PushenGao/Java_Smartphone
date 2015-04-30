@@ -1,6 +1,11 @@
 package ui;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -15,11 +20,18 @@ import android.widget.ListView;
 
 import com.example.android.actionbarcompat.styled.R;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.math.BigInteger;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 import dblayout.ChatRecordDAO;
@@ -41,6 +53,8 @@ public class ChatWindow extends ActionBarActivity {
     private String myName= "";
     private String friendName = "";
     private Handler mHandler = new Handler();
+    public static Context appContext;
+    private Bitmap cameraBitmap;
 
 
     @Override
@@ -52,6 +66,8 @@ public class ChatWindow extends ActionBarActivity {
         myName = LogIn.loginAccount.getBasicAccount().getName();
         friendName = getIntent().getStringExtra("name");
         System.out.println(myName + " " + friendName);
+
+        appContext = getApplicationContext();
 
         chatWindowList = (ListView) findViewById(R.id.chat_window_listview);
         mData = getData();
@@ -66,7 +82,7 @@ public class ChatWindow extends ActionBarActivity {
         callCameraButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-                startActivity(intent);
+                startActivityForResult(intent, Activity.DEFAULT_KEYS_DIALER);
             }
         });
 
@@ -114,6 +130,52 @@ public class ChatWindow extends ActionBarActivity {
 
 
     }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (data!= null) {
+            cameraBitmap = (Bitmap) data.getExtras().get("data");
+            //img.setImageBitmap(cameraBitmap);
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            cameraBitmap.compress(Bitmap.CompressFormat.PNG,40,baos);
+            byte[] byteImage_photo = baos.toByteArray();
+        }
+
+        FileOutputStream b = null;
+        //照片的命名，目标文件夹下，以当前时间数字串为名称，即可确保每张照片名称不相同。
+        String str=null;
+        Date date=null;
+        SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHHmmss");//获取当前时间，进一步转化为字符串
+        date =new Date();
+        str=format.format(date);
+        String fileName = str+".png";
+        //File myInternalFile = new File(filepath,fileName);
+
+        ContextWrapper cw = new ContextWrapper(getApplicationContext());
+        // path to /data/data/yourapp/app_data/imageDir
+        File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
+        // Create imageDir
+        File mypath=new File(directory,fileName);
+
+        try {
+            b = new FileOutputStream(mypath);
+            cameraBitmap.compress(Bitmap.CompressFormat.PNG, 100, b);// 把数据写入文件
+            String absolutePath = mypath.getAbsolutePath();
+            RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
+            remoteServerProxy.uploadOrDeleteImage(myName,friendName,absolutePath,"add");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                b.flush();
+                b.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 
     @Override
     public void onResume() {
@@ -176,6 +238,19 @@ public class ChatWindow extends ActionBarActivity {
 //            }
 //        });
 
+
+
+        //TODO get image from server
+//        List<String> imagelist = remoteServerProxy.getImageFromServer(myName);
+//        ContextWrapper cw = new ContextWrapper(ChatWindow.appContext);
+//        // path to /data/data/yourapp/app_data/imageDir
+//        File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
+//        File image = new File(directory, imagelist.get(0));
+//        BitmapFactory.Options bmOptions = new BitmapFactory.Options();
+//        Bitmap bitmap = BitmapFactory.decodeFile(image.getAbsolutePath(),bmOptions);
+        //TODO not sure if the filepath show be empty
+//        remoteServerProxy.uploadOrDeleteImage(myName,friendName,"","delete");
+        //img.setImageBitmap(bitmap);
     }
 
     public List<ChatRecord> getData() {

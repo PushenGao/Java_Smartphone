@@ -73,7 +73,8 @@ public class Recommend extends ActionBarActivity {
                         RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
                         List<BasicAccount> basicAccountList = remoteServerProxy.getRecommend(LogIn.loginAccount.getBasicAccount().getName());
                         mAdapter = new RecommendationAdapter(Recommend.this, basicAccountList);
-
+                        Toast.makeText(getApplicationContext(), "Recommend new users for you!",
+                                Toast.LENGTH_LONG).show();
                         recommend_listview.setAdapter(mAdapter);
 //                        int time = 10;
                         mVibrator.cancel();

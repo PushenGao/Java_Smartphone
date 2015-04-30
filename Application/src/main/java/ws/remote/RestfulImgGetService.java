@@ -1,5 +1,7 @@
 package ws.remote;
 
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.os.AsyncTask;
 
 import java.io.File;
@@ -16,12 +18,14 @@ import java.util.List;
 
 import javax.ws.rs.core.UriBuilder;
 
+import ui.ChatWindow;
+
 /**
  * Created by JiateLi on 15/4/27.
  */
 public class RestfulImgGetService extends AsyncTask<String,Void,Object> {
     private static URI getBaseURI() {
-        return UriBuilder.fromUri("http://localhost:8080/Jersey/rest/werun").build("");
+        return UriBuilder.fromUri("http://10.0.22.230:8080/Jersey/rest/werun").build("");
     }
 
     @Override
@@ -48,10 +52,13 @@ public class RestfulImgGetService extends AsyncTask<String,Void,Object> {
             OutputStream os = null;
             //TODO
             // change the file path to the android sd card
-            String path = "/home/" + params[0] + "/";
-            File fileDownloaded = new File(path + header);
-            results.add(path+header);
-            os = new FileOutputStream(fileDownloaded);
+            ContextWrapper cw = new ContextWrapper(ChatWindow.appContext);
+            // path to /data/data/yourapp/app_data/imageDir
+            File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
+            // Create imageDir
+            File mypath=new File(directory,header);
+
+            os = new FileOutputStream(mypath);
             byte[] b = new byte[2048];
             int length;
             while ((length = is.read(b)) != -1) {

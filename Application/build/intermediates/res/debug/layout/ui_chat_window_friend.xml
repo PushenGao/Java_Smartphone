@@ -19,4 +19,4 @@
         android:layout_toLeftOf="@+id/Header"
         android:textIsSelectable="false"
         android:gravity="center" />
-</RelativeLayout>  <!-- From: file:/Users/Jackyliz/Documents/Java_Smartphone/Application/src/main/res/layout/ui_chat_window_friend.xml -->
+</RelativeLayout>  <!-- From: file:/Users/JiateLi/Desktop/java-werun-430/Application/src/main/res/layout/ui_chat_window_friend.xml -->

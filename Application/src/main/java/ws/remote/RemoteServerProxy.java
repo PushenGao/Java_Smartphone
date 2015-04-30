@@ -18,7 +18,7 @@ import ws.util.JsonUtil;
  * Created by JiateLi on 15/4/17.
  */
 public class RemoteServerProxy implements FriendRequest, RecommendFriend, RegisterAccountToServer,
- UpdateRunningRecord, VerifyLoginAccount, SearchAccount,GetChatRec,GetImage,UploadChatRec,UploadImage{
+ UpdateRunningRecord, VerifyLoginAccount, SearchAccount,GetChatRec,GetImage,UploadChatRec{
 
     //final String ipAddress = "localhost:8080";
     final String ipAddress = "10.0.22.230:8080";//Building 19
@@ -163,11 +163,10 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
 
 
 
-    @Override
-    public void uploadOrDeleteImage(String senderId, String receiverId, String filePath, String action,String timeStamp) {
-        RestfulImgOperation.uploadOrDeleteImage(senderId, receiverId, filePath, action, timeStamp);
+    public void uploadOrDeleteImage(String senderId, String receiverId, String filePath, String action) {
+       // RestfulImgOperation.uploadOrDeleteImage(senderId, receiverId, filePath, action, timeStamp);
         try {
-            String rst = new RestfulImgUploadService().execute(senderId, receiverId, filePath, action, timeStamp).get();
+            String rst = new RestfulImgUploadService().execute(senderId, receiverId, filePath, action).get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
