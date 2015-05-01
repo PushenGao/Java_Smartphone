@@ -6,6 +6,7 @@ import android.content.ContextWrapper;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.Image;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.android.actionbarcompat.styled.R;
@@ -76,6 +78,32 @@ public class ChatWindow extends ActionBarActivity {
         chatWindowList.setAdapter(mAdapter);
         chatWindowList.smoothScrollToPositionFromTop(mData.size(), 0);
 
+        // load chatting history
+        ChatRecordDAO chatRecordDAO = new ChatRecordDAO(getApplicationContext());
+        List<ChatRecord> db_list1 = new ArrayList<ChatRecord>();
+        List<ChatRecord> db_list2 = new ArrayList<ChatRecord>();
+        List<ChatRecord> db_list = new ArrayList<ChatRecord>();
+        db_list1 = chatRecordDAO.getAllRecord(friendName, myName);
+        db_list2 = chatRecordDAO.getAllRecord(myName, friendName);
+        db_list.addAll(db_list1);
+        db_list.addAll(db_list2);
+
+        Collections.sort(db_list, new Comparator<ChatRecord>() {
+            public int compare(ChatRecord o1, ChatRecord o2){
+                if(getDate(o1.getTimeStamp()) == getDate(o2.getTimeStamp()))
+                    return 0;
+                return (getDate(o1.getTimeStamp()).compareTo(getDate(o2.getTimeStamp())) == 1  ? 1 : -1);
+            }
+        });
+
+
+
+        chatWindowList = (ListView) findViewById(R.id.chat_window_listview);
+
+        mAdapter = new ChatWindowAdapter(getApplicationContext(), db_list);
+
+        chatWindowList.setAdapter(mAdapter);
+
         inputText = (EditText) findViewById(R.id.input_text);
 
         callCameraButton = (Button) findViewById(R.id.button_callcamera);
@@ -96,39 +124,55 @@ public class ChatWindow extends ActionBarActivity {
                         InputMethodManager imm=(InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
                         if(inputText.getText().toString()!="")
                         {
-                            //获取时间
-                            Calendar c=Calendar.getInstance();
-                            StringBuilder mBuilder=new StringBuilder();
-                            mBuilder.append(Integer.toString(c.get(Calendar.YEAR))+"-");
-                            mBuilder.append(Integer.toString(c.get(Calendar.MONTH))+"-");
-                            mBuilder.append(Integer.toString(c.get(Calendar.DATE))+" ");
-                            mBuilder.append(Integer.toString(c.get(Calendar.HOUR_OF_DAY))+":");
-                            mBuilder.append(Integer.toString(c.get(Calendar.MINUTE)));
-                            //构造输入消息
-                            ChatRecord Message=new ChatRecord(myName, friendName, mBuilder.toString(), inputText.getText().toString());
-                            mData.add(Message);
+
+                            String str=null;
+                            Date date=null;
+                            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//获取当前时间，进一步转化为字符串
+                            date =new Date();
+                            str=format.format(date);
+                            // input value
+                            ChatRecord message=new ChatRecord(myName, friendName, str, inputText.getText().toString());
+
+                            mData.add(message);
                             //insert to local db, send to server
                             ChatRecordDAO chatRecordDAO = new ChatRecordDAO(getApplicationContext());
-                            chatRecordDAO.insertRecord(Message);
+                            chatRecordDAO.insertRecord(message);
                             RemoteServerProxy rsp = new RemoteServerProxy();
-                            rsp.uploadChatRec(Message);
-                            //构造返回消息
-                            Message=new ChatRecord(friendName, myName, mBuilder.toString(), "收到！");
-                            mData.add(Message);
-                            //更新数据
-                            mAdapter.Refresh();
+                            rsp.uploadChatRec(message);
+
+                            // reload list view
+                            List<ChatRecord> db_list1 = new ArrayList<ChatRecord>();
+                            List<ChatRecord> db_list2 = new ArrayList<ChatRecord>();
+                            List<ChatRecord> db_list = new ArrayList<ChatRecord>();
+                            db_list1 = chatRecordDAO.getAllRecord(friendName, myName);
+                            db_list2 = chatRecordDAO.getAllRecord(myName, friendName);
+                            db_list.addAll(db_list1);
+                            db_list.addAll(db_list2);
+
+                            Log.d("zheng",String.valueOf(db_list.size()));
+                            Collections.sort(db_list, new Comparator<ChatRecord>() {
+                                public int compare(ChatRecord o1, ChatRecord o2){
+                                    if(getDate(o1.getTimeStamp()) == getDate(o2.getTimeStamp()))
+                                        return 0;
+                                    return (getDate(o1.getTimeStamp()).compareTo(getDate(o2.getTimeStamp())) == 1  ? 1 : -1);
+                                }
+                            });
+
+                            chatWindowList = (ListView) findViewById(R.id.chat_window_listview);
+
+                            mAdapter = new ChatWindowAdapter(getApplicationContext(), db_list);
+
+                            chatWindowList.setAdapter(mAdapter);
                         }
-                        //清空输入框
+                        //empty input box
                         inputText.setText("");
-                        //关闭输入法
+                        //close input box
                         imm.hideSoftInputFromWindow(null, InputMethodManager.HIDE_IMPLICIT_ONLY);
-                        //滚动列表到当前消息
+                        //scroll to current message
                         chatWindowList.smoothScrollToPositionFromTop(mData.size(), 0);
                     }
                 }
         );
-
-
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -143,24 +187,22 @@ public class ChatWindow extends ActionBarActivity {
         }
 
         FileOutputStream b = null;
-        //照片的命名，目标文件夹下，以当前时间数字串为名称，即可确保每张照片名称不相同。
+        //name pictures as date.png
         String str=null;
         Date date=null;
-        SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHHmmss");//获取当前时间，进一步转化为字符串
+        SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHHmmss");
         date =new Date();
         str=format.format(date);
         String fileName = str+".png";
-        //File myInternalFile = new File(filepath,fileName);
 
         ContextWrapper cw = new ContextWrapper(getApplicationContext());
-        // path to /data/data/yourapp/app_data/imageDir
         File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
         // Create imageDir
         File mypath=new File(directory,fileName);
 
         try {
             b = new FileOutputStream(mypath);
-            cameraBitmap.compress(Bitmap.CompressFormat.PNG, 100, b);// 把数据写入文件
+            cameraBitmap.compress(Bitmap.CompressFormat.PNG, 100, b);//write data in file
             String absolutePath = mypath.getAbsolutePath();
             RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
             remoteServerProxy.uploadOrDeleteImage(myName,friendName,absolutePath,"add");
@@ -193,64 +235,43 @@ public class ChatWindow extends ActionBarActivity {
     private Runnable mUpdateClockTask = new Runnable() {
         public void run() {
             updateClock();
-            mHandler.postDelayed(mUpdateClockTask, 1000);
+            mHandler.postDelayed(mUpdateClockTask, 5000);
         }
     };
 
     public void updateClock(){
+
         ChatRecordDAO chatRecordDAO = new ChatRecordDAO(this);
         RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
 
         List<ChatRecord> list = remoteServerProxy.getChatRecord(LogIn.loginAccount.getBasicAccount().getName());
+        List<ChatRecord> db_list1 = new ArrayList<ChatRecord>();
+        List<ChatRecord> db_list2 = new ArrayList<ChatRecord>();
         List<ChatRecord> db_list = new ArrayList<ChatRecord>();
 
-        if (list.size() != 0) {
-            for (ChatRecord chatRecord : list) {
-                chatRecordDAO.insertRecord(chatRecord);
+        for (ChatRecord chatRecord : list) {
+            chatRecordDAO.insertRecord(chatRecord);
 
-            }
-            db_list = chatRecordDAO.getAllRecord(friendName, myName);
-//            for (ChatRecord chatRecord : db_list) {
-//                System.out.println(chatRecord.getMyName() + " " + chat);
-//            }
-            Log.d("zheng",String.valueOf(db_list.size()));
-            Collections.sort(db_list, new Comparator<ChatRecord>() {
-                public int compare(ChatRecord o1, ChatRecord o2){
-                    if(getDate(o1.getTimeStamp()) == getDate(o2.getTimeStamp()))
-                        return 0;
-                    return (getDate(o1.getTimeStamp()).compareTo(getDate(o2.getTimeStamp())) == 1  ? 1 : -1);
-                }
-            });
-
-            chatWindowList = (ListView) findViewById(R.id.chat_window_listview);
-
-            mAdapter = new ChatWindowAdapter(this, db_list);
-
-            chatWindowList.setAdapter(mAdapter);
         }
+        db_list1 = chatRecordDAO.getAllRecord(friendName, myName);
+        db_list2 = chatRecordDAO.getAllRecord(myName, friendName);
+        db_list.addAll(db_list1);
+        db_list.addAll(db_list2);
 
-//        layout = (RelativeLayout) findViewById(R.id.contact_relativelayout3);
-//        layout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(Contact.this, ProfileAndRemove.class);
-//                startActivity(intent);
-//            }
-//        });
+        Collections.sort(db_list, new Comparator<ChatRecord>() {
+            public int compare(ChatRecord o1, ChatRecord o2){
+                if(getDate(o1.getTimeStamp()) == getDate(o2.getTimeStamp()))
+                    return 0;
+                return (getDate(o1.getTimeStamp()).compareTo(getDate(o2.getTimeStamp())) == 1  ? 1 : -1);
+            }
+        });
 
+        chatWindowList = (ListView) findViewById(R.id.chat_window_listview);
 
+        mAdapter = new ChatWindowAdapter(this, db_list);
 
-        //TODO get image from server
-//        List<String> imagelist = remoteServerProxy.getImageFromServer(myName);
-//        ContextWrapper cw = new ContextWrapper(ChatWindow.appContext);
-//        // path to /data/data/yourapp/app_data/imageDir
-//        File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
-//        File image = new File(directory, imagelist.get(0));
-//        BitmapFactory.Options bmOptions = new BitmapFactory.Options();
-//        Bitmap bitmap = BitmapFactory.decodeFile(image.getAbsolutePath(),bmOptions);
-        //TODO not sure if the filepath show be empty
-//        remoteServerProxy.uploadOrDeleteImage(myName,friendName,"","delete");
-        //img.setImageBitmap(bitmap);
+        chatWindowList.setAdapter(mAdapter);
+
     }
 
     public List<ChatRecord> getData() {
@@ -264,7 +285,7 @@ public class ChatWindow extends ActionBarActivity {
         String[] trimDate1 = date.split(" ")[0].split("-");
         String[] trimDate2 = date.split(" ")[1].split(":");
 
-        return (new BigInteger(trimDate1[0]+trimDate1[1]+trimDate1[2]+trimDate2[0]+trimDate2[1]));
+        return (new BigInteger(trimDate1[0]+trimDate1[1]+trimDate1[2]+trimDate2[0]+trimDate2[1]+trimDate2[2]));
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

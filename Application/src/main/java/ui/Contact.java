@@ -42,25 +42,14 @@ public class Contact extends ActionBarActivity {
         setContentView(R.layout.ui_contact);
 
         contact_listView = (ListView) findViewById(R.id.contact_listview);
-        //mAdaper=new FriendAdapter(this, getData());
-        //use in real time
+
         mAdaper = new FriendAdapter(this, LogIn.loginAccount.getActiveFriends());
 
         pending_listView = (ListView) findViewById(R.id.contact_pendinglistview);
-       // pendingAdaper=new PendingRequestAdapter(this, getData());
-        //use in real time
+
         pendingAdaper = new PendingRequestAdapter(this, LogIn.loginAccount.getPendingFriends());
 
         contact_listView.setAdapter(mAdaper);
-        
-//        layout = (RelativeLayout) findViewById(R.id.contact_relativelayout3);
-//        layout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(Contact.this, ProfileAndRemove.class);
-//                startActivity(intent);
-//            }
-//        });
 
         searchButton = (Button) findViewById(R.id.search_button);
         searchButton.setOnClickListener(new View.OnClickListener() {
@@ -84,12 +73,8 @@ public class Contact extends ActionBarActivity {
                     Toast.makeText(getApplicationContext(), "cannot find", Toast.LENGTH_SHORT).show();
                 }
 
-                //Toast.makeText(getApplicationContext(), userid, Toast.LENGTH_SHORT).show();
-
             }
         });
-
-        //agreeButton = (Button) findViewById(R.id.agree_button);
 
 
 
@@ -127,25 +112,12 @@ public class Contact extends ActionBarActivity {
                 LogIn.loginAccount.getPassword());
         LogIn.loginAccount = tryAccount;
         contact_listView = (ListView) findViewById(R.id.contact_listview);
-        //mAdaper=new FriendAdapter(this, getData());
-        //use in real time
+
         mAdaper = new FriendAdapter(this, LogIn.loginAccount.getActiveFriends());
 
         pending_listView = (ListView) findViewById(R.id.contact_pendinglistview);
-        // pendingAdaper=new PendingRequestAdapter(this, getData());
-        //use in real time
+
         pendingAdaper = new PendingRequestAdapter(this, LogIn.loginAccount.getPendingFriends());
-
-        contact_listView.setAdapter(mAdaper);
-
-//        layout = (RelativeLayout) findViewById(R.id.contact_relativelayout3);
-//        layout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(Contact.this, ProfileAndRemove.class);
-//                startActivity(intent);
-//            }
-//        });
 
         contact_listView.setAdapter(mAdaper);
 

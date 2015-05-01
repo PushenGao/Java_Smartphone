@@ -45,6 +45,7 @@ public class RestfulImgGetService extends AsyncTask<String,Void,Object> {
                 return null;
             }
             String header = httpConnection.getHeaderField("imgFrom");
+            //header = "myimg";
             results.add(header);
             //System.out.println(header);
             InputStream is = httpConnection.getInputStream();
@@ -61,9 +62,12 @@ public class RestfulImgGetService extends AsyncTask<String,Void,Object> {
             os = new FileOutputStream(mypath);
             byte[] b = new byte[2048];
             int length;
+            int i = 0;
             while ((length = is.read(b)) != -1) {
                 os.write(b, 0, length);
+                i = i + 2048;
             }
+            System.out.println("fucker " + i);
 
             httpConnection.disconnect();
 
