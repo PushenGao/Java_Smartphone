@@ -17,21 +17,21 @@
         android:layout_toRightOf="@id/chat_photo"
         android:layout_centerVertical="true"
         android:layout_margin="2dp"/>
-    <TextView
-        android:id="@+id/chatview_textview2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/chat_photo"
-        android:layout_alignParentBottom="true"
-        android:padding="7dp"
-        android:text="@string/come_on"
-        android:textColor="#666" />
-    <TextView
-        android:id="@+id/chatview_textview3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/last_night"
-        android:layout_alignParentRight="true"/>
+    <!--<TextView-->
+        <!--android:id="@+id/chatview_textview2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_toRightOf="@id/chat_photo"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:padding="7dp"-->
+        <!--android:text="@string/come_on"-->
+        <!--android:textColor="#666" />-->
+    <!--<TextView-->
+        <!--android:id="@+id/chatview_textview3"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/last_night"-->
+        <!--android:layout_alignParentRight="true"/>-->
 
 
-</RelativeLayout><!-- From: file:/Users/JiateLi/Desktop/java-werun-501/Application/src/main/res/layout/ui_chat_history_view.xml -->
+</RelativeLayout><!-- From: file:/Users/Jackyliz/Documents/Java_Smartphone/Application/src/main/res/layout/ui_chat_history_view.xml -->

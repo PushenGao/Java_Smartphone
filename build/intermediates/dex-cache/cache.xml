@@ -2,95 +2,95 @@
 <items version="2" >
 
     <item
-        jar="/Users/JiateLi/Desktop/java-werun-501/Application/src/main/java/libs/gson-2.2.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="126d1ea978aa87b87c90f32beac4dc966a318982">
-        <dex dex="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/pre-dexed/debug/gson-2.2.3-740c1478db0f4f76d32d295269d409cf1a9c10a6.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/6.5.87/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a75b29dc51b364df032af8bcfcad7e54ccfda28d">
-        <dex dex="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/pre-dexed/debug/classes-a695d04324e60922ec2acf2a5074daf557a62446.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/java-werun-501/Application/src/main/java/libs/jsr311-api-1.1.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="59033da2a1afd56af1ac576750a8d0b1830d59e6">
-        <dex dex="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/pre-dexed/debug/jsr311-api-1.1.1-7021c318194c9926cfaefd25072aecdea5a0c099.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/pre-dexed/debug/classes-d6dfc85e3dadfe4b8fadf2a57b49285ded13dd6a.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-d008f6bc85537c42e562b7ccb97a13812db09c79.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-17508b1511177344e436add18a2e55d257e2befc.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/java-werun-501/Application/src/main/java/libs/jersey-bundle-1.8.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b59d9d4dd6d6301515697b29260f1f4dcaabd771">
-        <dex dex="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/pre-dexed/debug/jersey-bundle-1.8-3a6b4c395a67361ec2719fb9190eaafbf7f00013.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/java-werun-501/Application/src/main/java/libs/json_simple-1.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="5e303a03d04e6788dddfa3655272580ae0fc13bb">
-        <dex dex="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/pre-dexed/debug/json_simple-1.1-594636f01d195a35324f1013a93e3381b70ddb91.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
-        <dex dex="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/pre-dexed/debug/classes-afe08e04f15043bfdb5d5681414a0a84738a3afe.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/22.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="11842de6a309c447b3a3d60d73ad637a87c58994">
-        <dex dex="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/pre-dexed/debug/classes-a3336e9a6e6b6933e6cdd69e634e9b7c23cf97ab.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/java-werun-501/Application/src/main/java/libs/mimepull-1.4.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b6b598d554b27a7006d682a8179fd85efc671fce">
-        <dex dex="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/pre-dexed/debug/mimepull-1.4-9060a43b0a447e0c294d68a9b5007d493259a19e.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/22.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="c9e0c6fc22b22b96d0db564cf073ab6f288bb758">
-        <dex dex="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/pre-dexed/debug/classes-3aece5d66f9ba03cfce7fd7d4d53d1f873d08d36.jar" />
-    </item>
-    <item
-        jar="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/classes.jar"
+        jar="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="95482e7c792a7c0d5a9d5461e97726bd54fe9549">
-        <dex dex="/Users/JiateLi/Desktop/java-werun-501/Application/build/intermediates/pre-dexed/debug/classes-70ddf5949daa51b5fbafab8183cb7f68dee4d1a1.jar" />
+        <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-3345fb2305c86a182d939cacfbcc450c58aa448f.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Java_Smartphone/Application/src/main/java/libs/jersey-bundle-1.8.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b59d9d4dd6d6301515697b29260f1f4dcaabd771">
+        <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/jersey-bundle-1.8-bc3f7999ec8d9469a7384f5424884dd2ce1b3c2f.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Java_Smartphone/Application/src/main/java/libs/mimepull-1.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b6b598d554b27a7006d682a8179fd85efc671fce">
+        <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/mimepull-1.4-6e20c04b31a6c8642aa70b22adc0f96252037aac.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a75b29dc51b364df032af8bcfcad7e54ccfda28d">
+        <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-f2f254b494d7c0b5cd16f9de12221fb0b0f393ad.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Java_Smartphone/Application/src/main/java/libs/json_simple-1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5e303a03d04e6788dddfa3655272580ae0fc13bb">
+        <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/json_simple-1.1-1c1865abb392ffbd0034db1607122e86af7179bc.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="11842de6a309c447b3a3d60d73ad637a87c58994">
+        <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-7b70038af0406dc07b8968a6df1aad1fa6499f59.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Java_Smartphone/Application/src/main/java/libs/gson-2.2.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="126d1ea978aa87b87c90f32beac4dc966a318982">
+        <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/gson-2.2.3-b38ca05647438477ab0955619e5d47284c240461.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-36fe3431fdf94ed0893392440f23778a9c2df4f3.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c9e0c6fc22b22b96d0db564cf073ab6f288bb758">
+        <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-7ae37f3645a67a56cf022da2e1d8e32661cb11d8.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-50b16baf5bf7109a9d70188779eddc4ce132ab8d.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-5ec564c24c3fee7c1738133427fb251b9d8d480a.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Java_Smartphone/Application/src/main/java/libs/jsr311-api-1.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="59033da2a1afd56af1ac576750a8d0b1830d59e6">
+        <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/jsr311-api-1.1.1-cfb43582e7e1cf738d5485474649f5201ffd5b6a.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-14942bd6fbe58da247bc91eac88c432118b45307.jar" />
     </item>
 
 </items>

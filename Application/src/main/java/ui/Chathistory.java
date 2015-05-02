@@ -1,8 +1,10 @@
 package ui;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,15 +19,19 @@ import java.util.List;
 import java.util.Map;
 
 import adapter.BuildRecentChatRecord;
+import dblayout.ChatRecordDAO;
 import model.Account;
 import model.BasicAccount;
 import model.ChatRecord;
+import ws.remote.RemoteServerProxy;
 
 
 public class Chathistory extends ActionBarActivity {
     private RelativeLayout layout;
     private ListView chat_listview;
     private RecentChatAdapter mAdpter;
+    private Handler mHandler = new Handler();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,15 +61,64 @@ public class Chathistory extends ActionBarActivity {
 //        });
     }
 
-    private List<ChatRecord> getData()
-    {
-        List<ChatRecord> list=new ArrayList<ChatRecord>();
+    @Override
+    public void onResume() {
+        super.onResume();
+        mHandler.removeCallbacks(mUpdateClockTask);
+        mHandler.postDelayed(mUpdateClockTask, 100);
+    }
 
-        ChatRecord record1 = new ChatRecord();
-        record1.setMyName("zheng");
-        record1.setFriendName("jiate");
-        record1.setTimeStamp("2014-12-12");
-        record1.setChatContent("hello");
+    @Override
+    public void onPause() {
+        super.onPause();
+        mHandler.removeCallbacks(mUpdateClockTask);
+    }
+
+    private Runnable mUpdateClockTask = new Runnable() {
+        public void run() {
+            updateClock();
+            mHandler.postDelayed(mUpdateClockTask, 1000);
+        }
+    };
+
+    public void updateClock(){
+        Log.d("test", "1");
+        chat_listview = (ListView) findViewById(R.id.chat_listview);
+        mAdpter = new RecentChatAdapter(this, getData());
+
+        chat_listview.setAdapter(mAdpter);
+
+    }
+
+    private List<Account> getData()
+    {
+        String myName = LogIn.loginAccount.getBasicAccount().getName();
+
+        ChatRecordDAO chatRecordDAO = new ChatRecordDAO(getApplicationContext());
+
+        List<Account> list=new ArrayList<Account>();
+
+        List<BasicAccount> basicList = LogIn.loginAccount.getActiveFriends();
+        for (BasicAccount account : basicList) {
+            List<ChatRecord> recordList1 = chatRecordDAO.getAllRecord(myName, account.getName());
+            List<ChatRecord> recordList2 = chatRecordDAO.getAllRecord(account.getName(), myName);
+            List<ChatRecord> recordList = new ArrayList<ChatRecord>();
+            recordList.addAll(recordList1);
+            recordList.addAll(recordList2);
+            if (recordList.size() != 0) {
+                Account validAccount = new Account();
+                validAccount.setBasicAccount(account);
+                list.add(validAccount);
+            }
+        }
+
+
+
+//        ChatRecord record1 = new ChatRecord();
+//        record1.setMyName("zheng");
+//        record1.setFriendName("jiate");
+//        record1.setTimeStamp("2014-12-12");
+//        record1.setChatContent("hello");
 //        Account friend1=new Account();
 
 //        friend1.getBasicAccount().setName("Nancy");
@@ -78,7 +133,7 @@ public class Chathistory extends ActionBarActivity {
 //        friend3.setBasicAccount(basicAccount3);
 //        friend3.getBasicAccount().setName("Annie");
 
-        list.add(record1);
+//        list.add(record1);
 //        list.add(friend2);
 //        list.add(friend3);
 
