@@ -13,9 +13,19 @@
         android:layout_height="400dp"
         android:layout_alignParentLeft="true"
         android:paddingLeft="5dp"
-        android:src="@drawable/zheng"
+        android:src="@drawable/default_photo"
         android:paddingBottom="20dp"
         android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/show_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/total_miles"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignBottom="@id/history_background"
+        />
 
     <TableLayout
         android:id="@+id/history_tablelayout1"

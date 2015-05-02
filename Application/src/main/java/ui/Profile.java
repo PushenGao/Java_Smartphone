@@ -31,6 +31,7 @@ public class Profile extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //set up the information of user, when load
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_profile);
 
@@ -44,8 +45,8 @@ public class Profile extends ActionBarActivity {
         gender = intent.getStringExtra("gender");
 
         showName.setText(name);
-        showAge.setText(age);
-        showGender.setText(gender);
+        showAge.setText("Age: " + age);
+        showGender.setText("Gender: " + gender);
         addFriendBtn = (Button) findViewById(R.id.profile_button1);
     }
 
@@ -73,10 +74,8 @@ public class Profile extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    //TODO after add the button, can set the friend request to server
     public void addFriend(View view){
-        Toast.makeText(getApplicationContext(), "hello", Toast.LENGTH_SHORT).show();
-
+        //when click the add friend button, set friend request to server
         RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
         FriendReq friendReq = new FriendReq();
         friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());

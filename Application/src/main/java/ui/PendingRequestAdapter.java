@@ -50,19 +50,21 @@ public class PendingRequestAdapter extends BaseAdapter {
         return position;
     }
     @Override
-    public View getView(int position, View convertView, ViewGroup parent)
-    {
+    public View getView(int position, View convertView, ViewGroup parent){
+        //set up the pending request view
         View view = View.inflate(context, R.layout.ui_pengdingfriendsview, null);
         final BasicAccount friend = mData.get(position);
         TextView contactview = (TextView) view.findViewById(R.id.pengdingview_textview);
         contactview.setText(friend.getName());
 
+        //when user clicks the agree button
         agreeBtn = (Button) view.findViewById(R.id.pending_btn);
         agreeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 RemoteServerProxy rsp = new RemoteServerProxy();
                 FriendReq friendReq = new FriendReq();
+                //update the data in server
                 friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());
                 friendReq.setReceiver(friend.getName());
                 friendReq.setAction("add");
@@ -70,6 +72,7 @@ public class PendingRequestAdapter extends BaseAdapter {
             }
         });
 
+        //when user clicks the reject button
         rejectBtn = (Button) view.findViewById(R.id.reject_btn);
         rejectBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -8,7 +8,7 @@
         android:id="@+id/chat_photo"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:src="@drawable/zheng"/>
+        android:src="@drawable/default_photo"/>
     <TextView
         android:id="@+id/chatview_textview1"
         android:layout_width="wrap_content"

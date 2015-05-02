@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.example.android.actionbarcompat.styled.R;
 
+import java.util.List;
+
 import exception.RegisterInputNullExceptionHandler;
 import model.Account;
 import model.BasicAccount;
@@ -88,6 +90,7 @@ public class RegisterActivity extends ActionBarActivity {
             inputGender = radioSexButton.getText().toString();
 
             String strAge = "" + inputAge;
+
             if(inputUser.length() == 0 || inputPW.length() == 0 || inputName.length() == 0 || strAge.length() == 0
                     || inputGender.length() == 0){
                 Toast.makeText(getApplicationContext(), "Please input valid user information",
@@ -95,24 +98,28 @@ public class RegisterActivity extends ActionBarActivity {
                 return;
             }
 
+            //try to see if the account is registered
             BasicAccount newBasicAccount = new BasicAccount(inputName, strAge, inputGender);
             Account newAccount = new Account(inputPW);
             newAccount.setBasicAccount(newBasicAccount);
             RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
             String isOK = remoteServerProxy.register(newAccount);
 
-            if(isOK.equals("fail")){
+            //if the account is registered
+            if(isOK.equals("failed")){
                 Toast.makeText(getApplicationContext(), "The userid has been registered",
                 Toast.LENGTH_LONG).show();
                 return;
             }
 
+            //if register succeed
             Account tryAccount = remoteServerProxy.verifyAccount(inputUser,inputPW);
             LogIn.loginAccount = tryAccount;
 
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }catch(Exception e){
+            //catch the null exception
             Log.d("register exception:", e.toString());
             RegisterInputNullExceptionHandler registerInputNullExceptionHandler = new RegisterInputNullExceptionHandler();
             registerInputNullExceptionHandler.fix(inputUser);

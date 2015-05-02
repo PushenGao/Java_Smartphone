@@ -30,7 +30,6 @@ import com.google.android.gms.maps.model.PolylineOptions;
 import java.text.NumberFormat;
 
 public class Mainpage extends FragmentActivity {
-
     private GoogleMap mMap;
     private Marker marker;
     private PolylineOptions poly;
@@ -44,7 +43,6 @@ public class Mainpage extends FragmentActivity {
     public Location mylocation;
     public Location startPoint;
     public Location endPoint;
-//    public Chronometer chronometer;
     public double startTime;
     public double endTime;
 
@@ -54,12 +52,11 @@ public class Mainpage extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_mainpage);
         setUpMapIfNeeded();
+        //start button
         startBtn = (Button)findViewById(R.id.googlemaps_start);
         LocationManager locationManager;
         String svcName= Context.LOCATION_SERVICE;
         locationManager = (LocationManager)getSystemService(svcName);
-
-//        chronometer = new Chronometer(this);
         Criteria criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
         criteria.setPowerRequirement(Criteria.POWER_LOW);
@@ -78,8 +75,10 @@ public class Mainpage extends FragmentActivity {
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng,17));
         }
 
+        //draw the path of running
         poly = new PolylineOptions();
         updateWithNewLocation(location);
+        //update the location in a certain interval
         locationManager.requestLocationUpdates(provider, 1000, 10, locationListener);
     }
 
@@ -93,6 +92,7 @@ public class Mainpage extends FragmentActivity {
         return new LatLng(location.getLatitude(), location.getLongitude());
     }
 
+    //update the new location
     private void updateWithNewLocation(Location location) {
 
         if (location != null) {
@@ -138,9 +138,11 @@ public class Mainpage extends FragmentActivity {
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
     }
 
+    //when the button is clicked
     public void buttonClicked(View view){
         startBtn = (Button) findViewById(R.id.googlemaps_start);
         state++;
+        //try to change the state, if the user is running, set the text of the button to stop
         if(state == RUNSTATE) {
             startBtn.setText("Stop");
 
@@ -152,14 +154,17 @@ public class Mainpage extends FragmentActivity {
             sb.append(startPoint.getLatitude());
             //update last location
             LogIn.loginAccount.getBasicAccount().getHistoryRecord().setLastLocation(sb.toString());
-            //chronometer.start();
+            //start to count the running time
             startTime = SystemClock.elapsedRealtime();
         }else{
+            //if the user stops running
             state = STOPSTATE;
             try {
+                //get the end point
                 endPoint = mylocation;
                 float results[]=new float[1];
 
+                //calculate the distance between the starting point and endpoint
                 Location.distanceBetween(startPoint.getLatitude(), startPoint.getLongitude(),
                         endPoint.getLatitude(), endPoint.getLongitude(), results);
 
@@ -168,8 +173,8 @@ public class Mainpage extends FragmentActivity {
                 // mBundle.putSerializable(SER_KEY, drawable);
                 Intent intent = new Intent(this, Resultdisplay.class);
                 String distance = NumberFormat.getInstance().format(results[0]);
-                //chronometer.stop();
                 endTime = SystemClock.elapsedRealtime();
+                //calculate the running time
                 double totalTime = endTime - startTime;
                 String pastTime = String.valueOf(totalTime);
                 StringBuilder sb = new StringBuilder();

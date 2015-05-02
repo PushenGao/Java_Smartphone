@@ -28,30 +28,27 @@ public class FriendAdapter extends BaseAdapter {
         this.mData = data;
         this.context = context;
     }
-    @Override
-    public int getCount()
-    {
 
+    @Override
+    public int getCount(){
         return mData.size();
     }
-    @Override
-    public Object getItem(int position)
-    {
 
+    @Override
+    public Object getItem(int position){
         return mData.get(position);
     }
-    @Override
-    public long getItemId(int position)
-    {
 
+    @Override
+    public long getItemId(int position){
         return position;
     }
+
     @Override
-    public View getView(int position, View convertView, ViewGroup parent)
-    {
+    public View getView(int position, View convertView, ViewGroup parent){
+        //setup each view in the listview
         View view = View.inflate(context, R.layout.ui_contactview, null);
         final BasicAccount friend = mData.get(position);
-
         TextView contactview = (TextView) view.findViewById(R.id.contactview_textview);
         contactview.setText(friend.getName());
 
