@@ -36,57 +36,6 @@ public abstract class DBConnectorProxy {
         if (database != null)
             database.close();
     }
-//
-//    public void insertAccount(String id, String name)
-//    {
-//        ContentValues newAccount = new ContentValues();
-//        newAccount.put("userid", id);
-//        newAccount.put("name", name);
-//
-//        open();
-//        database.insert("account", null, newAccount);
-//        close();
-//    }
-//
-//    public void updateAccount(String id, String name)
-//    {
-//        ContentValues editAccount = new ContentValues();
-//        editAccount.put("name", name);
-//
-//        open();
-//        database.update("account", editAccount, "userid=" + id, null);
-//        close();
-//    }
-//
-//    public Cursor getAccount(String id)
-//    {
-//        return database.query(
-//                "account", null, "userid=" + id, null, null, null, null);
-//    }
-//
-//    public String getDataInfo() {
-//        open();
-//        Cursor cursor = database.rawQuery("SELECT * FROM account", null);
-//        cursor.moveToFirst();
-//        StringBuilder sb = new StringBuilder();
-//        for (; !cursor.isAfterLast(); cursor.moveToNext()) {
-//            sb.append(cursor.getString(cursor.getColumnIndex("userid")));
-//            sb.append(",");
-//            sb.append(cursor.getString(cursor.getColumnIndex("name")));
-//            sb.append(";");
-//        }
-//        cursor.close();
-//        close();
-//        sb.setLength(sb.length() - 1);
-//        return sb.toString();
-//    }
-//
-//    public void deleteAccount(String id)
-//    {
-//        open();
-//        database.delete("account", "userid=" + id, null);
-//        close();
-//    }
 
     public void insertRecord(String name, String withuser, String time, String content)
     {
@@ -147,28 +96,7 @@ public abstract class DBConnectorProxy {
         close();
         return chatRecord;
     }
-//    public String getAllRecords() {
-//        open();
-//        Cursor cursor = database.rawQuery("SELECT * FROM chatrecords", null);
-//        cursor.moveToFirst();
-//        StringBuilder sb = new StringBuilder();
-//        for (; !cursor.isAfterLast(); cursor.moveToNext()) {
-//            sb.append(cursor.getString(cursor.getColumnIndex("_id")));
-//            sb.append(",");
-//            sb.append(cursor.getString(cursor.getColumnIndex("senderuserid")));
-//            sb.append(",");
-//            sb.append(cursor.getString(cursor.getColumnIndex("withuserid")));
-//            sb.append(",");
-//            sb.append(cursor.getString(cursor.getColumnIndex("time")));
-//            sb.append(",");
-//            sb.append(cursor.getString(cursor.getColumnIndex("content")));
-//            sb.append(";");
-//        }
-//        cursor.close();
-//        close();
-//        sb.setLength(sb.length() - 1);
-//        return sb.toString();
-//    }
+
 
     public ArrayList<ChatRecord> getAllRecords(String senderuserid, String withuserid) {
         ArrayList<ChatRecord> list = new ArrayList<ChatRecord>();
@@ -190,7 +118,6 @@ public abstract class DBConnectorProxy {
         return list;
     }
 
-//TODO 每个好友只需要一个，而且是双向的里面找last
     public ArrayList<ChatRecord> getAllRecentRecords(String senderuserid) {
         ArrayList<ChatRecord> list = new ArrayList<ChatRecord>();
         open();
@@ -228,10 +155,6 @@ public abstract class DBConnectorProxy {
         @Override
         public void onCreate(SQLiteDatabase db)
         {
-//            String createQuery = "CREATE TABLE account" +
-//                    "(userid TEXT PRIMARY KEY, name TEXT);";
-//
-//            db.execSQL(createQuery);
 
             String createQuery = "CREATE TABLE if not exists chatrecords" +
                     "(_id INTEGER PRIMARY KEY AUTOINCREMENT, senderuserid TEXT, withuserid TEXT, " +

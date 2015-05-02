@@ -81,9 +81,7 @@ public class ChatWindowAdapter extends BaseAdapter {
             Content.setText(mData.get(Index).getChatContent());
 
             if (imagelist != null) {
-                // 下照片到本地 找到第一张
                 ContextWrapper cw = new ContextWrapper(ChatWindow.appContext);
-                // path to /data/data/yourapp/app_data/imageDir
                 File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
                 File image = new File(directory, imagelist.get(0));
 

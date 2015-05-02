@@ -18,9 +18,8 @@
         android:gravity="center"
         android:textColor="#000000"
         android:layout_toRightOf="@+id/Me_Header"
-
         android:textIsSelectable="false" />
 
 
     <!--android:background="@android:color/holo_blue_bright"-->
-</RelativeLayout><!-- From: file:/Users/Jackyliz/Documents/Java_Smartphone/Application/src/main/res/layout/ui_chat_window_me.xml -->
+</RelativeLayout><!-- From: file:/Users/JiateLi/Desktop/java-werun-501/Application/src/main/res/layout/ui_chat_window_me.xml -->

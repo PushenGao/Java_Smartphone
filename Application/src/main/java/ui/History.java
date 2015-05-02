@@ -39,13 +39,6 @@ public class History extends ActionBarActivity {
         showDistance.setText(totalDistance);
         showTime.setText(totalTime);
 
-//        intent = new Intent(this, BroadcastService.class);
-//        broadcastReceiver = new BroadcastReceiver() {
-//            @Override
-//            public void onReceive(Context context, Intent intent) {
-//                updateUI(intent);
-//            }
-//        };
     }
 
 
@@ -78,31 +71,8 @@ public class History extends ActionBarActivity {
 //
         showDistance.setText(totalDistance);
         showTime.setText(totalTime);
-//        showDistance.setText(String.valueOf(count++));
-//        showTime.setText(String.valueOf(count1++));
+
     }
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-//        startService(intent);
-//        registerReceiver(broadcastReceiver, new IntentFilter(BroadcastService.BROADCAST_ACTION));
-//    }
-//
-//    @Override
-//    public void onPause() {
-//        super.onPause();
-//        unregisterReceiver(broadcastReceiver);
-//        stopService(intent);
-//    }
-//
-//    private void updateUI(Intent intent) {
-//        String counter = intent.getStringExtra("counter");
-//        String time = intent.getStringExtra("time");
-//        showDistance = (TextView) findViewById(R.id.show_total_run);
-//        showTime = (TextView) findViewById(R.id.show_total_time);
-//        showDistance.setText(time);
-//        showTime.setText(counter);
-//    }
 
 
     @Override

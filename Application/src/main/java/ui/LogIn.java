@@ -84,7 +84,6 @@ public class LogIn extends ActionBarActivity {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
-//        //如果不存在账号需要提示账号不存在，提示注册
         else{
             Toast.makeText(getApplicationContext(), "The Account verification fails!",
                     Toast.LENGTH_LONG).show();

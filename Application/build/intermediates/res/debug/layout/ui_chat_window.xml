@@ -14,10 +14,6 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         >
-        <!--<ImageView-->
-            <!--android:id="@+id/test"-->
-            <!--android:layout_width="100dp"-->
-            <!--android:layout_height="100dp" />-->
         <ListView
             android:id="@+id/chat_window_listview"
             android:layout_width="match_parent"
@@ -52,13 +48,6 @@
 
         </TableRow>
     </RelativeLayout>
-
-    <!--<Button-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="test"-->
-        <!--android:id="@+id/test_btn" />-->
-
 </RelativeLayout>
 
-<!-- From: file:/Users/Jackyliz/Documents/Java_Smartphone/Application/src/main/res/layout/ui_chat_window.xml -->
+<!-- From: file:/Users/JiateLi/Desktop/java-werun-501/Application/src/main/res/layout/ui_chat_window.xml -->

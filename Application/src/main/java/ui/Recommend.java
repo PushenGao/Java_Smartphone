@@ -44,15 +44,6 @@ public class Recommend extends ActionBarActivity {
 
         recommend_listview.setAdapter(mAdapter);
 
-//        bt = (Button)findViewById(R.id.recommend_button);
-//        bt.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(Recommend.this, Profile.class);
-//                startActivity(intent);
-//            }
-//        });
-
 
         mVibrator = (Vibrator) getApplication().getSystemService(
                 VIBRATOR_SERVICE);
@@ -61,9 +52,6 @@ public class Recommend extends ActionBarActivity {
         mShakeListener.setOnShakeListener(new ShakeListener.OnShakeListener() {
 
             public void onShake() {
-
-                 //mAdapter = new RecommendationAdapter(this, getData());
-        //will be used in real time
 
                 mShakeListener.stop();
                 startVibrato();
@@ -76,7 +64,6 @@ public class Recommend extends ActionBarActivity {
                         Toast.makeText(getApplicationContext(), "Recommend new users for you!",
                                 Toast.LENGTH_LONG).show();
                         recommend_listview.setAdapter(mAdapter);
-//                        int time = 10;
                         mVibrator.cancel();
                         mShakeListener.start();
                     }

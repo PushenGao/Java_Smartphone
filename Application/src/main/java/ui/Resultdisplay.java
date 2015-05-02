@@ -24,11 +24,7 @@ public class Resultdisplay extends ActionBarActivity {
         String message = intent.getStringExtra(Mainpage.EXTRA_MESSAGE);
         rstBtn = (Button)findViewById(R.id.result_btn);
         rstText = (TextView) findViewById(R.id.rstTexxt);
-//        StringBuilder sb = new StringBuilder();
-//        sb.append("Running time: 39 min\n");
-//        sb.append("Running distance: 2.5 mile\n");
-//        sb.append("Energy consumption: 400 cal");
-        //rstText.setText(sb.toString());
+
         String[] result = message.split("werun");
         long time = (long)Double.parseDouble(result[1]);
         int intTime = (int) (time/1000);

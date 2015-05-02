@@ -67,7 +67,6 @@ public class PendingRequestAdapter extends BaseAdapter {
                 friendReq.setReceiver(friend.getName());
                 friendReq.setAction("add");
                 rsp.reqFriend(friendReq);
-                //Toast.makeText(context, "hello", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -81,7 +80,6 @@ public class PendingRequestAdapter extends BaseAdapter {
                 friendReq.setReceiver(friend.getName());
                 friendReq.setAction("reject");
                 rsp.reqFriend(friendReq);
-               // Toast.makeText(context, "hello", Toast.LENGTH_SHORT).show();
             }
         });
 

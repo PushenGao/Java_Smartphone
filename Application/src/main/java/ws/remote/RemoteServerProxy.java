@@ -26,7 +26,6 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
     @Override
     public String reqFriend(FriendReq freq) {
         String targetURL = "http://" + ipAddress + "/Jersey/rest/werun/friquest";
-//        String response = RestfulPOST.restPOST(freq.toString(),targetURL);
         String response = "";
         try {
             response = new RestfulPOSTService().execute(freq.toString(),targetURL).get();
@@ -42,7 +41,6 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
     public List<BasicAccount> getRecommend(String userId) {
         JsonUtil jsonUtil = new JsonUtil();
         String targetURL = "http://" + ipAddress + "/Jersey/rest/werun/recommend/" + userId;
-        //String resp = RestfulGET.restGET(targetURL);
         String resp = "";
         try {
             resp = new RestfulGETService().execute(targetURL).get();
@@ -65,7 +63,6 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
     @Override
     public String updateHistoryRecord(HistoryRecord history) {
         String targetURL = "http://" + ipAddress + "/Jersey/rest/werun/record";
-        //String response = RestfulPOST.restPOST(history.toString(),targetURL);
         String response = "";
         try {
             response = new RestfulPOSTService().execute(history.toString(),targetURL).get();
@@ -81,7 +78,6 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
     public Account verifyAccount(String userId, String passWord) {
         JsonUtil jsonUtil = new JsonUtil();
         String targetURL = "http://" + ipAddress + "/Jersey/rest/werun/login/" + userId + "/" + passWord;
-        //String resp = RestfulGET.restGET(targetURL);
         String resp = "";
         try {
             resp = new RestfulGETService().execute(targetURL).get();
@@ -112,7 +108,6 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
     public BasicAccount searchAccount(String userid) {
         JsonUtil jsonUtil = new JsonUtil();
         String targetURL = "http://" + ipAddress + "/Jersey/rest/werun/search/" + userid;
-        //String resp = RestfulGET.restGET(targetURL);
         String resp = "";
         try {
             resp = new RestfulGETService().execute(targetURL).get();
@@ -128,7 +123,6 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
     public List<ChatRecord> getChatRecord(String userId) {
         JsonUtil jsonUtil = new JsonUtil();
         String targetURL = "http://" + ipAddress + "/Jersey/rest/werun/getChat/" + userId;
-        //String resp = RestfulGET.restGET(targetURL);
         String resp = "";
         try {
             resp = new RestfulGETService().execute(targetURL).get();
@@ -149,7 +143,6 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
     @Override
     public List<String> getImageFromServer(String receiverId) {
         String targetURL = "http://" + ipAddress + "/Jersey/rest/werun/getImage/" + receiverId;
-       // List<String> resp = RestfulImgOperation.getImgFromServer(receiverId, targetURL);
         List<String> resp = null;
         try {
             resp = (List<String>) new RestfulImgGetService().execute(receiverId, targetURL).get();
@@ -164,7 +157,6 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
 
 
     public void uploadOrDeleteImage(String senderId, String receiverId, String filePath, String action) {
-       // RestfulImgOperation.uploadOrDeleteImage(senderId, receiverId, filePath, action, timeStamp);
         try {
             String rst = new RestfulImgUploadService().execute(senderId, receiverId, filePath, action).get();
         } catch (InterruptedException e) {

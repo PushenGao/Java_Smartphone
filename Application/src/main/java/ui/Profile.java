@@ -47,9 +47,6 @@ public class Profile extends ActionBarActivity {
         showAge.setText(age);
         showGender.setText(gender);
         addFriendBtn = (Button) findViewById(R.id.profile_button1);
-
-       // intent = new Intent(this, BroadcastService.class);
-
     }
 
 

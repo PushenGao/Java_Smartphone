@@ -30,7 +30,6 @@ public class RestfulImgGetService extends AsyncTask<String,Void,Object> {
 
     @Override
     protected Object doInBackground(String... params) {
-        //String userId, String targetURL
         List<String> results = new ArrayList<String>();
         try {
 
@@ -38,25 +37,18 @@ public class RestfulImgGetService extends AsyncTask<String,Void,Object> {
 
             HttpURLConnection httpConnection = (HttpURLConnection) restServiceURL.openConnection();
             httpConnection.setRequestMethod("GET");
-            //httpConnection.setRequestProperty("Accept", "application/json");
 
             if (httpConnection.getResponseCode() != 200) {
                 System.out.println("No images");
                 return null;
             }
             String header = httpConnection.getHeaderField("imgFrom");
-            //header = "myimg";
             results.add(header);
-            //System.out.println(header);
             InputStream is = httpConnection.getInputStream();
 
             OutputStream os = null;
-            //TODO
-            // change the file path to the android sd card
             ContextWrapper cw = new ContextWrapper(ChatWindow.appContext);
-            // path to /data/data/yourapp/app_data/imageDir
             File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
-            // Create imageDir
             File mypath=new File(directory,header);
 
             os = new FileOutputStream(mypath);

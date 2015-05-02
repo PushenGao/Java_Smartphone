@@ -19,10 +19,9 @@
         android:layout_margin="3dp"
         android:textIsSelectable="false"
         android:layout_toLeftOf="@+id/Friend_Header"
-
         android:textColor="#000000"
         android:gravity="center" />
 
 
     <!--android:background="@android:color/holo_green_light"-->
-</RelativeLayout><!-- From: file:/Users/Jackyliz/Documents/Java_Smartphone/Application/src/main/res/layout/ui_chat_window_friend.xml -->
+</RelativeLayout><!-- From: file:/Users/JiateLi/Desktop/java-werun-501/Application/src/main/res/layout/ui_chat_window_friend.xml -->
