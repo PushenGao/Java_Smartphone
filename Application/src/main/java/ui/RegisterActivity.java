@@ -24,14 +24,14 @@ import ws.remote.RemoteServerProxy;
 
 
 public class RegisterActivity extends ActionBarActivity {
-    private EditText userText;
+    //private EditText userText;
     private EditText passwordText;
     private EditText nameText;
     private EditText ageText;
     private RadioGroup radioSexGroup;
     private RadioButton radioSexButton;
     private Button registerBtn;
-    private String inputUser;
+    //private String inputUser;
     private String inputPW;
     private String inputName;
     private int inputAge;
@@ -41,7 +41,7 @@ public class RegisterActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_registeractivity);
-        userText = (EditText) findViewById(R.id.registerUserid);
+        //userText = (EditText) findViewById(R.id.registerUserid);
         passwordText = (EditText) findViewById(R.id.registerPassword);
         nameText = (EditText) findViewById(R.id.registerName);
         radioSexGroup = (RadioGroup) findViewById(R.id.registerGenderGroup);
@@ -76,7 +76,7 @@ public class RegisterActivity extends ActionBarActivity {
     public void onSubmitClicked(View view){
         //get the register information
         try {
-            inputUser = userText.getText().toString();
+           // inputUser = userText.getText().toString();
             inputPW = passwordText.getText().toString();
             nameText = (EditText) findViewById(R.id.registerName);
             radioSexGroup = (RadioGroup) findViewById(R.id.registerGenderGroup);
@@ -91,8 +91,8 @@ public class RegisterActivity extends ActionBarActivity {
 
             String strAge = "" + inputAge;
 
-            if(inputUser.length() == 0 || inputPW.length() == 0 || inputName.length() == 0 || strAge.length() == 0
-                    || inputGender.length() == 0){
+            if(inputPW.contains(" ") || inputName.contains(" ") || strAge.contains(" ")
+                    || inputGender.contains(" ")){
                 Toast.makeText(getApplicationContext(), "Please input valid user information",
                         Toast.LENGTH_LONG).show();
                 return;
@@ -113,7 +113,7 @@ public class RegisterActivity extends ActionBarActivity {
             }
 
             //if register succeed
-            Account tryAccount = remoteServerProxy.verifyAccount(inputUser,inputPW);
+            Account tryAccount = remoteServerProxy.verifyAccount(inputName,inputPW);
             LogIn.loginAccount = tryAccount;
 
             Intent intent = new Intent(this, MainActivity.class);
@@ -122,7 +122,9 @@ public class RegisterActivity extends ActionBarActivity {
             //catch the null exception
             Log.d("register exception:", e.toString());
             RegisterInputNullExceptionHandler registerInputNullExceptionHandler = new RegisterInputNullExceptionHandler();
-            registerInputNullExceptionHandler.fix(inputUser);
+            registerInputNullExceptionHandler.fix(inputName);
+            Toast.makeText(getApplicationContext(), "Please input valid user information",
+                    Toast.LENGTH_LONG).show();
         }
     }
 }

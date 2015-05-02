@@ -72,7 +72,8 @@ public class LogIn extends ActionBarActivity {
         }
 
 
-        if(inputUser.length() == 0 || inputPW.length() == 0){
+
+        if(inputUser.length() == 0 || inputPW.length() == 0 || inputUser.contains(" ") || inputPW.contains(" ")){
             Toast.makeText(getApplicationContext(), "Please input valid user information",
                     Toast.LENGTH_LONG).show();
             return;

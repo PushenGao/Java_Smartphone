@@ -74,8 +74,10 @@ public class ChatWindowAdapter extends BaseAdapter {
         }
         else {
             RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
-            List<String> imagelist = remoteServerProxy.getImageFromServer(LogIn.loginAccount.getBasicAccount().getName());
-
+            List<String> imagelist = null;
+            if(Index == mData.size()-1) {
+                imagelist = remoteServerProxy.getImageFromServer(LogIn.loginAccount.getBasicAccount().getName());
+            }
             mView=LayoutInflater.from(mContext).inflate(R.layout.ui_chat_window_friend, null);
             Content=(TextView)mView.findViewById(R.id.To_Content);
             Content.setText(mData.get(Index).getChatContent());
