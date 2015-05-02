@@ -19,6 +19,7 @@ public class History extends ActionBarActivity {
     private String totalTime;
     private TextView showDistance;
     private TextView showTime;
+    private TextView showName;
     private Intent intent;
     //handler to update the distance and time data when account is updated
     private Handler mHandler = new Handler();
@@ -31,11 +32,14 @@ public class History extends ActionBarActivity {
 
         showDistance = (TextView) findViewById(R.id.show_total_run);
         showTime = (TextView) findViewById(R.id.show_total_time);
+        showName = (TextView) findViewById(R.id.show_name);
+        //show_name
 
         totalDistance = LogIn.loginAccount.getBasicAccount().getHistoryRecord().getTotalDistance();
         totalTime = LogIn.loginAccount.getBasicAccount().getHistoryRecord().getTotalTime();
-        showDistance.setText(totalDistance);
-        showTime.setText(totalTime);
+        showName.setText("UserId: " + LogIn.loginAccount.getBasicAccount().getName());
+        showDistance.setText(totalDistance + "miles");
+        showTime.setText(totalTime + " s");
 
     }
 
