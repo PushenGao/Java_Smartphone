@@ -13,13 +13,14 @@ import com.example.android.actionbarcompat.styled.R;
 import java.util.List;
 
 import model.Account;
+import model.BasicAccount;
 import model.ChatRecord;
 
 /**
  * Created by JiateLi on 15/4/17.
  */
 public class RecentChatAdapter extends BaseAdapter {
-    private List<ChatRecord> mData;
+    private List<Account> mData;
     private Context context;
     private RelativeLayout layout;
 
@@ -49,26 +50,30 @@ public class RecentChatAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent)
     {
         View view = View.inflate(context, R.layout.ui_chat_history_view, null);
-        final ChatRecord friend = mData.get(position);
+        final Account friend = mData.get(position);
+        final BasicAccount basicAccount = friend.getBasicAccount();
 
         TextView chatview = (TextView) view.findViewById(R.id.chatview_textview1);
-        chatview.setText(friend.getFriendName());
+        chatview.setText(basicAccount.getName());
+//        chatview.setText(friend.getFriendName());
 
-        TextView chatview2 = (TextView) view.findViewById(R.id.chatview_textview2);
-        chatview2.setText(friend.getChatContent());
+//        TextView chatview2 = (TextView) view.findViewById(R.id.chatview_textview2);
+//        chatview2.setText(friend.getChatContent());
 
-        TextView chatview3 = (TextView) view.findViewById(R.id.chatview_textview3);
-        chatview3.setText(friend.getTimeStamp());
+//        TextView chatview3 = (TextView) view.findViewById(R.id.chatview_textview3);
+//        chatview3.setText(friend.getTimeStamp());
 
         layout = (RelativeLayout) view.findViewById(R.id.chat_layout);
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, ChatWindow.class);
-                intent.putExtra("myname", friend.getMyName())
-                        .putExtra("friendname", friend.getFriendName())
-                        .putExtra("time", friend.getTimeStamp())
-                        .putExtra("content", friend.getChatContent());
+                  intent.putExtra("myname", LogIn.loginAccount.getBasicAccount().getName())
+                          .putExtra("name", basicAccount.getName());
+//                intent.putExtra("myname", friend.getMyName())
+//                        .putExtra("friendname", friend.getFriendName())
+//                        .putExtra("time", friend.getTimeStamp())
+//                        .putExtra("content", friend.getChatContent());
 
                 context.startActivity(intent);
             }
