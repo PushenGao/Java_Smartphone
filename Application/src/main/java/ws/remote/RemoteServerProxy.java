@@ -20,8 +20,8 @@ import ws.util.JsonUtil;
 public class RemoteServerProxy implements FriendRequest, RecommendFriend, RegisterAccountToServer,
  UpdateRunningRecord, VerifyLoginAccount, SearchAccount,GetChatRec,GetImage,UploadChatRec{
 
-    final String ipAddress = "10.6.77.28:8080";
-    //final String ipAddress = "10.0.22.230:8080";//Building 19
+    //final String ipAddress = "10.6.77.28:8080";
+    final String ipAddress = "10.0.22.230:8080";//Building 19
     //final String ipAddress = "10.0.19.163:8080";//Building 23
 
     //send friend request to server, like add, accept, reject, delete friend

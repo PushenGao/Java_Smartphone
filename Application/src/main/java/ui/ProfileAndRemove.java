@@ -45,8 +45,8 @@ public class ProfileAndRemove extends ActionBarActivity {
         gender = intent.getStringExtra("gender");
 
         showName.setText(name);
-        showAge.setText(age);
-        showGender.setText(gender);
+        showAge.setText("Age: " + age);
+        showGender.setText("Gender: " + gender);
 
         //when chat button is clicked, turn to chat window
         addButton = (Button) findViewById(R.id.profileandremove_add);
