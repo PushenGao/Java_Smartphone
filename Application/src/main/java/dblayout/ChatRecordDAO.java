@@ -27,12 +27,22 @@ public class ChatRecordDAO implements IChatRecordDAO {
 
     @Override
     public void deleteRecord(ChatRecord chatRecord) {
-
+        String myName = chatRecord.getMyName();
+        String friendName = chatRecord.getFriendName();
+        String time = chatRecord.getTimeStamp();
+        String content = chatRecord.getChatContent();
+        long id = connector.getRecordId(myName,friendName,time);
+        connector.deleteRecord(id);
     }
 
     @Override
     public void updateRecord(ChatRecord chatRecord) {
-
+        String myName = chatRecord.getMyName();
+        String friendName = chatRecord.getFriendName();
+        String time = chatRecord.getTimeStamp();
+        String content = chatRecord.getChatContent();
+        long id = connector.getRecordId(myName,friendName,time);
+        connector.updateRecord(id,myName,friendName,time,content);
     }
 
     @Override
