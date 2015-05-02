@@ -51,11 +51,21 @@ public class Contact extends ActionBarActivity {
         //get the listview based on the data from login user
         contact_listView = (ListView) findViewById(R.id.contact_listview);
 
-        mAdaper = new FriendAdapter(this, LogIn.loginAccount.getActiveFriends());
+
+        List<BasicAccount> activeFriend = LogIn.loginAccount.getActiveFriends();
+        if(activeFriend == null){
+            activeFriend = new ArrayList<BasicAccount>();
+        }
+        mAdaper = new FriendAdapter(this, activeFriend);
 
         pending_listView = (ListView) findViewById(R.id.contact_pendinglistview);
 
-        pendingAdaper = new PendingRequestAdapter(this, LogIn.loginAccount.getPendingFriends());
+
+        List<BasicAccount> pendingFriend = LogIn.loginAccount.getPendingFriends();
+        if(pendingFriend == null){
+            pendingFriend = new ArrayList<BasicAccount>();
+        }
+        pendingAdaper = new PendingRequestAdapter(this, pendingFriend);
 
         contact_listView.setAdapter(mAdaper);
         //setup the search button, when user input the user id and change to profile
@@ -118,11 +128,21 @@ public class Contact extends ActionBarActivity {
         Account tryAccount = remoteServerProxy.verifyAccount(LogIn.loginAccount.getBasicAccount().getName(),
                 LogIn.loginAccount.getPassword());
         LogIn.loginAccount = tryAccount;
+
+
+
         contact_listView = (ListView) findViewById(R.id.contact_listview);
-        mAdaper = new FriendAdapter(this, LogIn.loginAccount.getActiveFriends());
+        List<BasicAccount> activeFriend = LogIn.loginAccount.getActiveFriends();
+        if(activeFriend == null){
+            activeFriend = new ArrayList<BasicAccount>();
+        }
+        mAdaper = new FriendAdapter(this, activeFriend);
         pending_listView = (ListView) findViewById(R.id.contact_pendinglistview);
-        pendingAdaper = new PendingRequestAdapter(this, LogIn.loginAccount.getPendingFriends());
-        contact_listView.setAdapter(mAdaper);
+        List<BasicAccount> pendingFriend = LogIn.loginAccount.getPendingFriends();
+        if(pendingFriend == null){
+            pendingFriend = new ArrayList<BasicAccount>();
+        }
+        pendingAdaper = new PendingRequestAdapter(this, pendingFriend);contact_listView.setAdapter(mAdaper);
         pending_listView.setAdapter(pendingAdaper);
     }
 

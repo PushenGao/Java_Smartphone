@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.example.android.actionbarcompat.styled.R;
 
+import java.util.List;
+
 import exception.RegisterInputNullExceptionHandler;
 import model.Account;
 import model.BasicAccount;
@@ -104,7 +106,7 @@ public class RegisterActivity extends ActionBarActivity {
             String isOK = remoteServerProxy.register(newAccount);
 
             //if the account is registered
-            if(isOK.equals("fail")){
+            if(isOK.equals("failed")){
                 Toast.makeText(getApplicationContext(), "The userid has been registered",
                 Toast.LENGTH_LONG).show();
                 return;
