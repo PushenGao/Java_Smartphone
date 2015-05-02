@@ -35,16 +35,18 @@ public class Recommend extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_recommend);
 
+        //set up the recommen list view
         recommend_listview = (ListView) findViewById(R.id.recommend_listview);
         //mAdapter = new RecommendationAdapter(this, getData());
         //will be used in real time
+        //try to get the recommend friend from server
         RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
         List<BasicAccount> basicAccountList = remoteServerProxy.getRecommend(LogIn.loginAccount.getBasicAccount().getName());
         mAdapter = new RecommendationAdapter(this, basicAccountList);
 
         recommend_listview.setAdapter(mAdapter);
 
-
+        //set up the shake listener to listen the shake
         mVibrator = (Vibrator) getApplication().getSystemService(
                 VIBRATOR_SERVICE);
         mShakeListener = new ShakeListener(Recommend.this);
@@ -52,7 +54,7 @@ public class Recommend extends ActionBarActivity {
         mShakeListener.setOnShakeListener(new ShakeListener.OnShakeListener() {
 
             public void onShake() {
-
+//when the shake occurs, get new recommend friend from server
                 mShakeListener.stop();
                 startVibrato();
                 new Handler().postDelayed(new Runnable() {
@@ -72,6 +74,7 @@ public class Recommend extends ActionBarActivity {
         });
     }
 
+    //test method to set up the list view
     private List<Account> getData()
     {
         List<Account> list = new ArrayList<Account>();

@@ -27,6 +27,7 @@ public class RestfulImgUploadService extends AsyncTask<String,Void,String> {
         DefaultClientConfig config = new DefaultClientConfig();
         Client client = Client.create(config);
 
+        //upload image to server
         WebResource resource = client.resource(getBaseURI()).path("uploadStream/" + params[0] + "/" + params[1] + "/" + params[3]);
         InputStream fileInStream = null;
         try {

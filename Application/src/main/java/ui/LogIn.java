@@ -58,8 +58,9 @@ public class LogIn extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //when login button is cliked, would cause this method
     public void login_werun(View view){
-
+        //try to get the input string of the user
         try {
             inputUser = userText.getText().toString();
             inputPW = passwordText.getText().toString();
@@ -70,6 +71,7 @@ public class LogIn extends ActionBarActivity {
             return;
         }
 
+
         if(inputUser.length() == 0 || inputPW.length() == 0){
             Toast.makeText(getApplicationContext(), "Please input valid user information",
                     Toast.LENGTH_LONG).show();
@@ -78,18 +80,19 @@ public class LogIn extends ActionBarActivity {
 //        //verify the log in userid and password
         RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
         Account tryAccount = remoteServerProxy.verifyAccount(inputUser,inputPW);
-//        //if the server has the account
+//        //if the server has the account information, directlt login the application
         if(tryAccount.getPassword() != null){
             loginAccount = tryAccount;
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
-        }
-        else{
+        }else{
+            //if the login information is wrong
             Toast.makeText(getApplicationContext(), "The Account verification fails!",
                     Toast.LENGTH_LONG).show();
         }
     }
 
+    //when the register button is clicked
     public void register_werun(View view){
         Intent intent = new Intent(this,RegisterActivity.class);
         startActivity(intent);

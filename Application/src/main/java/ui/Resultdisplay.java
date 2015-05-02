@@ -26,15 +26,18 @@ public class Resultdisplay extends ActionBarActivity {
         rstText = (TextView) findViewById(R.id.rstTexxt);
 
         String[] result = message.split("werun");
+        //calculate the time of running
         long time = (long)Double.parseDouble(result[1]);
         int intTime = (int) (time/1000);
         int min = intTime / 60;
         int second = intTime % 60;
 
+        //update the history information
         LogIn.loginAccount.getBasicAccount().getHistoryRecord().setUserid(LogIn.loginAccount.getBasicAccount().getName());
         LogIn.loginAccount.getBasicAccount().getHistoryRecord().addDistance(result[0]);
         LogIn.loginAccount.getBasicAccount().getHistoryRecord().addTime(intTime);
 
+        //update data in server
         RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
         remoteServerProxy.updateHistoryRecord(LogIn.loginAccount.getBasicAccount().getHistoryRecord());
 

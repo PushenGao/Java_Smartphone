@@ -45,14 +45,15 @@ public class RecommendationAdapter extends BaseAdapter {
         return position;
     }
     @Override
-    public View getView(int position, View convertView, ViewGroup parent)
-    {
+    public View getView(int position, View convertView, ViewGroup parent){
+        //set up the recommend list view
         View view = View.inflate(context, R.layout.ui_recommendview, null);
         final BasicAccount friend = mData.get(position);
 
         TextView recommendview = (TextView) view.findViewById(R.id.recommendview_textview);
         recommendview.setText(friend.getName());
 
+        //when button clicked, turn to the profile page then can add friend
         btn = (Button) view.findViewById(R.id.recommend_btn);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

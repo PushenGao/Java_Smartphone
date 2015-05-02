@@ -32,7 +32,6 @@ public class RestfulImgGetService extends AsyncTask<String,Void,Object> {
     protected Object doInBackground(String... params) {
         List<String> results = new ArrayList<String>();
         try {
-
             URL restServiceURL = new URL(params[1]);
 
             HttpURLConnection httpConnection = (HttpURLConnection) restServiceURL.openConnection();
@@ -47,6 +46,7 @@ public class RestfulImgGetService extends AsyncTask<String,Void,Object> {
             InputStream is = httpConnection.getInputStream();
 
             OutputStream os = null;
+            //store the image file locally
             ContextWrapper cw = new ContextWrapper(ChatWindow.appContext);
             File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
             File mypath=new File(directory,header);
@@ -54,23 +54,15 @@ public class RestfulImgGetService extends AsyncTask<String,Void,Object> {
             os = new FileOutputStream(mypath);
             byte[] b = new byte[2048];
             int length;
-            int i = 0;
+
             while ((length = is.read(b)) != -1) {
                 os.write(b, 0, length);
-                i = i + 2048;
             }
-            System.out.println("fucker " + i);
-
             httpConnection.disconnect();
-
         } catch (MalformedURLException e) {
-
             e.printStackTrace();
-
         } catch (IOException e) {
-
             e.printStackTrace();
-
         }
         return results;
 

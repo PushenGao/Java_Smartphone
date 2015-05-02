@@ -13,7 +13,7 @@
         android:layout_height="400dp"
         android:layout_alignParentLeft="true"
         android:paddingLeft="5dp"
-        android:src="@drawable/zheng"
+        android:src="@drawable/default_photo"
         android:paddingBottom="20dp"
         android:layout_alignParentTop="true" />
 

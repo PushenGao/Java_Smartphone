@@ -28,7 +28,6 @@ public class ProfileAndRemove extends ActionBarActivity {
     private String name;
     private String age;
     private String gender;
-//    private BroadcastReceiver broadcastReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +48,7 @@ public class ProfileAndRemove extends ActionBarActivity {
         showAge.setText(age);
         showGender.setText(gender);
 
+        //when chat button is clicked, turn to chat window
         addButton = (Button) findViewById(R.id.profileandremove_add);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,10 +85,9 @@ public class ProfileAndRemove extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-//TODO after add the button, can delete the friend request to server
-    public void deleteFriend(View view){
-        Toast.makeText(getApplicationContext(), "hello", Toast.LENGTH_SHORT).show();
 
+    public void deleteFriend(View view){
+//when the delete button is clicked, detele the friend and update in the server
         RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
         FriendReq friendReq = new FriendReq();
         friendReq.setSender(LogIn.loginAccount.getBasicAccount().getName());

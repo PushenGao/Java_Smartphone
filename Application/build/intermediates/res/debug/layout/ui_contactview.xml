@@ -8,7 +8,7 @@
         android:id="@+id/contact_photo"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:src="@drawable/zheng"/>
+        android:src="@drawable/default_photo"/>
     <TextView
         android:id="@+id/contactview_textview"
         android:layout_width="wrap_content"

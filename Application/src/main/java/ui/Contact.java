@@ -27,20 +27,28 @@ import ws.remote.SearchAccount;
 
 public class Contact extends ActionBarActivity {
     private RelativeLayout layout;
+    //button for search user
     private Button searchButton;
+    //needs to be deleted
     private Button agreeButton;
+    //search user's id
     private EditText search_bar;
+    //contact list view
     private ListView contact_listView;
+    //friend adapter for contact's list view
     private FriendAdapter mAdaper;
+    //list view for pending friend
     private ListView pending_listView;
+    //adapter for pending list view
     private PendingRequestAdapter pendingAdaper;
+    //handler to update the UI based on the updated data from server
     private Handler mHandler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_contact);
-
+        //get the listview based on the data from login user
         contact_listView = (ListView) findViewById(R.id.contact_listview);
 
         mAdaper = new FriendAdapter(this, LogIn.loginAccount.getActiveFriends());
@@ -50,7 +58,7 @@ public class Contact extends ActionBarActivity {
         pendingAdaper = new PendingRequestAdapter(this, LogIn.loginAccount.getPendingFriends());
 
         contact_listView.setAdapter(mAdaper);
-
+        //setup the search button, when user input the user id and change to profile
         searchButton = (Button) findViewById(R.id.search_button);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +77,6 @@ public class Contact extends ActionBarActivity {
                             .putExtra("gender", gender);
                     startActivity(searchIntent);
                 }else{
-                    //TODO cannot find
                     Toast.makeText(getApplicationContext(), "cannot find", Toast.LENGTH_SHORT).show();
                 }
 
@@ -79,7 +86,6 @@ public class Contact extends ActionBarActivity {
 
 
         contact_listView.setAdapter(mAdaper);
-
         pending_listView.setAdapter(pendingAdaper);
     }
 
@@ -104,6 +110,7 @@ public class Contact extends ActionBarActivity {
         }
     };
 
+    //update the UI based on data from server in a certain interval
     public void updateClock(){
 
         RemoteServerProxy remoteServerProxy = new RemoteServerProxy();
@@ -112,43 +119,33 @@ public class Contact extends ActionBarActivity {
                 LogIn.loginAccount.getPassword());
         LogIn.loginAccount = tryAccount;
         contact_listView = (ListView) findViewById(R.id.contact_listview);
-
         mAdaper = new FriendAdapter(this, LogIn.loginAccount.getActiveFriends());
-
         pending_listView = (ListView) findViewById(R.id.contact_pendinglistview);
-
         pendingAdaper = new PendingRequestAdapter(this, LogIn.loginAccount.getPendingFriends());
-
         contact_listView.setAdapter(mAdaper);
-
         pending_listView.setAdapter(pendingAdaper);
     }
 
-    private List<Account> getData()
-    {
+    //test method when setup the listview, not used in the application
+    private List<Account> getData() {
         List<Account> list = new ArrayList<Account>();
-
         BasicAccount basicAccount1 = new BasicAccount();
         Account friend1 = new Account();
         friend1.setBasicAccount(basicAccount1);
         friend1.getBasicAccount().setName("Nancy");
         friend1.getBasicAccount().setAge("18");
         friend1.getBasicAccount().setGender("F");
-
         BasicAccount basicAccount2 = new BasicAccount();
         Account friend2 = new Account();
         friend2.setBasicAccount(basicAccount2);
         friend2.getBasicAccount().setName("Joe");
-
         BasicAccount basicAccount3 = new BasicAccount();
         Account friend3 = new Account();
         friend3.setBasicAccount(basicAccount3);
         friend3.getBasicAccount().setName("Annie");
-
         list.add(friend1);
         list.add(friend2);
         list.add(friend3);
-
         return list;
     }
 

@@ -20,10 +20,9 @@ public class History extends ActionBarActivity {
     private TextView showDistance;
     private TextView showTime;
     private Intent intent;
-    private BroadcastReceiver broadcastReceiver;
+    //handler to update the distance and time data when account is updated
     private Handler mHandler = new Handler();
-    private int count = 0;
-    private int count1 = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +34,6 @@ public class History extends ActionBarActivity {
 
         totalDistance = LogIn.loginAccount.getBasicAccount().getHistoryRecord().getTotalDistance();
         totalTime = LogIn.loginAccount.getBasicAccount().getHistoryRecord().getTotalTime();
-//
         showDistance.setText(totalDistance);
         showTime.setText(totalTime);
 
@@ -63,12 +61,12 @@ public class History extends ActionBarActivity {
     };
 
     public void updateClock(){
+        //update ui element in a certain interval
         showDistance = (TextView) findViewById(R.id.show_total_run);
         showTime = (TextView) findViewById(R.id.show_total_time);
 
         totalDistance = LogIn.loginAccount.getBasicAccount().getHistoryRecord().getTotalDistance();
         totalTime = LogIn.loginAccount.getBasicAccount().getHistoryRecord().getTotalTime();
-//
         showDistance.setText(totalDistance);
         showTime.setText(totalTime);
 

@@ -37,6 +37,7 @@ public abstract class DBConnectorProxy {
             database.close();
     }
 
+    //insert one ChatRecord to DB
     public void insertRecord(String name, String withuser, String time, String content)
     {
         ContentValues newRecord = new ContentValues();
@@ -50,6 +51,7 @@ public abstract class DBConnectorProxy {
         close();
     }
 
+    //update one ChatRecord
     public void updateRecord(long id, String name, String withuser, String time, String content)
     {
         ContentValues editRecord = new ContentValues();
@@ -69,7 +71,7 @@ public abstract class DBConnectorProxy {
                 "chatrecords", null, "_id=" + id, null, null, null, null);
     }
 
-    //needs test
+    //get the ChatRecord's id in DB
     public long getRecordId(String senderuserid, String withuserid, String time){
         open();
         Cursor cursor = database.rawQuery("SELECT * FROM chatrecords where senderuserid = " + senderuserid +
@@ -82,6 +84,7 @@ public abstract class DBConnectorProxy {
     }
 
 
+    //get one ChatRecord
     public ChatRecord getRecord(String senderuserid, String withuserid, String time){
         open();
         Cursor cursor = database.rawQuery("SELECT * FROM chatrecords where senderuserid = " + senderuserid +
@@ -98,6 +101,7 @@ public abstract class DBConnectorProxy {
     }
 
 
+    //get all the ChatRecord between sender and receiver
     public ArrayList<ChatRecord> getAllRecords(String senderuserid, String withuserid) {
         ArrayList<ChatRecord> list = new ArrayList<ChatRecord>();
         open();
@@ -118,6 +122,7 @@ public abstract class DBConnectorProxy {
         return list;
     }
 
+    //get all recent records for one login user
     public ArrayList<ChatRecord> getAllRecentRecords(String senderuserid) {
         ArrayList<ChatRecord> list = new ArrayList<ChatRecord>();
         open();
@@ -137,6 +142,7 @@ public abstract class DBConnectorProxy {
         return list;
     }
 
+    //delete chatrecord
     public void deleteRecord(long id)
     {
         open();

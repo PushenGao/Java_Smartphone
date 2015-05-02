@@ -20,9 +20,11 @@ import ws.util.JsonUtil;
 public class RemoteServerProxy implements FriendRequest, RecommendFriend, RegisterAccountToServer,
  UpdateRunningRecord, VerifyLoginAccount, SearchAccount,GetChatRec,GetImage,UploadChatRec{
 
-//    final String ipAddress = "10.0.23.141:8080";
-    final String ipAddress = "10.0.22.230:8080";//Building 19
+    final String ipAddress = "10.6.77.28:8080";
+    //final String ipAddress = "10.0.22.230:8080";//Building 19
     //final String ipAddress = "10.0.19.163:8080";//Building 23
+
+    //send friend request to server, like add, accept, reject, delete friend
     @Override
     public String reqFriend(FriendReq freq) {
         String targetURL = "http://" + ipAddress + "/Jersey/rest/werun/friquest";
@@ -37,6 +39,7 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
         return response;
     }
 
+    //get recommend friend from server
     @Override
     public List<BasicAccount> getRecommend(String userId) {
         JsonUtil jsonUtil = new JsonUtil();
@@ -59,7 +62,7 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
         return recommendFriends;
     }
 
-
+//update history information of user
     @Override
     public String updateHistoryRecord(HistoryRecord history) {
         String targetURL = "http://" + ipAddress + "/Jersey/rest/werun/record";
@@ -74,6 +77,7 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
         return response;
     }
 
+    //verify account from server
     @Override
     public Account verifyAccount(String userId, String passWord) {
         JsonUtil jsonUtil = new JsonUtil();
@@ -90,6 +94,7 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
         return jsonUtil.parseAccountFromJson(resp);
     }
 
+    //register account from server
     @Override
     public String register(Account newAccount) {
         String targetURL = "http://" + ipAddress + "/Jersey/rest/werun/register";
@@ -104,6 +109,7 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
         return response;
     }
 
+    //search account in server
     @Override
     public BasicAccount searchAccount(String userid) {
         JsonUtil jsonUtil = new JsonUtil();
@@ -119,6 +125,7 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
         return jsonUtil.parseBasicAccountFromJson(resp);
     }
 
+    //get chatrecord of user
     @Override
     public List<ChatRecord> getChatRecord(String userId) {
         JsonUtil jsonUtil = new JsonUtil();
@@ -140,6 +147,7 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
         return chatRecords;
     }
 
+    //get image from server
     @Override
     public List<String> getImageFromServer(String receiverId) {
         String targetURL = "http://" + ipAddress + "/Jersey/rest/werun/getImage/" + receiverId;
@@ -166,6 +174,7 @@ public class RemoteServerProxy implements FriendRequest, RecommendFriend, Regist
         }
     }
 
+    //upload chat record
     @Override
     public String uploadChatRec(ChatRecord chatRecord) {
         String targetURL = "http://" + ipAddress + "/Jersey/rest/werun/chatup";
