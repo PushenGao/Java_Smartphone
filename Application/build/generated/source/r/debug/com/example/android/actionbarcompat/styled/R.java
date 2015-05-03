@@ -1834,7 +1834,11 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0a0044;
         public static final int action_mode_bar_stub=0x7f0a0043;
         public static final int action_mode_close_button=0x7f0a0036;
+<<<<<<< HEAD
         public static final int action_settings=0x7f0a00c5;
+=======
+        public static final int action_settings=0x7f0a00c9;
+>>>>>>> c084f15b092b5e580990ca29975d10a3edf198bc
         public static final int activity_chooser_view_content=0x7f0a0037;
         public static final int adjust_height=0x7f0a0027;
         public static final int adjust_width=0x7f0a0028;
@@ -1843,9 +1847,15 @@ containing a value of this type.
         public static final int always=0x7f0a002c;
         public static final int beginning=0x7f0a0025;
         public static final int bottom=0x7f0a0017;
+<<<<<<< HEAD
         public static final int btnMan=0x7f0a00b8;
         public static final int btnWoman=0x7f0a00b9;
         public static final int btn_register=0x7f0a00bd;
+=======
+        public static final int btnMan=0x7f0a00bc;
+        public static final int btnWoman=0x7f0a00bd;
+        public static final int btn_register=0x7f0a00c1;
+>>>>>>> c084f15b092b5e580990ca29975d10a3edf198bc
         public static final int button_callcamera=0x7f0a0061;
         public static final int center=0x7f0a0018;
         public static final int center_horizontal=0x7f0a0019;
@@ -1885,6 +1895,7 @@ containing a value of this type.
         public static final int end=0x7f0a001d;
         public static final int expand_activities_button=0x7f0a0038;
         public static final int expanded_menu=0x7f0a003e;
+<<<<<<< HEAD
         public static final int fifth=0x7f0a008c;
         public static final int fill=0x7f0a001e;
         public static final int fill_horizontal=0x7f0a001f;
@@ -1892,13 +1903,29 @@ containing a value of this type.
         public static final int first=0x7f0a0087;
         public static final int fourth=0x7f0a008b;
         public static final int googlemaps_start=0x7f0a008f;
+=======
+        public static final int fifth=0x7f0a0090;
+        public static final int fill=0x7f0a001e;
+        public static final int fill_horizontal=0x7f0a001f;
+        public static final int fill_vertical=0x7f0a0020;
+        public static final int first=0x7f0a008b;
+        public static final int fourth=0x7f0a008f;
+        public static final int googlemaps_start=0x7f0a0093;
+>>>>>>> c084f15b092b5e580990ca29975d10a3edf198bc
         public static final int history_background=0x7f0a0074;
         public static final int history_relativelayout1=0x7f0a0073;
         public static final int history_tablelayout1=0x7f0a0076;
         public static final int history_tablerow1=0x7f0a0077;
         public static final int history_tablerow2=0x7f0a0079;
+<<<<<<< HEAD
         public static final int history_tablerow5=0x7f0a007b;
         public static final int history_tablerow6=0x7f0a007d;
+=======
+        public static final int history_tablerow3=0x7f0a007b;
+        public static final int history_tablerow4=0x7f0a007d;
+        public static final int history_tablerow5=0x7f0a007f;
+        public static final int history_tablerow6=0x7f0a0081;
+>>>>>>> c084f15b092b5e580990ca29975d10a3edf198bc
         public static final int home=0x7f0a0004;
         public static final int homeAsUp=0x7f0a000d;
         public static final int horizontal=0x7f0a0013;
@@ -1906,11 +1933,16 @@ containing a value of this type.
         public static final int icon=0x7f0a003c;
         public static final int ifRoom=0x7f0a002e;
         public static final int image=0x7f0a0039;
+<<<<<<< HEAD
         public static final int image_Res=0x7f0a00bf;
+=======
+        public static final int image_Res=0x7f0a00c3;
+>>>>>>> c084f15b092b5e580990ca29975d10a3edf198bc
         public static final int input_text=0x7f0a0060;
         public static final int left=0x7f0a0021;
         public static final int listMode=0x7f0a0009;
         public static final int list_item=0x7f0a003b;
+<<<<<<< HEAD
         public static final int loginImage=0x7f0a0080;
         public static final int login_btn=0x7f0a0086;
         public static final int login_linearlayout=0x7f0a007f;
@@ -1923,10 +1955,25 @@ containing a value of this type.
         public static final int menu_location=0x7f0a00c3;
         public static final int menu_refresh=0x7f0a00c2;
         public static final int menu_settings=0x7f0a00c4;
+=======
+        public static final int loginImage=0x7f0a0084;
+        public static final int login_btn=0x7f0a008a;
+        public static final int login_linearlayout=0x7f0a0083;
+        public static final int login_passwd_edit=0x7f0a0087;
+        public static final int login_relativelayout=0x7f0a0088;
+        public static final int login_top_layout=0x7f0a0085;
+        public static final int login_user_edit=0x7f0a0086;
+        public static final int main_relativelayout=0x7f0a0091;
+        public static final int map=0x7f0a0092;
+        public static final int menu_location=0x7f0a00c7;
+        public static final int menu_refresh=0x7f0a00c6;
+        public static final int menu_settings=0x7f0a00c8;
+>>>>>>> c084f15b092b5e580990ca29975d10a3edf198bc
         public static final int middle=0x7f0a0026;
         public static final int never=0x7f0a002f;
         public static final int none=0x7f0a000e;
         public static final int normal=0x7f0a000a;
+<<<<<<< HEAD
         public static final int pending_btn=0x7f0a0092;
         public static final int pending_photo=0x7f0a0090;
         public static final int pengdingview_textview=0x7f0a0091;
@@ -1974,6 +2021,55 @@ containing a value of this type.
         public static final int resultdisplay_linearlayout1=0x7f0a00be;
         public static final int right=0x7f0a0022;
         public static final int rstTexxt=0x7f0a00c0;
+=======
+        public static final int pending_btn=0x7f0a0096;
+        public static final int pending_photo=0x7f0a0094;
+        public static final int pengdingview_textview=0x7f0a0095;
+        public static final int profile_button1=0x7f0a00a0;
+        public static final int profile_imageview=0x7f0a009c;
+        public static final int profile_linearlayout=0x7f0a0098;
+        public static final int profile_relativelayout=0x7f0a0099;
+        public static final int profile_relativelayout2=0x7f0a009b;
+        public static final int profile_textView3=0x7f0a009e;
+        public static final int profile_textView4=0x7f0a009f;
+        public static final int profile_textview1=0x7f0a009a;
+        public static final int profile_textview2=0x7f0a009d;
+        public static final int profileandremove_add=0x7f0a00a9;
+        public static final int profileandremove_delete=0x7f0a00aa;
+        public static final int profileandremove_imageview1=0x7f0a00a5;
+        public static final int profileandremove_linearlayout=0x7f0a00a1;
+        public static final int profileandremove_relativelayout=0x7f0a00a2;
+        public static final int profileandremove_relativelayout2=0x7f0a00a4;
+        public static final int profileandremove_textview1=0x7f0a00a3;
+        public static final int profileandremove_textview2=0x7f0a00a6;
+        public static final int profileandremove_textview3=0x7f0a00a7;
+        public static final int profileandremove_textview4=0x7f0a00a8;
+        public static final int progress_circular=0x7f0a0005;
+        public static final int progress_horizontal=0x7f0a0006;
+        public static final int radio=0x7f0a0041;
+        public static final int recommend_btn=0x7f0a00b1;
+        public static final int recommend_linearlayout1=0x7f0a00ab;
+        public static final int recommend_listview=0x7f0a00ae;
+        public static final int recommend_photo=0x7f0a00af;
+        public static final int recommend_relativelayout1=0x7f0a00ac;
+        public static final int recommend_textview1=0x7f0a00ad;
+        public static final int recommendview_textview=0x7f0a00b0;
+        public static final int registerAge=0x7f0a00c0;
+        public static final int registerGenderGroup=0x7f0a00bb;
+        public static final int registerName=0x7f0a00b5;
+        public static final int registerPassword=0x7f0a00b8;
+        public static final int register_btn=0x7f0a0089;
+        public static final int register_tablelayout=0x7f0a00b2;
+        public static final int register_textview2=0x7f0a00b7;
+        public static final int register_textview3=0x7f0a00b4;
+        public static final int register_textview4=0x7f0a00ba;
+        public static final int register_textview5=0x7f0a00bf;
+        public static final int reject_btn=0x7f0a0097;
+        public static final int result_btn=0x7f0a00c5;
+        public static final int resultdisplay_linearlayout1=0x7f0a00c2;
+        public static final int right=0x7f0a0022;
+        public static final int rstTexxt=0x7f0a00c4;
+>>>>>>> c084f15b092b5e580990ca29975d10a3edf198bc
         public static final int satellite=0x7f0a002a;
         public static final int search_badge=0x7f0a004b;
         public static final int search_bar=0x7f0a004a;
@@ -1985,13 +2081,18 @@ containing a value of this type.
         public static final int search_plate=0x7f0a004f;
         public static final int search_src_text=0x7f0a0050;
         public static final int search_voice_btn=0x7f0a0054;
+<<<<<<< HEAD
         public static final int second=0x7f0a0089;
+=======
+        public static final int second=0x7f0a008d;
+>>>>>>> c084f15b092b5e580990ca29975d10a3edf198bc
         public static final int send_btn=0x7f0a0062;
         public static final int shortcut=0x7f0a0040;
         public static final int showCustom=0x7f0a000f;
         public static final int showHome=0x7f0a0010;
         public static final int showTitle=0x7f0a0011;
         public static final int show_name=0x7f0a0075;
+<<<<<<< HEAD
         public static final int show_total_run=0x7f0a007a;
         public static final int show_total_time=0x7f0a007e;
         public static final int split_action_bar=0x7f0a0007;
@@ -2009,6 +2110,27 @@ containing a value of this type.
         public static final int top=0x7f0a0024;
         public static final int total_run=0x7f0a0078;
         public static final int total_time=0x7f0a007c;
+=======
+        public static final int show_total_energy=0x7f0a007e;
+        public static final int show_total_run=0x7f0a007a;
+        public static final int show_total_time=0x7f0a0082;
+        public static final int split_action_bar=0x7f0a0007;
+        public static final int start=0x7f0a0023;
+        public static final int states=0x7f0a008c;
+        public static final int submit_area=0x7f0a0052;
+        public static final int tabMode=0x7f0a000b;
+        public static final int tableRow1=0x7f0a00b6;
+        public static final int tableRow2=0x7f0a00b3;
+        public static final int tableRow3=0x7f0a00b9;
+        public static final int tableRow4=0x7f0a00be;
+        public static final int terrain=0x7f0a002b;
+        public static final int third=0x7f0a008e;
+        public static final int title=0x7f0a003d;
+        public static final int top=0x7f0a0024;
+        public static final int total_energy=0x7f0a007c;
+        public static final int total_run=0x7f0a0078;
+        public static final int total_time=0x7f0a0080;
+>>>>>>> c084f15b092b5e580990ca29975d10a3edf198bc
         public static final int up=0x7f0a0008;
         public static final int useLogo=0x7f0a0012;
         public static final int vertical=0x7f0a0014;
