@@ -3,7 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Application/Application.iml" filepath="$PROJECT_DIR$/Application/Application.iml" />
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/java-werun-502.iml" filepath="$PROJECT_DIR$/java-werun-502.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/Java_Smartphone.iml" filepath="$PROJECT_DIR$/Java_Smartphone.iml" />
+>>>>>>> adcfe6219fc4afd1696608adb0a00149dbf061a3
     </modules>
   </component>
 </project>

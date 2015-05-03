@@ -75,6 +75,10 @@ public class Contact extends ActionBarActivity {
             public void onClick(View v) {
                 search_bar = (EditText) findViewById(R.id.search_bar);
                 String userid = search_bar.getText().toString();
+                if(userid == null || userid.length() == 0){
+                    Toast.makeText(getApplicationContext(), "Please input valid userid", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 RemoteServerProxy rsp = new RemoteServerProxy();
                 BasicAccount searchRst = rsp.searchAccount(userid);
                 if(searchRst.getName() != null){
