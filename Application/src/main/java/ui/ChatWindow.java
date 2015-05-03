@@ -149,7 +149,6 @@ public class ChatWindow extends ActionBarActivity {
                             db_list.addAll(db_list1);
                             db_list.addAll(db_list2);
 
-                            Log.d("zheng",String.valueOf(db_list.size()));
                             Collections.sort(db_list, new Comparator<ChatRecord>() {
                                 public int compare(ChatRecord o1, ChatRecord o2){
                                     if(getDate(o1.getTimeStamp()) == getDate(o2.getTimeStamp()))

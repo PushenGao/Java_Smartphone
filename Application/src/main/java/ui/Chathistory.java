@@ -40,25 +40,8 @@ public class Chathistory extends ActionBarActivity {
 
         chat_listview = (ListView) findViewById(R.id.chat_listview);
         mAdpter = new RecentChatAdapter(this, getData());
-        //used in real time
-//        HashMap<String, ChatRecord> chatRecordHashMap = BuildRecentChatRecord.chatrecordMap;
-//        List<ChatRecord> chatRecordList = new ArrayList<ChatRecord>();
-//
-//        for (Map.Entry<String, ChatRecord> entry : chatRecordHashMap.entrySet()) {
-//            chatRecordList.add(entry.getValue());
-//        }
-//        mAdpter = new RecentChatAdapter(this, chatRecordList);
 
         chat_listview.setAdapter(mAdpter);
-
-//        layout = (RelativeLayout) findViewById(R.id.chat_relative);
-//        layout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(Chathistory.this, ChatWindow.class);
-//                startActivity(intent);
-//            }
-//        });
     }
 
     @Override
@@ -82,7 +65,6 @@ public class Chathistory extends ActionBarActivity {
     };
 
     public void updateClock(){
-        Log.d("test", "1");
         chat_listview = (ListView) findViewById(R.id.chat_listview);
         mAdpter = new RecentChatAdapter(this, getData());
 
@@ -111,31 +93,6 @@ public class Chathistory extends ActionBarActivity {
                 list.add(validAccount);
             }
         }
-
-
-
-//        ChatRecord record1 = new ChatRecord();
-//        record1.setMyName("zheng");
-//        record1.setFriendName("jiate");
-//        record1.setTimeStamp("2014-12-12");
-//        record1.setChatContent("hello");
-//        Account friend1=new Account();
-
-//        friend1.getBasicAccount().setName("Nancy");
-//
-//        BasicAccount basicAccount2 = new BasicAccount();
-//        Account friend2=new Account();
-//        friend2.setBasicAccount(basicAccount2);
-//        friend2.getBasicAccount().setName("Joe");
-//
-//        BasicAccount basicAccount3 = new BasicAccount();
-//        Account friend3=new Account();
-//        friend3.setBasicAccount(basicAccount3);
-//        friend3.getBasicAccount().setName("Annie");
-
-//        list.add(record1);
-//        list.add(friend2);
-//        list.add(friend3);
 
         return list;
     }

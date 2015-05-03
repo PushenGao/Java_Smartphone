@@ -63,9 +63,6 @@ public class ChatWindowAdapter extends BaseAdapter {
         TextView Content;
         ImageView Image;
 
-        Log.d("sender", mData.get(Index).getMyName());
-        Log.d("receiver", mData.get(Index).getFriendName());
-
         if (mData.get(Index).getMyName().equals(LogIn.loginAccount.getBasicAccount().getName())) {
 
                 mView=LayoutInflater.from(mContext).inflate(R.layout.ui_chat_window_me, null);
@@ -87,15 +84,10 @@ public class ChatWindowAdapter extends BaseAdapter {
                 File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
                 File image = new File(directory, imagelist.get(0));
 
-                Log.d("sender", mData.get(Index).getMyName());
-
-                Log.d("receiver", mData.get(Index).getFriendName());
-
                 remoteServerProxy.uploadOrDeleteImage(mData.get(Index).getMyName(), LogIn.loginAccount.getBasicAccount().getName(), image.getAbsolutePath(), "delete");
                 BitmapFactory.Options bmOptions = new BitmapFactory.Options();
                 Bitmap bitmap = BitmapFactory.decodeFile(image.getAbsolutePath(), bmOptions);
 
-                //mView = LayoutInflater.from(mContext).inflate(R.layout.ui_chat_window_friend, null);
                 Image = (ImageView) mView.findViewById(R.id.Friend_Header);
 
                 Image.setImageBitmap(bitmap);
@@ -104,7 +96,6 @@ public class ChatWindowAdapter extends BaseAdapter {
 
 
          }
-//        }
         return mView;
     }
 

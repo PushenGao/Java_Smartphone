@@ -55,13 +55,6 @@ public class RecentChatAdapter extends BaseAdapter {
 
         TextView chatview = (TextView) view.findViewById(R.id.chatview_textview1);
         chatview.setText(basicAccount.getName());
-//        chatview.setText(friend.getFriendName());
-
-//        TextView chatview2 = (TextView) view.findViewById(R.id.chatview_textview2);
-//        chatview2.setText(friend.getChatContent());
-
-//        TextView chatview3 = (TextView) view.findViewById(R.id.chatview_textview3);
-//        chatview3.setText(friend.getTimeStamp());
 
         layout = (RelativeLayout) view.findViewById(R.id.chat_layout);
         layout.setOnClickListener(new View.OnClickListener() {
@@ -70,10 +63,6 @@ public class RecentChatAdapter extends BaseAdapter {
                 Intent intent = new Intent(context, ChatWindow.class);
                   intent.putExtra("myname", LogIn.loginAccount.getBasicAccount().getName())
                           .putExtra("name", basicAccount.getName());
-//                intent.putExtra("myname", friend.getMyName())
-//                        .putExtra("friendname", friend.getFriendName())
-//                        .putExtra("time", friend.getTimeStamp())
-//                        .putExtra("content", friend.getChatContent());
 
                 context.startActivity(intent);
             }

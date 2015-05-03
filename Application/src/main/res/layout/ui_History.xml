@@ -60,32 +60,32 @@
                 android:paddingLeft="400dp" />
         </TableRow>
 
-        <TableRow
-            android:id="@+id/history_tablerow3"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+        <!--<TableRow-->
+            <!--android:id="@+id/history_tablerow3"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="fill_parent">-->
 
-            <TextView
-                android:id="@+id/total_energy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/energy_consumption" />
-        </TableRow>
+            <!--<TextView-->
+                <!--android:id="@+id/total_energy"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:text="@string/energy_consumption" />-->
+        <!--</TableRow>-->
 
-        <TableRow
-            android:id="@+id/history_tablerow4"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+        <!--<TableRow-->
+            <!--android:id="@+id/history_tablerow4"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="fill_parent">-->
 
-            <TextView
-                android:id="@+id/show_total_energy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/total_kals"
-                android:paddingLeft="400dp" />
-        </TableRow>
+            <!--<TextView-->
+                <!--android:id="@+id/show_total_energy"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:text="@string/total_kals"-->
+                <!--android:paddingLeft="400dp" />-->
+        <!--</TableRow>-->
 
         <TableRow
             android:id="@+id/history_tablerow5"

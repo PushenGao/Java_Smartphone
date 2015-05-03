@@ -51,18 +51,18 @@
         <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/gson-2.2.3-b38ca05647438477ab0955619e5d47284c240461.jar" />
     </item>
     <item
-        jar="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-36fe3431fdf94ed0893392440f23778a9c2df4f3.jar" />
-    </item>
-    <item
         jar="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/22.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="c9e0c6fc22b22b96d0db564cf073ab6f288bb758">
         <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-7ae37f3645a67a56cf022da2e1d8e32661cb11d8.jar" />
+    </item>
+    <item
+        jar="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/pre-dexed/debug/classes-36fe3431fdf94ed0893392440f23778a9c2df4f3.jar" />
     </item>
     <item
         jar="/Users/Jackyliz/Documents/Java_Smartphone/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"

@@ -92,6 +92,7 @@ public class RegisterActivity extends ActionBarActivity {
             String strAge = "" + inputAge;
 
             if(inputPW.contains(" ") || inputName.contains(" ") || strAge.contains(" ")
+                    || inputPW.equals("") || inputName.equals("") || strAge.equals("")
                     || inputGender.contains(" ")){
                 Toast.makeText(getApplicationContext(), "Please input valid user information",
                         Toast.LENGTH_LONG).show();
